@@ -12,13 +12,14 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 
-	<!-- Foundation core CSS -->
+	<!-- Foundation -->
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/foundation.css" />
 	
 	<!-- Font Awesome icons -->
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 
+	<!-- Swiper stuff -->
 	<link rel="stylesheet" href="css/idangerous.swiper.css" />
 	<link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css" />
 	<link rel="stylesheet" href="css/simple-app.css" />
@@ -79,6 +80,7 @@
 		width: 32px;
 		height: 4px;
 }
+
 a.menu-trigger { outline: medium none; }
 
 .top-bar .apps {
@@ -166,9 +168,6 @@ a.menu-trigger { outline: medium none; }
 #mp-menu .mp-level-overlay .title { border: none; background-color: transparent; }
 
 
-
-
-
 /* Icon Hacks */
 .icon.fa:before {
     display: inline-block;
@@ -205,13 +204,11 @@ i.fa.lg {
 .swiper-nav.dropmenu .swiper-wrapper { overflow: auto; }
 .swiper-nav.dropmenu .swiper-slide { float: none; }
 .swiper-nav.dropmenu { 
-    background: #fff;
     height: 110px;
     xposition: absolute;
     xwidth: 200px;
     z-index: 500;
 }
-
 
 .pagination {
 	position: absolute;
@@ -235,6 +232,7 @@ i.fa.lg {
 	border-radius: 4px; 
 	cursor: pointer;
 }
+
 .pagination .swiper-pagination-switch:last-child { margin-right: 0; }
 .pagination .swiper-pagination-switch:hover { background: #333; }
 
@@ -248,12 +246,6 @@ i.fa.lg {
 
 </head>
 <body>
-
-
-
-
-
-
 
 <a href="#" id="trigger" class="menu-trigger"></a>
 
@@ -300,6 +292,7 @@ i.fa.lg {
 			</div><!-- /mp-pusher -->
 						
 		</div><!-- /nav-container -->
+
 <!-- /Multilevel push menu ===================================================== -->
 
 <!-- top-bar Panel menu ===================================================== -->		
@@ -308,40 +301,34 @@ i.fa.lg {
 
 <nav class="top-bar" data-topbar data-options="is_hover: false">
 
-
-	<section class="top-bar-section"> 
+	<section class="top-bar-section">
 
 		<!-- Right Nav Section -->
 		<div class="right">
 
-
 			 <!-- Search box -->
-			    <div class="xrow xcollapse searchbox">
-			        <div class="xlarge-4 xsmall-3 xcolumns left">
-			        	<a href="#" class="button split tiny secondary searchcat right"> 
-			        		<i class="fa fa-align-justify"></i><span data-dropdown="searchdrop"></span>
-			        	</a>
-					</div>
-					<div class="xlarge-6 xsmall-7 xcolumns left">
-			        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
-								<li><a href="#">People</a></li>
-								<li><a href="#">Projects</a></li>
-								<li><a href="#">Documents</a></li>
-								<li><a href="#">Communities</a></li>
-							</ul>
-			        	<input type="search" placeholder="search...">
-			        </div>
-			        <div class="xlarge-2 xsmall-2 xcolumns left"> 
-						<a class="tiny button secondary searchgo" href="#"><i class="fa fa-search"></i></a> 
-			        </div>
-			    </div>
+		    <div class="searchbox">
+		        <div class="left">
+		        	<a href="#" class="button split tiny secondary searchcat right"> 
+		        		<i class="fa fa-align-justify"></i><span data-dropdown="searchdrop"></span>
+		        	</a>
+				</div>
+				<div class="left">
+		        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
+							<li><a href="#">People</a></li>
+							<li><a href="#">Projects</a></li>
+							<li><a href="#">Documents</a></li>
+							<li><a href="#">Communities</a></li>
+						</ul>
+		        	<input type="search" placeholder="search...">
+		        </div>
+		        <div class="left"> 
+					<a class="tiny button secondary searchgo" href="#"><i class="fa fa-search"></i></a> 
+		        </div>
+		    </div>
 			  <!-- /Search box -->
 
-
-
-
-
-		<a href="#" data-dropdown="utils" class="apps ico"><i class="apps fa fa-th"></i></a>
+			<a href="#" data-dropdown="utils" class="apps ico"><i class="apps fa fa-th"></i></a>
 			<div id="utils" data-dropdown-content class="f-dropdown content utils">
 				<div class="drop-panel-bg">
 					<div class="row">
@@ -364,35 +351,11 @@ i.fa.lg {
 				</div><!-- /drop panel --> 
 			</div>
 
-
-
-
-
-
-
 	</section>
 </nav>
 <!-- /Header and Nav =================================================== --> 
 
 <!-- /top-bar Panel menu ===================================================== -->		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <a href="#" class="button tiny secondary" title="Panel View" data-dropdown="paneldrop"><i class="fa fa-plus"></i></a>
 <div id="paneldrop" data-dropdown-content class="f-dropdown content">
@@ -404,23 +367,6 @@ i.fa.lg {
 		</ul>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	
 
@@ -440,10 +386,6 @@ i.fa.lg {
 
 
 
-
-
-
-
 <!-- Slide 1 ================================================================ -->		
 <div class="swiper-slide">
 <div class="swiper-container scroll-container">
@@ -455,156 +397,149 @@ i.fa.lg {
 
 <div class="container">
 
-		
-<div class="row">
-	<div class="small-12 columns">
-		<h1>Company</h1>
+	<div class="row">
+		<div class="small-12 columns">
+			<h1>Company</h1>
+		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="small-12 medium-6 large-3 columns">
-		<div class="tile-full tight">
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p> <span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="widget1 tc5">
-				<p> <img src="img/icon-announcement-sm.png" class="text-left" alt="Add Announcement"> Add Announcement +</p>
-			</div>
-		</div><!-- /tile full --> 
-		
-	</div><!-- /cols -->
-
-
-
-
-
-
-
-
-	<div class="small-12 medium-6 large-3 columns">
-		<div class="tile-4 tc1 tight">
-			<img src="img/industry-news.jpg" alt="Industry News">
-			<div class="tile-body">
-				<h6>NNSR Bags New Client - Elkay</h6>
-				<p>00.00  Event Title Description...</p>
-				<p>00.00  Event Title Description...</p>
-			</div>
-			<div class="tile-slide button-group">
-				<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
-				<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
-			</div>
-		</div>
-		<div class="tile-2 tc1 tight">
-			<div class="tile-body"> <i class="tile-type ic3 fa fa-rocket"></i>
-				<h5>Lift Off</h5>
-				<p>00.00  Project Launch</p>
-				<p>00.00  Project Launch</p>
-				<p>00.00  Project Launch</p>
-			</div>
-		</div>
-		<div class="tile-2 tc1">
-			<div class="tile-body"> <i class="tile-type ic3 fa fa-smile-o"></i>
-				<h5>Welcome</h5>
-				<p>First Last: Account Manager<br>
-					First Last: SP Developer<br>
-					First Last: SP Developer</p>
-			</div>
-		</div>
-	</div><!-- /cols -->
-
-
-
-
-
-	<div class="small-12 medium-12 large-6 columns">
-		<div class="row narrow">
-			<div class="small-12 medium-9 large-9 columns">
-				<div class="tile-2 tc1">
-					<div class="tile-body"> <i class="tile-type ic3 fa fa-briefcase"></i>
-						<h5>Open Recs</h5>
-						<div class="pull-left tight">
-							<p>00.00  Business Analyst</p>
-							<p>00.00  Business Analyst</p>
-							<p>00.00  Business Analyst</p>
-						</div>
-					</div>
+	<div class="row">
+		<div class="small-12 medium-6 large-3 columns">
+			<div class="tile-full tight">
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p> <span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
 				</div>
-				<div class="tile-2 tc1">
-					<div class="tile-body"> 
-					<i class="tile-type ic3 fa fa-calendar"></i>
-					<!--<i class="tile-type ic3 glyphicon glyphicon-calendar"></i>-->
-						<h5>Company Events</h5>
-						<div class="pull-left tight">
-							<p>00.00  Event Title Description</p>
-							<p>00.00  Event Title Description</p>
-							<p>00.00  Event Title Description</p>
-						</div>
-					</div>
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
 				</div>
-				<div class="tile-4 tc1">
-					<div class="tile-body"> <i class="tile-type ic3 fa fa-trophy"></i>
-						<h5>Recent Wins</h5>
-						<p><strong>NNSR Bags New Client - Elkay</strong><br>
-							Date Closed: 8/19/2013<br>
-							Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
-						<p><strong>NNSR Bags New Client - Elkay</strong><br>
-							Date Closed: 8/19/2013<br>
-							Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
-					</div>
-					<div class="tile-slide button-group">
-						<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
-						<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
-					</div>
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
 				</div>
-			</div>
-			<div class="small-12 medium-3 large-3 columns">
-				<div class="row">
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-gallery-md.png" alt="Gallery" />
-						<h5 class="tile-label bottom">Gallery</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-blog-md.png" alt="Blog" />
-						<h5 class="tile-label bottom">Blog</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-twitter-md.png" alt="Twitter" />
-						<h5 class="tile-label bottom">Twitter</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities" />
-						<h5 class="tile-label bottom">Communities</h5>
-						</a> 
-					</div>
-				</div><!-- /row --> 
-			</div><!-- /col-3 --> 
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
+				</div>
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
+				</div>
+				<div class="post-cell tc3">
+					<p>Salvation Army - Angel Tree Program Success!</p>
+					<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
+				</div>
+				<div class="widget1 tc5">
+					<p> <img src="img/icon-announcement-sm.png" class="text-left" alt="Add Announcement"> Add Announcement +</p>
+				</div>
+			</div><!-- /tile full --> 
 			
-		</div><!-- /row narrow --> 
-	</div><!-- /cols --> 
-	
-</div><!--/row--> 
+		</div><!-- /cols -->
+		s
+
+		<div class="small-12 medium-6 large-3 columns">
+			<div class="tile-4 tc1 tight">
+				<img src="img/industry-news.jpg" alt="Industry News">
+				<div class="tile-body">
+					<h6>NNSR Bags New Client - Elkay</h6>
+					<p>00.00  Event Title Description...</p>
+					<p>00.00  Event Title Description...</p>
+				</div>
+				<div class="tile-slide button-group">
+					<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
+					<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
+				</div>
+			</div>
+			<div class="tile-2 tc1 tight">
+				<div class="tile-body"> <i class="tile-type ic3 fa fa-rocket"></i>
+					<h5>Lift Off</h5>
+					<p>00.00  Project Launch</p>
+					<p>00.00  Project Launch</p>
+					<p>00.00  Project Launch</p>
+				</div>
+			</div>
+			<div class="tile-2 tc1">
+				<div class="tile-body"> <i class="tile-type ic3 fa fa-smile-o"></i>
+					<h5>Welcome</h5>
+					<p>First Last: Account Manager<br>
+						First Last: SP Developer<br>
+						First Last: SP Developer</p>
+				</div>
+			</div>
+		</div><!-- /cols -->
+
+
+
+
+
+		<div class="small-12 medium-12 large-6 columns">
+			<div class="row narrow">
+				<div class="small-12 medium-9 large-9 columns">
+					<div class="tile-2 tc1">
+						<div class="tile-body"> <i class="tile-type ic3 fa fa-briefcase"></i>
+							<h5>Open Recs</h5>
+							<div class="pull-left tight">
+								<p>00.00  Business Analyst</p>
+								<p>00.00  Business Analyst</p>
+								<p>00.00  Business Analyst</p>
+							</div>
+						</div>
+					</div>
+					<div class="tile-2 tc1">
+						<div class="tile-body"> 
+						<i class="tile-type ic3 fa fa-calendar"></i>
+						<!--<i class="tile-type ic3 glyphicon glyphicon-calendar"></i>-->
+							<h5>Company Events</h5>
+							<div class="pull-left tight">
+								<p>00.00  Event Title Description</p>
+								<p>00.00  Event Title Description</p>
+								<p>00.00  Event Title Description</p>
+							</div>
+						</div>
+					</div>
+					<div class="tile-4 tc1">
+						<div class="tile-body"> <i class="tile-type ic3 fa fa-trophy"></i>
+							<h5>Recent Wins</h5>
+							<p><strong>NNSR Bags New Client - Elkay</strong><br>
+								Date Closed: 8/19/2013<br>
+								Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
+							<p><strong>NNSR Bags New Client - Elkay</strong><br>
+								Date Closed: 8/19/2013<br>
+								Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
+						</div>
+						<div class="tile-slide button-group">
+							<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
+							<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
+						</div>
+					</div>
+				</div>
+				<div class="small-12 medium-3 large-3 columns">
+					<div class="row">
+						<div class="small-6 medium-12 large-12 columns"> 
+							<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-gallery-md.png" alt="Gallery" />
+							<h5 class="tile-label bottom">Gallery</h5>
+							</a> </div>
+						<div class="small-6 medium-12 large-12 columns"> 
+							<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-blog-md.png" alt="Blog" />
+							<h5 class="tile-label bottom">Blog</h5>
+							</a> </div>
+						<div class="small-6 medium-12 large-12 columns"> 
+							<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-twitter-md.png" alt="Twitter" />
+							<h5 class="tile-label bottom">Twitter</h5>
+							</a> </div>
+						<div class="small-6 medium-12 large-12 columns"> 
+							<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities" />
+							<h5 class="tile-label bottom">Communities</h5>
+							</a> 
+						</div>
+					</div><!-- /row --> 
+				</div><!-- /col-3 --> 
+				
+			</div><!-- /row narrow --> 
+		</div><!-- /cols --> 
+		
+	</div><!--/row--> 
 
 
 
