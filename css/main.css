@@ -29,7 +29,7 @@ body {
 	font-size: 1.1em;
 	line-height: 1.4em;
 	background: #132732 url("../img/bg-body-sm.jpg") repeat-x 0 0;
-	color: #fff;
+	color: #FFF;
 }
 
 img {
@@ -42,7 +42,7 @@ h2, h3, h4, h5, h6 {
 	margin: 0 0 0.8em; 
 	font-weight: normal;
 	text-transform: uppercase;
-	color: #31c7d8;
+	color: #31C7D8;
 }
 
 
@@ -54,8 +54,6 @@ h5 { font-size: 0.875rem; }
 h6 { font-size: 0.75rem; }
 
 small { font-size: 85%; }
-
-
 
 input[type="text"], textarea {
 	-webkit-box-sizing: border-box;
@@ -119,8 +117,43 @@ input[type="submit"]:active {
 .top-bar {
 	height: 40px;
 	line-height: 40px;
+	margin-top: 0;
 	background: rgba(102, 102, 102, 0.8);
 }
+
+.top-bar .swiper-nav {
+    background-color: none;
+    background-image: none;
+    height: inherit;
+    width: inherit;
+}
+
+.top-bar .swiper-container {
+	backface-visibility: inherit;
+	overflow: inherit;
+	margin: 0 auto;
+	position: relative;
+	z-index: 999;
+}
+
+.top-bar .swiper-nav li {
+	background-color: #333;
+}
+
+.top-bar .apps {
+    font-size: 1.8rem;
+    position: relative;
+    right: 10px;
+}
+
+.top-bar {
+	overflow: inherit;
+}
+
+.top-bar .apps.ico {
+	color: #fff;
+}
+
 
 /* gutter narrow */
 .row.narrow { margin: 0 -0.313em; }
@@ -138,24 +171,7 @@ input[type="submit"]:active {
 
 
 /* why the fuck these inline on page */
-
-.top-bar .swiper-nav {
-    background-color: none;
-    background-image: none;
-    height: inherit;
-    width: inherit;
-}
-.top-bar .swiper-container {
-	backface-visibility: inherit;
-	overflow: inherit;
-	margin: 0 auto;
-	position: relative;
-	z-index: 999;
-}
-.top-bar .swiper-nav li {
-	background-color: #333;
-}
-
+/*
 
 .menu-trigger {
 	z-index: 10;
@@ -169,7 +185,7 @@ input[type="submit"]:active {
 .menu-trigger:before {
 		box-shadow: 0 2px #34495E, 0 10px #FFFFFF, 0 8px #34495E, 0 20px #FFFFFF;
 		position: absolute;
-		left: 4px;
+		left: 6px;
 		top: 8px;
 		width: 32px;
 		height: 4px;
@@ -177,16 +193,9 @@ input[type="submit"]:active {
 
 a.menu-trigger { outline: medium none; }
 
-.top-bar .apps {
-    font-size: 1.8rem;
-    position: relative;
-    right: 10px;
-}
 
 .f-dropdown.content.utils { max-width: 400px; }
-.top-bar { overflow: inherit; }
-.top-bar .apps.ico { color: #fff; }
-
+*/
 
 
 /* top-bar Nav menu */
@@ -198,6 +207,7 @@ a.menu-trigger { outline: medium none; }
 	position: absolute;
 	z-index: 9999;
 }
+
 .mp-pusher:after, .mp-level:after { background: none; }
 .mp-level { background-color: #e9e9e9; }
 .mp-menu ul li:before { color: rgba(0, 0, 0, 0.5); }
@@ -229,24 +239,29 @@ a.menu-trigger { outline: medium none; }
     width: auto;
 	margin-right: 50px;
 }
+
 #searchdrop > li {
     display: block;
     width: 100%;
 }
+
 #searchdrop li a {
     background: #fff;
     color: #333;
 }
+
 #searchdrop li a:hover { background: #ddd; }
 
 .searchbox a.searchcat.button {
     padding-left: 0.5rem;
     padding-right: 2rem;
 }
+
 .searchbox .searchcat > span {
     border-left: medium none;
     padding-left: 3.2rem;
 }
+
 .searchbox .searchcat.button span:before {
     margin-left: 0;
 }
@@ -273,7 +288,7 @@ a.menu-trigger { outline: medium none; }
 .tile-5 		{ min-height: 304px; }
 .tile-6 		{ min-height: 367px; }
 .tile-7 		{ min-height: 430px; }
-.tile-full 	{ min-height: 493px; }
+.tile-full		{ min-height: 493px; }
 
 .tile-1, .tile-2, .tile-3, .tile-4, .tile-5, .tile-6, .tile-7, .tile-full {  
 	/*overflow: hidden;*/
