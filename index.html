@@ -40,9 +40,56 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 
+
+<style type="text/css">
+@keyframes turnin {
+  0% {
+    transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+-ms-transform: rotate(0deg);
+  }
+  50% {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+  }
+  100% {
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+  }
+}
+#omgzsh {
+position: absolute;
+width: 500%;
+height: 500%;
+left: -200%;
+top: -200%;
+z-index: 0;
+	background: #42bfa6; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #42bfa6 0%, #98a5e2 22%, #d65b40 47%, #dbe87f 75%, #458e66 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#42bfa6), color-stop(22%,#98a5e2), color-stop(47%,#d65b40), color-stop(75%,#dbe87f), color-stop(100%,#458e66)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  #42bfa6 0%,#98a5e2 22%,#d65b40 47%,#dbe87f 75%,#458e66 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  #42bfa6 0%,#98a5e2 22%,#d65b40 47%,#dbe87f 75%,#458e66 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  #42bfa6 0%,#98a5e2 22%,#d65b40 47%,#dbe87f 75%,#458e66 100%); /* IE10+ */
+background: linear-gradient(45deg,  #42bfa6 0%,#98a5e2 22%,#d65b40 47%,#dbe87f 75%,#458e66 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#42bfa6', endColorstr='#458e66',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+;
+}
+
+</style>
+
 </head>
 <body>
 
+<!-- <div id="omgzsh"></div>
+ -->
 <a href="#" id="trigger" class="menu-trigger"></a>
 
 <!-- Multilevel push menu ===================================================== -->		

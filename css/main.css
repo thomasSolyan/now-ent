@@ -138,9 +138,7 @@ input[type="submit"]:active {
 
 
 /* why the fuck these inline on page */
-.top-bar {
-    line-height: 30px;
-}
+
 .top-bar .swiper-nav {
     background-color: none;
     background-image: none;
@@ -163,14 +161,15 @@ input[type="submit"]:active {
 	z-index: 10;
 	float: left;
 	display: inline-block;
-	height: 45px;
+	height: 40px;
 	padding: 0 22px !important;
 	background-color: #333;
 }
+
 .menu-trigger:before {
 		box-shadow: 0 2px #34495E, 0 10px #FFFFFF, 0 8px #34495E, 0 20px #FFFFFF;
 		position: absolute;
-		left: 5px;
+		left: 4px;
 		top: 8px;
 		width: 32px;
 		height: 4px;
@@ -325,6 +324,7 @@ a.menu-trigger { outline: medium none; }
     right: 10px;
     top: 0;
 }
+
 em.stat {
 		margin-right: 30px;
 		color: #31c7d8;
@@ -333,6 +333,7 @@ em.stat {
     font-weight: normal;
 		font-style: normal;
 }
+
 .tile-stat .tile-label { 
 		bottom: 0;
 		color: #333;
