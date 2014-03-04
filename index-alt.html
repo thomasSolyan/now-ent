@@ -49,37 +49,30 @@
 
 		<section class="top-bar-section"> 
 
-			<a href="#" id="trigger" class="menu-trigger"></a>
+			<a href="#" id="trigger-panel-main" class="menu-trigger"></a>
 
 
 			<!-- Right Nav Section -->
-			<div class="right">
+			<div class="search-wrapper right">
+
 
 				 <!-- Search box -->
-			    <div class="searchbox">
-			        <div class="left">
-			        <div class="left">
-			        	<a href="#" class="button split tiny secondary searchcat right"> 
-			        		<i class="fa fa-align-justify"></i><span data-dropdown="searchdrop"></span>
-			        	</a>
-					</div>
-					<div class="left">
-			        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
-								<li><a href="#">People</a></li>
-								<li><a href="#">Projects</a></li>
-								<li><a href="#">Documents</a></li>
-								<li><a href="#">Communities</a></li>
-							</ul>
-			        	<input type="search" placeholder="search...">
-			        </div>
-			        <div class="left"> 
-						<a class="tiny button secondary" href="#"><i class="fa fa-search"></i></a> 
-			        </div>
+			    <div class="search-box">
+		        	<a href="#" class="button split tiny secondary search-category bg-color-white"> 
+		        		<span data-dropdown="searchdrop"></span>
+		        	</a>
+		        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
+						<li><a href="#">People</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Documents</a></li>
+						<li><a href="#">Communities</a></li>
+					</ul>
+		        	<input type="search" placeholder="Enter keywords...">
+					<a class="tiny button search-magnifier" href="#"></a> 
 			    </div>
-				  <!-- /Search box -->
 
-				<a href="#" data-dropdown="utils" class="apps ico"><i class="apps fa fa-th"></i></a>
-				<div id="utils" data-dropdown-content class="f-dropdown content utils">
+				<a href="#" data-dropdown="utils" class="trigger-apps right"></a>
+				<div id="utils" data-dropdown-content class="f-dropdown medium utils">
 					<div class="drop-panel-bg">
 						<div class="row">
 							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">You</a> <span class="label secondary">You</span> </div>
@@ -165,13 +158,7 @@ $(document).foundation();
 <script src="js/classie.js"></script>
 <script src="js/mlpushmenu.js"></script>
 <script>
-	// layered menu
 	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-
-	// covered menu
-	//new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
-	//	type : 'cover'
-	//} );
 </script>
 
 <!-- Swiper
@@ -184,16 +171,6 @@ $(document).foundation();
 <script src="js/main.js"></script>
 
 <script>
-	//  var mySwiper = new Swiper('.swiper-container',{
-	//pagination: '.pagination',
-	//loop:true,
-	//		mousewheelControl:true,
-	//		mousewheelControlForceToAxis,
-	//    hashNav: true  
-	/*    grabCursor: true,
-	paginationClickable: true
-	})
-	*/
 
 
 	var mySwiper = new Swiper('.swiper-container', {
@@ -210,7 +187,6 @@ $(document).foundation();
 		  draggable: false  
 		}
 	})
-
 
 	var mySwiper2 = new Swiper('.swiper-pagi',{
 		pagination: '.pagination',
