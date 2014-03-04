@@ -247,26 +247,34 @@ input[type="submit"]:active {
 
 
 
-/* =Menu Drop 
+/* =searchboxshit
 ------------------------------------------------------------ */
-/*.menu-drop {
-    position: relative;
-    z-index: 250;
-    top: 4px;
-    left: 10px;
-    font-size: 2em;
+/* top-bar searchbox */
+#searchdrop > li {
+    display: block;
+    width: 100%;
 }
-.menu-drop-icon {
-		position: absolute;
-		top: 0;
-		left: 65px;
-		line-height: 1;
-		padding: 2px 6px;		
-		background-color: #fff;
+
+#searchdrop li a {
+    background: #fff;
     color: #333;
 }
-*/
 
+#searchdrop li a:hover { background: #ddd; }
+
+.searchbox a.searchcat.button {
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+}
+
+.searchbox .searchcat > span {
+    border-left: medium none;
+    padding-left: 3.2rem;
+}
+
+.searchbox .searchcat.button span:before {
+    margin-left: 0;
+}
 
 
 

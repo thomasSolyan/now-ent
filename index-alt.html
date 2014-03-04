@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="Multi-Level Push Menu: Off-screen navigation with multiple levels" />
+	<meta name="keywords" content="multi-level, menu, navigation, off-canvas, off-screen, mobile, levels, nested, transform" />
+	<meta name="author" content="Adriano Pezzella" />
+
+	<title>Multi-Level Push Menu</title>
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- Foundation core CSS -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/foundation.css" />
+	
+	<!-- Font Awesome icons -->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css" />
+	<link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css" />
+	<link rel="stylesheet" href="css/simple-app.css" />
+
+	<!-- Multi push menu -->
+	<!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="css/mlpushmenu.css" />
+
+	<!-- Custom Branding -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script src="js/modernizr.custom.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+
+<body>
+
+<div class="fixed">
+	<nav class="top-bar" data-topbar data-options="is_hover: false">
+
+		<section class="top-bar-section"> 
+
+			<a href="#" id="trigger" class="menu-trigger"></a>
+
+
+			<!-- Right Nav Section -->
+			<div class="right">
+
+				 <!-- Search box -->
+			    <div class="searchbox">
+			        <div class="left">
+			        <div class="left">
+			        	<a href="#" class="button split tiny secondary searchcat right"> 
+			        		<i class="fa fa-align-justify"></i><span data-dropdown="searchdrop"></span>
+			        	</a>
+					</div>
+					<div class="left">
+			        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
+								<li><a href="#">People</a></li>
+								<li><a href="#">Projects</a></li>
+								<li><a href="#">Documents</a></li>
+								<li><a href="#">Communities</a></li>
+							</ul>
+			        	<input type="search" placeholder="search...">
+			        </div>
+			        <div class="left"> 
+						<a class="tiny button secondary" href="#"><i class="fa fa-search"></i></a> 
+			        </div>
+			    </div>
+				  <!-- /Search box -->
+
+				<a href="#" data-dropdown="utils" class="apps ico"><i class="apps fa fa-th"></i></a>
+				<div id="utils" data-dropdown-content class="f-dropdown content utils">
+					<div class="drop-panel-bg">
+						<div class="row">
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">You</a> <span class="label secondary">You</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Lync</a> <span class="label secondary">Lync</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Book Room</a> <span class="label secondary">Book Room</span> </div>
+						</div><!-- /row --> 
+						<div class="row">
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Directory</a> <span class="label secondary">Directory</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Calendar</a> <span class="label secondary">Calendar</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Time Entry</a> <span class="label secondary">Time Entry</span> </div>
+						</div><!-- /row --> 
+						<div class="row">
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Payroll</a> <span class="label secondary">Payroll</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Travel</a> <span class="label secondary">Travel</span> </div>
+							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Help Desk</a> <span class="label secondary">Help Desk</span> </div>
+						</div><!-- /row -->
+
+						<div><a href="#">More →</a></div>
+					</div><!-- /drop panel --> 
+				</div>
+
+		</section>
+	</nav>
+
+</div>
+
+
+
+<!-- Multilevel push menu ===================================================== -->		
+
+<div class="nav-container">
+	<!-- Push Wrapper -->
+	<div class="mp-pusher" id="mp-pusher">
+
+		<!-- mp-menu -->
+		<nav id="mp-menu" class="mp-menu">
+			<div class="mp-level">
+				<!-- <h2 class="icon icon-world" title=""></h2> -->
+				<ul>
+					<li class="icon icon-arrow-left">
+						<a class="icon " href="#">Global Menu</a>
+						<div class="mp-level">
+							<h2 class="icon" title="Global Menu">Global Menu</h2>
+							<a class="mp-back" href="#">back</a>
+							<ul>
+								<li><a href="#">Internet</a></li>
+								<li><a href="#">Intranet</a></li>
+								<li><a href="#">Extranet</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><h4 class="title">Intranet</h4></li>
+					<li><a class="icon fa fa-home" href="#">Home</a></li>
+					<li><a class="icon fa fa-briefcase" href="#">Projects &amp; Teams</a></li>
+					<li><a class="icon fa fa-group" href="#">Employee Center</a></li>
+					<li><a class="icon fa fa-wrench" href="#">Workplace Services</a></li>
+					<li><a class="icon fa fa-building-o" href="#">Company</a></li>
+					<li><a class="icon fa fa-cog" href="#">My Settings</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- /mp-menu -->
+	</div><!-- /mp-pusher -->
+</div><!-- /nav-container -->
+
+
+
+
+<!-- Foundation core JavaScript
+================================================== -->
+<!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+<script src="js/jquery.min.js"></script>
+
+<script src="js/foundation.min.js"></script>
+
+<script>
+$(document).foundation();
+</script>
+
+<script src="js/offcanvas.js"></script>
+
+
+<script src="js/classie.js"></script>
+<script src="js/mlpushmenu.js"></script>
+<script>
+	// layered menu
+	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+
+	// covered menu
+	//new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+	//	type : 'cover'
+	//} );
+</script>
+
+<!-- Swiper
+================================================== -->
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/idangerous.swiper.scrollbar-2.0.js"></script>
+
+<!-- Custom Scripts -->
+<script src="js/simple-app.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+	//  var mySwiper = new Swiper('.swiper-container',{
+	//pagination: '.pagination',
+	//loop:true,
+	//		mousewheelControl:true,
+	//		mousewheelControlForceToAxis,
+	//    hashNav: true  
+	/*    grabCursor: true,
+	paginationClickable: true
+	})
+	*/
+
+
+	var mySwiper = new Swiper('.swiper-container', {
+		scrollContainer:true,
+		mousewheelControl : true,
+		mode:'vertical',
+
+	    //pagination: '.pagination',
+	    //paginationClickable: true,
+		//Enable Scrollbar
+		scrollbar: {
+		  container :'.swiper-scrollbar',
+		  hide: true,
+		  draggable: false  
+		}
+	})
+
+
+	var mySwiper2 = new Swiper('.swiper-pagi',{
+		pagination: '.pagination',
+		paginationClickable: true
+	})
+
+	$('.arrow-left').on('click', function(e){
+		e.preventDefault()
+		mySwiper.swipePrev()
+	})
+
+	$('.arrow-right').on('click', function(e){
+		e.preventDefault()
+		mySwiper.swipeNext()
+	})
+</script>
+
+</body>
+
+</html>
