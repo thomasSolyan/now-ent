@@ -197,6 +197,10 @@ input[type="search"] {
 	background: url('../img/now-ent-ui-sprite.png') 0px -100px no-repeat;	
 }
 
+#utils {
+	width: auto !important;
+}
+
 
 
 
