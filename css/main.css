@@ -126,6 +126,11 @@ input[type="submit"]:active {
 	max-height: 40px;
 }
 
+.top-bar-section ul {
+	background: #FFF;
+	top: 37px !important;
+}
+
 .top-bar-section {
 	height: 40px;
 }

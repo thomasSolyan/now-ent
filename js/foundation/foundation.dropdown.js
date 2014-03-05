@@ -158,7 +158,7 @@
           position : 'absolute',
           width: '95%',
           'max-width': 'none',
-          top: position.top + target.outerHeight()
+          top: position.top + target.outerHeight() + 2
         });
         dropdown.css(Foundation.rtl ? 'right':'left', '2.5%');
       } else {
