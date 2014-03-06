@@ -44,7 +44,7 @@
 
 <body>
 
-<div class="fixed">
+<div class="fixed height-special">
 	<nav class="top-bar" data-topbar data-options="is_hover: false">
 
 		<section class="top-bar-section"> 
@@ -74,20 +74,20 @@
 				<a href="#" data-dropdown="utils" class="trigger-apps right"></a>
 				<div id="utils" data-dropdown-content class="f-dropdown medium content utils">
 					<div class="drop-panel-bg">
-						<div class="row">
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">You</a> <span class="label secondary">You</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Lync</a> <span class="label secondary">Lync</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Book Room</a> <span class="label secondary">Book Room</span> </div>
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-you" alt="You"></a><span class="label secondary">You</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-lnc" alt="Lync"></a><span class="label secondary">Lync</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-lib" alt="Book Room"></a><span class="label secondary">Book Room</span></div>
 						</div><!-- /row --> 
-						<div class="row">
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Directory</a> <span class="label secondary">Directory</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Calendar</a> <span class="label secondary">Calendar</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Time Entry</a> <span class="label secondary">Time Entry</span> </div>
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-dir" alt="Directory"></a><span class="label secondary">Directory</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-cal" alt="Calendar"></a><span class="label secondary">Calendar</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-tim" alt="Time Entry"></a><span class="label secondary">Time Entry</span></div>
 						</div><!-- /row --> 
-						<div class="row">
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Payroll</a> <span class="label secondary">Payroll</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Travel</a> <span class="label secondary">Travel</span> </div>
-							<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Help Desk</a> <span class="label secondary">Help Desk</span> </div>
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-pay" alt="Payroll"></a><span class="label secondary">Payroll</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-fly" alt="Travel"></a><span class="label secondary">Travel</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-nfo" alt="Help Desk"></a><span class="label secondary">Help Desk</span></div>
 						</div><!-- /row -->
 
 						<div><a href="#">More →</a></div>
@@ -97,13 +97,22 @@
 		</section>
 	</nav>
 
+	<a href="#" class="trigger-categories" title="Category View" data-dropdown="panel-categories"></a>
+	<div id="panel-categories" data-dropdown-content class="f-dropdown content now-categories">
+		<ul class="swiper-wrapper" data-dropdown-content>
+			<li class="swiper-slide nav-company"><a href="#"></a></li>
+			<li class="swiper-slide nav-space"><a href="#"></a></li>
+			<li class="swiper-slide nav-daily"><a href="#"></a></li>
+		</ul>
+	</div>
+
 </div>
 
 
 
 <!-- Multilevel push menu ===================================================== -->		
 
-<div class="nav-container">
+<div id="nav-con" class="nav-container kill-pointer">
 	<!-- Push Wrapper -->
 	<div class="mp-pusher" id="mp-pusher">
 
@@ -112,7 +121,7 @@
 			<div class="mp-level">
 				<!-- <h2 class="icon icon-world" title=""></h2> -->
 				<ul>
-					<li class="icon icon-arrow-left">
+					<li class="">
 						<a class="icon " href="#">Global Menu</a>
 						<div class="mp-level">
 							<h2 class="icon" title="Global Menu">Global Menu</h2>
@@ -158,7 +167,7 @@ $(document).foundation();
 <script src="js/classie.js"></script>
 <script src="js/mlpushmenu.js"></script>
 <script>
-	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
 </script>
 
 <!-- Swiper
@@ -202,6 +211,7 @@ $(document).foundation();
 		e.preventDefault()
 		mySwiper.swipeNext()
 	})
+
 </script>
 
 </body>

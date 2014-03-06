@@ -85,6 +85,7 @@
 			this.level = 0;
 			// the moving wrapper
 			this.wrapper = document.getElementById( 'mp-pusher' );
+			this.navwrap = document.getElementById( 'nav-con' );
 			// the mp-level elements
 			this.levels = Array.prototype.slice.call( this.el.querySelectorAll( 'div.mp-level' ) );
 			// save the depth of each of these mp-level elements
@@ -195,6 +196,7 @@
 			// add class mp-pushed to main wrapper if opening the first time
 			if( this.level === 1 ) {
 				classie.add( this.wrapper, 'mp-pushed' );
+				classie.remove( this.navwrap, 'kill-pointer');
 				this.open = true;
 			}
 			// add class mp-level-open to the opening level element
@@ -206,6 +208,7 @@
 			this.level = 0;
 			// remove class mp-pushed from main wrapper
 			classie.remove( this.wrapper, 'mp-pushed' );
+			classie.add( this.navwrap, 'kill-pointer');
 			this._toggleLevels();
 			this.open = false;
 		},
