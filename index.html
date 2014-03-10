@@ -39,963 +39,113 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 
-
-<style>
-
-
-.top-bar .swiper-nav {
-    background-color: none;
-    background-image: none;
-    height: inherit;
-    width: inherit;
-}
-
-.top-bar .swiper-container {
-	backface-visibility: inherit;
-	overflow: inherit;
-	margin: 0 auto;
-	position: relative;
-	z-index: 999;
-}
-
-
-.menu-trigger {
-	z-index: 10;
-	float: left;
-	display: inline-block;
-	height: 45px;
-	padding: 0 22px !important;
-	background-color: #333;
-}
-
-.menu-trigger:before {
-		box-shadow: 0 2px #34495E, 0 10px #FFFFFF, 0 8px #34495E, 0 20px #FFFFFF;
-		position: absolute;
-		left: 5px;
-		top: 8px;
-		width: 32px;
-		height: 4px;
-}
-
-a.menu-trigger { outline: medium none; }
-
-.top-bar .apps {
-    font-size: 1.8rem;
-    position: relative;
-    right: 10px;
-}
-
-.f-dropdown.content.utils { max-width: 400px; }
-
-.top-bar .apps.ico { color: #fff; }
-
-
-/* top-bar Nav menu */
-.nav-container { 
-	height: 100%;
-	padding-top: 45px;
-	background: none; 
-	overflow: inherit; 
-	position: absolute;
-	z-index: 9999;
-}
-
-.mp-pusher:after, .mp-level:after { background: none; }
-.mp-level { background-color: #e9e9e9; }
-.mp-menu ul li:before { color: rgba(0, 0, 0, 0.5); }
-.mp-menu ul li > a { color: #333; }
-#mp-menu li a { font-family: inherit; }
-
-#mp-menu .title {
-	background-color: #d5d5d5;
-	border-bottom: 2px solid #555;
-	color: #333;
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-bottom: 0;
-	padding: 0.5em 0.8em;
-}
-
-#mp-menu hr {
-    border-color: #909090;
-    margin: 0.1rem 0;
-    padding: 0;
-}
-
-
-/* top-bar searchbox */
-#searchdrop > li {
-    display: block;
-    width: 100%;
-}
-
-#searchdrop li a {
-    background: #fff;
-    color: #333;
-}
-
-#searchdrop li a:hover { background: #ddd; }
-
-.searchbox a.searchcat.button {
-    padding-left: 0.5rem;
-    padding-right: 2rem;
-}
-
-.searchbox .searchcat > span {
-    border-left: medium none;
-    padding-left: 3.2rem;
-}
-
-.searchbox .searchcat.button span:before {
-    margin-left: 0;
-}
-
-
-@media only screen and (max-width: 26em) { 
-	.top-bar .searchbox { margin-right: 40px; }
-	.searchbox input { width: 5rem; }
-}
-
-@media only screen and (max-width: 40em) { 
-
-}
-/*.mp-menu .mp-level.mp-level-overlay > ul > li > a, .mp-level.mp-level-overlay > ul > li:first-child > a*/
-
-#mp-menu .mp-level-overlay .title { border: none; background-color: transparent; }
-
-/* Icon Hacks */
-.icon.fa:before {
-    display: inline-block;
-    font-family: fontawesome;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: 1;
-    margin-right: 0.6em;
-    text-transform: none;
-}
-.apps i.fa {
-	font-size: 1.5rem;
-	margin-top: 10px;
-}
-
-i.fa.lg {
-    font-size: 1.8rem;
-    position: relative;
-    top: 5px;
-}
-.icon:before {
-	display: inline-block;
-	/*font-family: 'linecons';*/
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 1;
-	margin-right: 0.6em;
-	text-transform: none;
-}
-
-.swiper-nav.dropmenu { width: auto; background: none;  }
-.swiper-nav.dropmenu .swiper-wrapper { overflow: auto; }
-.swiper-nav.dropmenu .swiper-slide { float: none; }
-.swiper-nav.dropmenu { 
-    background: #fff;
-    height: 110px;
-    xposition: absolute;
-    xwidth: 200px;
-    z-index: 500;
-}
-
-
-.pagination {
-	position: absolute;
-	z-index: 20;
-	bottom: -6px;
-	width: 100%;
-	padding: 0 10px;
-}
-.swiper-pagination-switch {
-
-}
-
-.pagination .swiper-pagination-switch { 
-	display: inline-block;
-  	width: 32%; 
-	height: 15px; 
-	margin-right: 1%;
-	opacity: 0.8;
-	background: #555;
-	border: 1px solid #fff;
-	border-radius: 4px; 
-	cursor: pointer;
-}
-.pagination .swiper-pagination-switch:last-child { margin-right: 0; }
-.pagination .swiper-pagination-switch:hover { background: #333; }
-
-@media only screen and (max-width: 40em) { 
-	.page-inner { padding: 15px 0; } 
-}
-
-
-</style>
-
-
 </head>
+
+
 <body>
 
+<div class="fixed height-special">
+	<nav class="top-bar" data-topbar data-options="is_hover: false">
+
+		<section class="top-bar-section"> 
+
+			<a href="#" id="trigger-panel-main" class="menu-trigger"></a>
 
 
-<a href="#" id="trigger" class="menu-trigger"></a>
+			<!-- Right Nav Section -->
+			<div class="search-wrapper right">
+
+
+				 <!-- Search box -->
+			    <div class="search-box">
+		        	<a href="#" class="button split tiny secondary search-category bg-color-white"> 
+		        		<span data-dropdown="searchdrop"></span>
+		        	</a>
+		        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
+						<li><a href="#">People</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Documents</a></li>
+						<li><a href="#">Communities</a></li>
+					</ul>
+		        	<input type="search" placeholder="Enter keywords...">
+					<a class="tiny button search-magnifier" href="#"></a> 
+			    </div>
+
+				<a href="#" data-dropdown="utils" class="trigger-apps right"></a>
+				<div id="utils" data-dropdown-content class="f-dropdown medium content utils">
+					<div class="drop-panel-bg">
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-you" alt="You"></a><span class="label secondary">You</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-lnc" alt="Lync"></a><span class="label secondary">Lync</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-lib" alt="Book Room"></a><span class="label secondary">Book Room</span></div>
+						</div><!-- /row --> 
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-dir" alt="Directory"></a><span class="label secondary">Directory</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-cal" alt="Calendar"></a><span class="label secondary">Calendar</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-tim" alt="Time Entry"></a><span class="label secondary">Time Entry</span></div>
+						</div><!-- /row --> 
+						<div class="row linkico">
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-pay" alt="Payroll"></a><span class="label secondary">Payroll</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-fly" alt="Travel"></a><span class="label secondary">Travel</span></div>
+							<div class="small-4 columns"><a href="javascript:;" class="ico icon-nfo" alt="Help Desk"></a><span class="label secondary">Help Desk</span></div>
+						</div><!-- /row -->
+
+						<div><a href="#">More →</a></div>
+					</div><!-- /drop panel --> 
+				</div>
+
+		</section>
+	</nav>
+
+	<a href="#" class="trigger-categories" title="Category View" data-dropdown="panel-categories"></a>
+	<div id="panel-categories" data-dropdown-content class="f-dropdown content now-categories">
+		<ul class="swiper-wrapper" data-dropdown-content>
+			<li class="swiper-slide nav-company"><a href="#"></a></li>
+			<li class="swiper-slide nav-space"><a href="#"></a></li>
+			<li class="swiper-slide nav-daily"><a href="#"></a></li>
+		</ul>
+	</div>
+
+</div>
+
+
 
 <!-- Multilevel push menu ===================================================== -->		
 
-	<div class="nav-container">
+<div id="nav-con" class="nav-container kill-pointer">
+	<!-- Push Wrapper -->
+	<div class="mp-pusher" id="mp-pusher">
 
-			<!-- Push Wrapper -->
-			<div class="mp-pusher" id="mp-pusher">
-
-				<!-- mp-menu -->
-				<nav id="mp-menu" class="mp-menu">
-					<div class="mp-level">
-						<!-- <h2 class="icon icon-world" title=""></h2> -->
-						<ul>
-
-							<li class="icon icon-arrow-left">
-								<a class="icon " href="#">Global Menu</a>
-								<div class="mp-level">
-									<h2 class="icon" title="Global Menu">Global Menu</h2>
-									<a class="mp-back" href="#">back</a>
-									<ul>
-										<li><a href="#">Internet</a></li>
-										<li><a href="#">Intranet</a></li>
-										<li><a href="#">Extranet</a></li>
-									</ul>
-								</div>
-							</li>
-
-
-							<li><h4 class="title">Intranet</h4></li>
-							<li><a class="icon fa fa-home" href="#">Home</a></li>
-							<li><a class="icon fa fa-briefcase" href="#">Projects &amp; Teams</a></li>
-							<li><a class="icon fa fa-group" href="#">Employee Center</a></li>
-							<li><a class="icon fa fa-wrench" href="#">Workplace Services</a></li>
-							<li><a class="icon fa fa-building-o" href="#">Company</a></li>
-							<li><a class="icon fa fa-cog" href="#">My Settings</a></li>
-						</ul>
-							
-					</div>
-				</nav>
-				<!-- /mp-menu -->
-
-			</div><!-- /mp-pusher -->
-						
-		</div><!-- /nav-container -->
-<!-- /Multilevel push menu ===================================================== -->
-
-
-
-<!-- top-bar Panel menu ===================================================== -->		
-
-<!-- Header and Nav =================================================== -->
-
-<nav class="top-bar" data-topbar data-options="is_hover: false">
-
-
-	<section class="top-bar-section"> 
-
-		<!-- Right Nav Section -->
-		<div class="right">
-
-
-			 <!-- Search box -->
-			    <div class="xrow xcollapse searchbox">
-			        <div class="xlarge-4 xsmall-3 xcolumns left">
-			        	<a href="#" class="button split tiny secondary searchcat right"> 
-			        		<i class="fa fa-align-justify"></i><span data-dropdown="searchdrop"></span>
-			        	</a>
-					</div>
-					<div class="xlarge-6 xsmall-7 xcolumns left">
-			        	<ul id="searchdrop" class="f-dropdown" data-dropdown-content>
-								<li><a href="#">People</a></li>
-								<li><a href="#">Projects</a></li>
-								<li><a href="#">Documents</a></li>
-								<li><a href="#">Communities</a></li>
+		<!-- mp-menu -->
+		<nav id="mp-menu" class="mp-menu">
+			<div class="mp-level">
+				<!-- <h2 class="icon icon-world" title=""></h2> -->
+				<ul>
+					<li class="">
+						<a class="icon " href="#">Global Menu</a>
+						<div class="mp-level">
+							<h2 class="icon" title="Global Menu">Global Menu</h2>
+							<a class="mp-back" href="#">back</a>
+							<ul>
+								<li><a href="#">Internet</a></li>
+								<li><a href="#">Intranet</a></li>
+								<li><a href="#">Extranet</a></li>
 							</ul>
-			        	<input type="search" placeholder="search...">
-			        </div>
-			        <div class="xlarge-2 xsmall-2 xcolumns left"> 
-						<a class="tiny button secondary searchgo" href="#"><i class="fa fa-search"></i></a> 
-			        </div>
-			    </div>
-			  <!-- /Search box -->
-
-
-
-
-
-		<a href="#" data-dropdown="utils" class="apps ico"><i class="apps fa fa-th"></i></a>
-			<div id="utils" data-dropdown-content class="f-dropdown content utils">
-				<div class="drop-panel-bg">
-					<div class="row">
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">You</a> <span class="label secondary">You</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Lync</a> <span class="label secondary">Lync</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Book Room</a> <span class="label secondary">Book Room</span> </div>
-					</div><!-- /row --> 
-					<div class="row">
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Directory</a> <span class="label secondary">Directory</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Calendar</a> <span class="label secondary">Calendar</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Time Entry</a> <span class="label secondary">Time Entry</span> </div>
-					</div><!-- /row --> 
-					<div class="row">
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Payroll</a> <span class="label secondary">Payroll</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Travel</a> <span class="label secondary">Travel</span> </div>
-						<div class="small-4 columns linkico"> <a href="javascript:;" class="ico">Help Desk</a> <span class="label secondary">Help Desk</span> </div>
-					</div><!-- /row -->
-
-					<div><a href="#">More →</a></div>
-				</div><!-- /drop panel --> 
-			</div>
-
-
-
-
-
-
-
-	</section>
-</nav>
-<!-- /Header and Nav =================================================== --> 
-
-<!-- /top-bar Panel menu ===================================================== -->		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a href="#" class="button tiny secondary" title="Panel View" data-dropdown="paneldrop"><i class="fa fa-plus"></i></a>
-<div id="paneldrop" data-dropdown-content class="f-dropdown content">
-	<div class="swiper-nav swiper-container dropmenu">
-		<ul class="swiper-wrapper" data-dropdown-content>
-			<li class="swiper-slide"><a href="#">Company</a></li>
-			<li class="swiper-slide"><a href="#">My Workspace</a></li>
-			<li class="swiper-slide"><a href="#">My Day</a></li>
-		</ul>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-<!-- swiper pages ===================================================== -->		
-<div class="showcase swiper-pages swiper-container swiper-pagi">
-
-<!-- paging nav -->
-	 
-<!-- 	<div class="arrow-left"></div>
-	<div class="arrow-right"></div>	  -->
-	
-<!-- /paging nav -->
-
-
-<!-- swiper wrapper ===================================================== -->		
-<div class="swiper-wrapper">
-
-
-
-
-
-
-
-<!-- Slide 1 ================================================================ -->		
-<div class="swiper-slide">
-<div class="swiper-container scroll-container">
-<div class="swiper-scrollbar"></div>
-<div class="swiper-wrapper">
-<div class="swiper-slide" data-hash="slide1">
-<div class="page-inner">
-
-
-<div class="container">
-
-		
-<div class="row">
-	<div class="small-12 columns">
-		<h1>Company</h1>
-	</div>
-</div>
-
-<div class="row">
-	<div class="small-12 medium-6 large-3 columns">
-		<div class="tile-full tight">
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p> <span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="post-cell tc3">
-				<p>Salvation Army - Angel Tree Program Success!</p>
-				<p><span class="pull-left"> <i class="glyphicon glyphicon-time"></i> <small>15h ago</small> </span> <span class="pull-right"> <i class="glyphicon glyphicon-comment"></i> <b>23</b> </span> </p>
-			</div>
-			<div class="widget1 tc5">
-				<p> <img src="img/icon-announcement-sm.png" class="text-left" alt="Add Announcement"> Add Announcement +</p>
-			</div>
-		</div><!-- /tile full --> 
-		
-	</div><!-- /cols -->
-
-
-
-
-
-
-
-
-	<div class="small-12 medium-6 large-3 columns">
-		<div class="tile-4 tc1 tight">
-			<img src="img/industry-news.jpg" alt="Industry News">
-			<div class="tile-body">
-				<h6>NNSR Bags New Client - Elkay</h6>
-				<p>00.00  Event Title Description...</p>
-				<p>00.00  Event Title Description...</p>
-			</div>
-			<div class="tile-slide button-group">
-				<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
-				<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
-			</div>
-		</div>
-		<div class="tile-2 tc1 tight">
-			<div class="tile-body"> <i class="tile-type ic3 fa fa-rocket"></i>
-				<h5>Lift Off</h5>
-				<p>00.00  Project Launch</p>
-				<p>00.00  Project Launch</p>
-				<p>00.00  Project Launch</p>
-			</div>
-		</div>
-		<div class="tile-2 tc1">
-			<div class="tile-body"> <i class="tile-type ic3 fa fa-smile-o"></i>
-				<h5>Welcome</h5>
-				<p>First Last: Account Manager<br>
-					First Last: SP Developer<br>
-					First Last: SP Developer</p>
-			</div>
-		</div>
-	</div><!-- /cols -->
-
-
-
-
-
-	<div class="small-12 medium-12 large-6 columns">
-		<div class="row narrow">
-			<div class="small-12 medium-9 large-9 columns">
-				<div class="tile-2 tc1">
-					<div class="tile-body"> <i class="tile-type ic3 fa fa-briefcase"></i>
-						<h5>Open Recs</h5>
-						<div class="pull-left tight">
-							<p>00.00  Business Analyst</p>
-							<p>00.00  Business Analyst</p>
-							<p>00.00  Business Analyst</p>
 						</div>
-					</div>
-				</div>
-				<div class="tile-2 tc1">
-					<div class="tile-body"> 
-					<i class="tile-type ic3 fa fa-calendar"></i>
-					<!--<i class="tile-type ic3 glyphicon glyphicon-calendar"></i>-->
-						<h5>Company Events</h5>
-						<div class="pull-left tight">
-							<p>00.00  Event Title Description</p>
-							<p>00.00  Event Title Description</p>
-							<p>00.00  Event Title Description</p>
-						</div>
-					</div>
-				</div>
-				<div class="tile-4 tc1">
-					<div class="tile-body"> <i class="tile-type ic3 fa fa-trophy"></i>
-						<h5>Recent Wins</h5>
-						<p><strong>NNSR Bags New Client - Elkay</strong><br>
-							Date Closed: 8/19/2013<br>
-							Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
-						<p><strong>NNSR Bags New Client - Elkay</strong><br>
-							Date Closed: 8/19/2013<br>
-							Congrats to Alex Gasick on his first client win! Elkay makes sinks...</p>
-					</div>
-					<div class="tile-slide button-group">
-						<button type="button" class="button tiny"><i class="fa fa-arrow-left"></i></button>
-						<button type="button" class="button tiny"><i class="fa fa-arrow-right"></i></button>
-					</div>
-				</div>
+					</li>
+					<li><h4 class="title">Intranet</h4></li>
+					<li><a class="icon fa fa-home" href="#">Home</a></li>
+					<li><a class="icon fa fa-briefcase" href="#">Projects &amp; Teams</a></li>
+					<li><a class="icon fa fa-group" href="#">Employee Center</a></li>
+					<li><a class="icon fa fa-wrench" href="#">Workplace Services</a></li>
+					<li><a class="icon fa fa-building-o" href="#">Company</a></li>
+					<li><a class="icon fa fa-cog" href="#">My Settings</a></li>
+				</ul>
 			</div>
-			<div class="small-12 medium-3 large-3 columns">
-				<div class="row">
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-gallery-md.png" alt="Gallery" />
-						<h5 class="tile-label bottom">Gallery</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-blog-md.png" alt="Blog" />
-						<h5 class="tile-label bottom">Blog</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-twitter-md.png" alt="Twitter" />
-						<h5 class="tile-label bottom">Twitter</h5>
-						</a> </div>
-					<div class="small-6 medium-12 large-12 columns"> 
-						<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities" />
-						<h5 class="tile-label bottom">Communities</h5>
-						</a> 
-					</div>
-				</div><!-- /row --> 
-			</div><!-- /col-3 --> 
-			
-		</div><!-- /row narrow --> 
-	</div><!-- /cols --> 
-	
-</div><!--/row--> 
-
-
-
-
-</div><!--/.container -->
-
-
-</div><!-- /page inner -->
-</div>
-</div>
-</div>
-</div><!-- /swiper slide -->
-<!-- /Slide 1 ================================================================ -->		
-
-
-
-
-
-
-
-
-
-
-<!-- Slide 2 ================================================================ -->		
-<div class="swiper-slide">
-<div class="swiper-container scroll-container">
-<div class="swiper-scrollbar"></div>
-<div class="swiper-wrapper">
-<div class="swiper-slide" data-hash="slide2">
-<div class="page-inner">
-
-
-<div class="container">
-
-<div class="row">
-	<div class="small-12 columns">
-		<h1>My Workspace</h1>
-	</div>
-</div>
-	
-	<div class="row">
-		<div class="small-12 medium-6 large-4 columns">
-			<div class="tile-full tight">
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-hollinet.png" class="avatar pull-left" />
-					<p><strong>Clair Smith @ Hollinet</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>29m</small> </span> </p>
-					<p>Let's use Wordpress!  It's faster and cheaper to implement and maintain...</p>
-				</div>
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-treehouse.png" class="avatar pull-left" />
-					<p><strong>Jim Jones @ TreeHouse</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>2h</small> </span> </p>
-					<p>We will be upgrading Treehouse to Sharepoint 2013 over the next we...</p>
-				</div>
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-chrysler.png" class="avatar pull-left" />
-					<p><strong>Kelly McDonell @ Chrysler</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>4h</small> </span> </p>
-					<p>We will be designing Chrysler's portal on Websphere server</p>
-				</div>
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-crowe.png" class="avatar pull-left" />
-					<p><strong>Brian Li @ Crowe Horwath</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>13h</small> </span> </p>
-					<p>Websphere application is ready for testing.  Please visit test server at h...</p>
-				</div>
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-allstate.png" class="avatar pull-left" />
-					<p><strong>Mike O'Toole @ AllState</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>1d</small> </span> </p>
-					<p>WordPress is being deplyed as a managed Saas solution</p>
-				</div>
-				<div class="post-cell tc4"> 
-					<img src="img/avatar-lockheed.png" class="avatar pull-left" />
-					<p><strong>Brianna Kelly @ Lockheed</strong> <span class="pull-right"> <i class="glyphicon glyphicon-time"></i> <small>3d</small> </span> </p>
-					<p>Sharepoint deployment will begin on the 27/3/14.  Mike and Rob are res... </p>
-				</div>
-				
-			</div><!-- /tile full --> 
-			
-		</div><!-- /col -->
-
-
-
-
-		<div class="small-12 medium-6 large-4 columns">
-			<div class="tile-4 tc1 tight">
-				<div class="tile-body"> 
-				<i class="tile-type ic3 fa fa-calendar"></i>
-				<!--<i class="tile-type ic3 glyphicon glyphicon-calendar"></i>-->
-					<h5>My Events</h5>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-					<p>00.00  Event Title Description...</p>
-				</div>
-			</div>
-			<div class="tile-4 tc1 tight">
-				<div class="tile-body"> <i class="tile-type ic3 fa fa-list"></i>
-					<h5>My Tasks</h5>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<p>00.00  Task description...</p>
-					<a href="javascript:;" class="tile-edit ic2  fa fa-pencil"></a> </div>
-			</div>
-		</div><!-- /col -->
-
-
-
-
-
-		<div class="small-12 medium-12 large-4 columns">
-			<div class="row narrow">
-				<div class="small-4 columns"> 
-					<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-manage-md.png" alt="Manage Employees" />
-					<h5 class="tile-label bottom">Manage Employees</h5>
-					</a> <a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-meeting-md.png" alt="Reserve Room" />
-					<h5 class="tile-label bottom">Reserve Room</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-project-site-md.png" alt="Project Site" />
-					<h5 class="tile-label bottom">Project Site</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-project-site-md.png" alt="Project Site" />
-					<h5 class="tile-label bottom">Project Site</h5>
-					</a> </div>
-				<!-- /col-4 -->
-				
-				<div class="small-4 columns"> 
-					<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-approve-md.png" alt="Approve Time Sheets" />
-					<h5 class="tile-label bottom">Approve Time Sheets</h5>
-					</a> <a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-tasks-md.png" alt="Delegate Tasks" />
-					<h5 class="tile-label bottom">Delegate Tasks</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-project-site-md.png" alt="Project Site" />
-					<h5 class="tile-label bottom">Project Site</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-project-site-md.png" alt="Project Site" />
-					<h5 class="tile-label bottom">Project Site</h5>
-					</a> </div>
-				<!-- /col-4 -->
-				
-				<div class="small-4 columns"> 
-					<a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-time-md.png" alt="Enter Timesheet" />
-					<h5 class="tile-label bottom">Enter Timesheet</h5>
-					</a> <a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-create-project-site-md.png" alt="Create Project Site" />
-					<h5 class="tile-label bottom">Create Project Site</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-project-site-md.png" alt="Project Site" />
-					<h5 class="tile-label bottom">Project Site</h5>
-					</a> <a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-arrow-md-r.png" alt="More Projects" />
-					<h5 class="tile-label bottom">More Projects</h5>
-					</a> 
-				</div>
-				<!-- /col-4 --> 
-				
-			</div><!-- /row narrow --> 
-			
-		</div><!-- /col --> 
-	</div><!--/row--> 
-
-
-</div><!--/.container -->
-
-
-</div><!-- /page inner -->
-</div>
-</div>
-</div>
-</div><!-- /swiper slide -->
-<!-- /Slide 2 ================================================================ -->		
-
-
-
-
-
-
-
-
-
-
-<!-- Slide 3 ================================================================ -->		
-<div class="swiper-slide">
-<div class="swiper-container scroll-container">
-<div class="swiper-scrollbar"></div>
-<div class="swiper-wrapper">
-<div class="swiper-slide" data-hash="slide3">
-<div class="page-inner">
-
-
-<div class="container">
-
-
-<div class="row">
-	<div class="small-12 columns">
-		<h1>My Day</h1>
-	</div>
-</div>
-
-<div class="row">
-	<div class="small-12 medium-6 large-3 columns">
-		<div class="row narrow">
-			<div class="small-6 columns">
-				<div class="tile-2 tile-stat tc1 edge">
-					<p class="stat">00</p>
-					<h5 class="tile-label">Alerts</h5>
-				</div>
-				<div class="tile-2 tile-stat tc1 edge">
-					<p class="stat">00</p>
-					<h5 class="tile-label">Reminders</h5>
-				</div>
-			</div><!-- /col 6 -->
-			
-			<div class="small-6 columns">
-				<div class="tile-2 tile-stat tc1 edge">
-					<p class="stat">00</p>
-					<h5 class="tile-label">Invites</h5>
-				</div>
-				<div class="tile-2 tile-stat tc1 edge">
-					<p class="stat">75%</p>
-					<h5 class="tile-label">Profile Complete</h5>
-				</div>
-			</div><!-- /col 6 --> 
-			
-		</div><!-- /row narrow -->
-		
-		<div class="tile-4 tc1 tight">
-			<div class="tile-body">
-				<h5>Pinboard</h5>
-				<p><span class="num">0</span> By Topic</p>
-				<p><span class="num">0</span> By Topic</p>
-				<p><span class="num">0</span> By Topic</p>
-				<p><span class="num">0</span> By Topic</p>
-				<p><span class="num">0</span> By Topic</p>
-				<p><span class="num">0</span> By Topic</p>
-			</div>
-		</div>
-	</div><!-- /col -->
-
-
-
-
-
-
-	<div class="small-12 medium-6 large-4 columns">
-		<div class="tile-4 tc1 tight">
-			<div class="tile-body">
-				<h5>Utilization / Time</h5>
-
-				<p><em class="stat">00</em>    Billable YTD</p>
-				<p><em class="stat">00</em>    Contribution YTD</p>
-				<p><em class="stat">00</em>    PTO Accrued YTD</p>
-
-			</div>
-		</div>
-		<div class="tile-4 tc1 tight">
-			<div class="tile-body">
-				<h5>Annual Goals</h5>
-				<p>By Topic</p>
-				<p>By Topic</p>
-				<p>By Topic</p>
-				<p>By Topic</p>
-				<p>By Topic</p>
-				<p>By Topic</p>
-			</div>
-		</div>
-	</div><!-- /col -->
-
-
-
-
-
-
-	<div class="small-12 medium-12 large-5 columns">
-		<div class="row narrow">
-			<div class="small-8 columns">
-				<div class="tile-2 tc2 edge center">
-					<div class="diginum cntr">
-						<p><span>00</span> <span>00</span> <span>00</span> <span>00</span></p>
-						<h5 class="tile-label">Until Your Vacation</h5>
-					</div>
-				</div>
-			</div><!-- /col-8 -->
-			
-			<div class="small-4 columns"> <a href="javascript:;" class="tile-2 tc2 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Schedule PTO</h5>
-				</a> 
-			</div><!-- /col-4 --> 
-			
-		</div>
-		<div class="row narrow">
-			<div class="small-8 columns">
-				<div class="tile-2 tc2 tile-body tight">
-					<h5 class="tile-label">Following</h5>
-					<p><span class="num">0</span> Communities</p>
-					<p><span class="num">0</span> Topics</p>
-					<p><span class="num">0</span> People</p>
-				</div>
-			</div><!-- /col-8 -->
-			
-			<div class="small-4 columns">
-				<div class="tile-2 tc2 edge">
-					<h5 class="tile-label bottom">Add Feed</h5>
-				</div>
-			</div><!-- /col-4 --> 
-		</div>
-		<div class="row narrow">
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Feed Label</h5>
-				</a> 
-			</div><!-- /col-4 -->
-			
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Feed Label</h5>
-				</a> 
-			</div><!-- /col-4 -->
-			
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Feed Label</h5>
-				</a> 
-			</div><!-- /col-4 --> 
-			
-		</div>
-		<div class="row narrow">
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Feed Label</h5>
-				</a> 
-			</div><!-- /col-4 -->
-			
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img src="img/icon-communities-md.png" alt="Communities">
-				<h5 class="tile-label bottom">Feed Label</h5>
-				</a> 
-			</div><!-- /col-4 -->
-			
-			<div class="small-4 columns"> 
-				<a href="javascript:;" class="tile-2 tc3 edge center"> <img alt="More Feeds" src="img/icon-arrow-md-r.png">
-				<h5 class="tile-label bottom">More Feeds</h5>
-				</a> 
-			</div><!-- /col-4 --> 
-		</div><!-- /row narrow --> 
-		
-	</div><!-- /col --> 
-	
-</div><!--/row--> 
-
-
-
-
-</div><!--/.container -->
-
-
-</div><!-- /page inner -->
-</div>
-</div>
-</div>
-</div><!-- /swiper slide -->
-<!-- /Slide 3 ================================================================ -->		
-
-
-
-
-
-
-
-</div><!-- /swiper wrapper ===================================================== -->
-<div class="pagination"></div>
-</div><!-- /swiper pages ===================================================== -->		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		</nav>
+		<!-- /mp-menu -->
+	</div><!-- /mp-pusher -->
+</div><!-- /nav-container -->
 
 
 
@@ -1006,8 +156,9 @@ i.fa.lg {
 <script src="js/jquery.min.js"></script>
 
 <script src="js/foundation.min.js"></script>
+
 <script>
-	$(document).foundation();
+$(document).foundation();
 </script>
 
 <script src="js/offcanvas.js"></script>
@@ -1016,16 +167,8 @@ i.fa.lg {
 <script src="js/classie.js"></script>
 <script src="js/mlpushmenu.js"></script>
 <script>
-	// layered menu
-	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-
-	// covered menu
-	//new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
-	//	type : 'cover'
-	//} );
+	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
 </script>
-
-
 
 <!-- Swiper
 ================================================== -->
@@ -1036,58 +179,41 @@ i.fa.lg {
 <script src="js/simple-app.js"></script>
 <script src="js/main.js"></script>
 
-
-
 <script>
-//  var mySwiper = new Swiper('.swiper-container',{
-//pagination: '.pagination',
-//loop:true,
-//		mousewheelControl:true,
-//		mousewheelControlForceToAxis,
-//    hashNav: true  
-/*    grabCursor: true,
-paginationClickable: true
-})
-*/
 
 
-var mySwiper = new Swiper('.swiper-container', {
-	scrollContainer:true,
-	mousewheelControl : true,
-	mode:'vertical',
+	var mySwiper = new Swiper('.swiper-container', {
+		scrollContainer:true,
+		mousewheelControl : true,
+		mode:'vertical',
 
-    //pagination: '.pagination',
-    //paginationClickable: true,
-	//Enable Scrollbar
-	scrollbar: {
-	  container :'.swiper-scrollbar',
-	  hide: true,
-	  draggable: false  
-	}
-})
+	    //pagination: '.pagination',
+	    //paginationClickable: true,
+		//Enable Scrollbar
+		scrollbar: {
+		  container :'.swiper-scrollbar',
+		  hide: true,
+		  draggable: false  
+		}
+	})
 
+	var mySwiper2 = new Swiper('.swiper-pagi',{
+		pagination: '.pagination',
+		paginationClickable: true
+	})
 
-var mySwiper2 = new Swiper('.swiper-pagi',{
-	pagination: '.pagination',
-	paginationClickable: true
-})
+	$('.arrow-left').on('click', function(e){
+		e.preventDefault()
+		mySwiper.swipePrev()
+	})
 
-$('.arrow-left').on('click', function(e){
-	e.preventDefault()
-	mySwiper.swipePrev()
-})
+	$('.arrow-right').on('click', function(e){
+		e.preventDefault()
+		mySwiper.swipeNext()
+	})
 
-$('.arrow-right').on('click', function(e){
-	e.preventDefault()
-	mySwiper.swipeNext()
-})
 </script>
 
-
-
-
-
-
-
 </body>
+
 </html>
