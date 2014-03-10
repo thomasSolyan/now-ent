@@ -197,3 +197,21 @@ input[type="submit"]:active {
 
 
 
+
+
+
+
+/***********************************
+	8. Queries
+***********************************/
+
+
+@media (min-width: 768px) {
+	body { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
+}
+
+@media (min-width: 992px) {
+	body { background: #132732 url("../img/bg-body-lg.jpg") repeat-x 0 0; }
+}
+
+
