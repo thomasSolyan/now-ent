@@ -27,6 +27,7 @@ html, body, .nav-container, .scroller {
 	position: absolute;
 	overflow: hidden;
 	width: 300px;
+	height: inherit;
 	top: 40px;
 	z-index: 100;
 }
