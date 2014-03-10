@@ -29,7 +29,7 @@ body {
 	font-size: 100%;
 	/*font-size: 13px;*/
 	line-height: 1.5;
-	background: #132732 url("../img/bg-body-sm.jpg") repeat-x 0 0;
+	background: #132732 url("../img/bg-body-sm.jpg") no-repeat 0 0;
 	color: #fff;
 }
 
@@ -81,7 +81,8 @@ input[type="text"], textarea {
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3) inset, 0px 1px 0px rgba(255, 255, 255, 0.2);
 	border:1px solid #000;
 	border-radius: 5px;
-	padding: 9px 10px;
+	padding: 0.45em 0.5em;
+	margin: 0;
 	color: #fff;
 	width: 100%;
 }
@@ -131,6 +132,8 @@ input[type="submit"]:active {
 	height: inherit;
 }
 
+
+
 /***********************************
 	3. Structure
 ***********************************/
@@ -162,52 +165,6 @@ input[type="submit"]:active {
 	background: url('../img/now-ent-ui-sprite.png') 0px -100px no-repeat;	
 }
 
-#utils {
-	width: auto !important;
-}
-
-.linkico {
-	margin-bottom: 1.2em;
-}
-
-.ico { 
-	display: inline-block; 
-	width: 80px; 
-	height: 80px; 
-	border-radius: 0.25em;
-}
-
-	.ico.icon-you { background: #369 url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat; }
-		.ico.icon-you:hover { background: #23476b url('../img/now-ent-ui-sprite.png') 0px -140px no-repeat; }
-	.ico.icon-lnc { background: #369 url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-		.ico.icon-lnc:hover { background: #23476b url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-	.ico.icon-lib { background: #369 url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-		.ico.icon-lib:hover { background: #23476b url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-	.ico.icon-dir { background: #369 url('../img/now-ent-ui-sprite.png') -80px -140px no-repeat;}
-		.ico.icon-dir:hover { background: #23476b url('../img/now-ent-ui-sprite.png') -80px -140px no-repeat;}
-	.ico.icon-cal { background: #369 url('../img/now-ent-ui-sprite.png') -240px -140px no-repeat;}
-		.ico.icon-cal:hover { background: #23476b url('../img/now-ent-ui-sprite.png') -240px -140px no-repeat;}
-	.ico.icon-tim { background: #369 url('../img/now-ent-ui-sprite.png') -320px -140px no-repeat;}
-		.ico.icon-tim:hover { background: #23476b url('../img/now-ent-ui-sprite.png') -320px -140px no-repeat;}
-	.ico.icon-pay { background: #369 url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-		.ico.icon-pay:hover { background: #23476b url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-	.ico.icon-fly { background: #369 url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-		.ico.icon-fly:hover { background: #23476b url('../img/now-ent-ui-sprite.png') 0 -140px no-repeat;}
-	.ico.icon-nfo { background: #369 url('../img/now-ent-ui-sprite.png') -400px -140px no-repeat;}
-		.ico.icon-nfo:hover { background: #23476b url('../img/now-ent-ui-sprite.png') -400px -140px no-repeat;}
-
-
-.linkico .label {
-	position: absolute;
-	bottom: 0;
-    margin: 0;
-    padding: 0;
-    color: #454545;
-    background: none;
-    display: block;
-    line-height: 1.3em;
-    font-size: 0.8em;
-}
 
 .trigger-categories { /* on hover shows full height panel from side */
 	display: block;
