@@ -49,34 +49,33 @@
 
 	<nav class="top-bar" data-topbar data-options="is_hover: false">
 
-	    <ul class="title-area">
-	        <li class="name"></li>
-	        <li class="toggle-topbar menu-icon">
-	        	<a href="#"><span></span></a>
-	        </li>
-	    </ul>
-		<section class="top-bar-section">
-		    <ul class="left">
-		        <li class="divider"></li>
-		        <li class="active"><a href="#">Main Item 1</a></li>
-		        <li class="divider"></li>
-		        <li><a href="#">Main Item 2</a></li>
-		        <li class="divider"></li>
-				<li class="has-form">
-				    <form>
-				        <div class="row collapse">
-				            <div class="small-8 columns">
-				                <input type="text">
-				            </div>
-				            <div class="small-4 columns">
-				                <a href="#" class="alert button">Search</a>
-				            </div>
-				        </div>
-				    </form>
-				</li>		        
-		    </ul>
-		</section>
+		<div class="row">
+			<div class="small-1 columns alpha">
+				<a href="#" id="trigger-panel-main" class="ui-button-categories"></a>
+			</div>
+			<div class="small-5 columns push-4">
+			    <ul class="left">
+					<li class="has-form">
+					    <form>
+					        <div class="row collapse">
+					            <div class="small-8 columns">
+					                <input type="text">
+					            </div>
+					            <div class="small-2 columns">
+					                <a href="#" class="alert button">Search</a>
+					            </div>
+					        </div>
+					    </form>
+					</li>		        
+			    </ul>
+			</div>
+			<div class="small-1 columns omega">
+				<p style="text-align:right;">asdf</p>
+			</div>
 
+		</div>
+
+		
 	</nav>
 
 </div>
@@ -92,6 +91,14 @@
 <script>
 $(document).foundation();
 </script>
+
+<script src="js/main.js"></script>
+
+<script src="js/mlpushmenu.js"></script>
+<script>
+	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
+</script>
+
 
 </body>
 

@@ -1,10 +1,10 @@
 @charset "utf-8";
-/***********************************
+/*************************************************
 	NOW Enterprise | SP2013 | Intranet
-	weo3 - 2.23.14
+	weo3 - 3.3.14
 
-1. HTML elements
-2. Foundation Overrides (?)
+1. HTML Elements (and ID elements)
+2. Foundation Overrides
 3. Structure
 4. Navigation
 5. Modular
@@ -12,12 +12,12 @@
 7. General
 8. Queries
 
-***********************************/
+*************************************************/
 
-/***********************************
-	1. HTML Elements
-***********************************/
 
+/*************************************************
+	1. HTML Elements (and ID elements)
+*************************************************/
 body, html {
 	position: relative;
 	height: 100%;
@@ -125,10 +125,15 @@ input[type="submit"]:active {
 	box-shadow: 0px 2px 2px rgba(0,0,0,0.4) inset;
 }
 
-
-/***********************************
+/*************************************************
 	2. Foundation Overrides
-***********************************/
+*************************************************/
+
+
+.top-bar {
+	height: 40px;
+	line-height: 40px;
+}
 
 .top-bar-section .has-form {
 	height: inherit;
@@ -136,15 +141,18 @@ input[type="submit"]:active {
 
 
 
-/***********************************
+/*************************************************
 	3. Structure
-***********************************/
+*************************************************/
 
 
 
-/***********************************
+
+
+/*************************************************
 	4. Navigation
-***********************************/
+*************************************************/
+
 
 .trigger-apps {
 	display: block;
@@ -168,21 +176,35 @@ input[type="submit"]:active {
 }
 
 
-.trigger-categories { /* on hover shows full height panel from side */
+.ui-button-categories {
 	display: block;
 	height: 40px;
 	width: 40px;
-	background: url('../img/now-ent-ui-sprite.png') -40px 0 no-repeat;
+	background: url('../img/now-ent-ui-sprite.png') 0 0 no-repeat;
 }
+
+	.ui-button-categories:hover {
+		background: url('../img/now-ent-ui-sprite.png') 0 -40px no-repeat;
+	}
 
 .kill-pointer {
 	pointer-events:none;
 }
 
 
-/***********************************
+/*************************************************
 	4. Modular
-***********************************/
+*************************************************/
+
+.alpha {
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.omega {
+	padding-right: 0;
+	margin-right: 0;
+}
 
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
@@ -193,9 +215,9 @@ input[type="submit"]:active {
 
 
 
-/***********************************
+/*************************************************
 	7. General
-***********************************/
+*************************************************/
 
 
 
@@ -203,9 +225,10 @@ input[type="submit"]:active {
 
 
 
-/***********************************
+/*************************************************
 	8. Queries
-***********************************/
+*************************************************/
+
 
 
 @media (min-width: 768px) {
