@@ -76,6 +76,14 @@ input[type="text"], textarea {
 	padding: 0.25em;
 }
 
+	input[type="text"].ui-search-ne:before {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: #FF9900;
+	}
+
 input[type="submit"] {
 	height: inherit; /* might be a bad fix */
 }
@@ -117,22 +125,25 @@ input[type="submit"]:active {
 *************************************************/
 
 
-.trigger-apps {
+.ui-button-apps {
 	display: block;
 	height: 40px;
 	width: 40px;
 	background: url('../img/now-ent-ui-sprite.png') -80px 0 no-repeat;
 }
 
-.search-category {
+.ui-button-search-category {
+	display: block;
 	width: 20px;
 	padding-right: 3rem !important;
 	border-radius: 0.3em 0 0 0.3em;
 	background: url('../img/now-ent-ui-sprite.png') 5px -55px no-repeat;
 }
 
-.search-magnifier {
-	height: 31px !important;
+.ui-button-magnifier {
+	display: block;
+	height: 40px;
+	width: 40px;
 	border-radius: 0 0.5em 0.5em 0;
 	border-bottom: 1px solid #454545;
 	background: url('../img/now-ent-ui-sprite.png') 0px -100px no-repeat;	
