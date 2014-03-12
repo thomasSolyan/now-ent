@@ -76,7 +76,7 @@ input[type="text"], textarea {
 	padding: 0.25em;
 }
 
-	input[type="text"].ui-search-ne:before {
+	input[type="text"].ui-textfield-ne:before {
 		content: "";
 		display: block;
 		width: 40px;
@@ -142,11 +142,12 @@ input[type="submit"]:active {
 
 .ui-button-magnifier {
 	display: block;
-	height: 40px;
+	height: 26px;
 	width: 40px;
-	border-radius: 0 0.5em 0.5em 0;
+	margin-top: 7px;
+	border-radius: 0 0.2em 0.2em 0;
 	border-bottom: 1px solid #454545;
-	background: url('../img/now-ent-ui-sprite.png') 0px -100px no-repeat;	
+	background: url('../img/now-ent-ui-sprite.png') 0px -104px no-repeat;	
 }
 
 
