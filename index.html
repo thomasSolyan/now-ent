@@ -31,7 +31,7 @@
 	<!-- Custom Branding -->
 	<link rel="stylesheet" href="css/main.css" />
 
-	<script src="js/modernizr.custom.js"></script>
+	<script src="/js/vendor/modernizr.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -47,7 +47,7 @@
 
 <div class="fixed">
 
-	<nav class="top-bar" data-topbar data-options="is_hover: false">
+	<nav class="top-bar">
 
 		<div class="row">
 			<div class="small-1 columns alpha">
@@ -69,8 +69,8 @@
 					</li>		        
 			    </ul>
 			</div>
-			<div class="small-1 columns omega">
-				<p style="text-align:right;">asdf</p>
+			<div class="right-small small-1 columns omega">
+				<a href="#" id="trigger-panel-apps" class="ui-button-apps"></a>
 			</div>
 
 		</div>
@@ -84,12 +84,18 @@
 
 
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<!-- <script src="js/jquery.min.js"></script> -->
+<script src="/js/vendor/jquery.js"></script>
+<script src="/js/vendor/fastclick.js"></script>
 <script src="js/foundation.min.js"></script>
 
 <script>
-$(document).foundation();
+$(document).foundation({
+  topbar : {
+    custom_back_text: false,
+    is_hover: false,
+    mobile_show_parent_link: true
+  }
+});
 </script>
 
 <script src="js/main.js"></script>

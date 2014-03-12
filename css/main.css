@@ -127,6 +127,8 @@ input[type="submit"]:active {
 
 .ui-button-apps {
 	display: block;
+	position: absolute;
+	right: 0;
 	height: 40px;
 	width: 40px;
 	background: url('../img/now-ent-ui-sprite.png') -80px 0 no-repeat;
@@ -149,7 +151,6 @@ input[type="submit"]:active {
 	border-bottom: 1px solid #454545;
 	background: url('../img/now-ent-ui-sprite.png') 0px -104px no-repeat;	
 }
-
 
 .ui-button-categories {
 	display: block;
