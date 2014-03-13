@@ -56,20 +56,18 @@
 			<div class="small-5 columns push-4">
 			    <ul class="left">
 					<li class="has-form">
-					    <form>
-					        <div class="row collapse">
-					            <div class="small-11 columns">
-					                <input type="text" value="Enter keywords..." name="ui-search-ne" class="ui-textfield-ne" onfocus="if(this.value == 'Enter keywords...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Enter keywords...'; }">
-					            </div>
-					            <div class="small-1 columns">
-					                <a href="#" class="ui-button-magnifier"></a>
-					            </div>
-					        </div>
-					    </form>
+				        <div class="row collapse">
+				            <div class="large-10 small-11 columns">
+				                <input type="text" value="Enter keywords..." name="ui-search-ne" class="ui-textfield-ne" onfocus="if(this.value == 'Enter keywords...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Enter keywords...'; }">
+				            </div>
+				            <div class="large-2 small-1 columns">
+				                <a href="#" class="ui-button-magnifier"></a>
+				            </div>
+				        </div>
 					</li>		        
 			    </ul>
 			</div>
-			<div class="right-small small-1 columns omega">
+			<div class="small-1 columns omega">
 				<a href="#" id="trigger-panel-apps" class="ui-button-apps"></a>
 			</div>
 
@@ -86,7 +84,11 @@
 
 <script src="/js/vendor/jquery.js"></script>
 <script src="/js/vendor/fastclick.js"></script>
-<script src="js/foundation.min.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.topbar.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/mlpushmenu.js"></script>
 
 <script>
 $(document).foundation({
@@ -98,9 +100,7 @@ $(document).foundation({
 });
 </script>
 
-<script src="js/main.js"></script>
 
-<script src="js/mlpushmenu.js"></script>
 <script>
 	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
 </script>
