@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
 
 	//Init Navigation
 	var nav = $('.swiper-nav').swiper({
@@ -6,23 +6,25 @@ $(function(){
 		freeMode:true,
 		freeModeFluid:true,
 		onSlideClick: function(nav){
-			pages.swipeTo( nav.clickedSlideIndex )
+			pages.swipeTo(nav.clickedSlideIndex);
 		}
-	})
+	});
 
 	//Function to Fix Pages Height
-	function fixPagesHeight() {
+	function fixPagesHeight(){
 		$('.swiper-pages').css({
 			height: $(window).height()-nav.height
 		})
 	}
+
 	$(window).on('resize',function(){
-		fixPagesHeight()
+		fixPagesHeight();
 	})
-	fixPagesHeight()
+
+	fixPagesHeight();
 
 	//Init Pages
-	var pages = $('.swiper-pages').swiper()
+	var pages = $('.swiper-pages').swiper();
 
 	//Scroll Containers
 	$('.scroll-container').each(function(){
@@ -33,8 +35,8 @@ $(function(){
 			scrollbar: {
 				container:$(this).find('.swiper-scrollbar')[0]
 			}
-		})
-	})
+		});
+	});
 
 	//Gallery
 	var swiperGallery = $('.swiper-gallery').swiper({
@@ -45,7 +47,7 @@ $(function(){
 		scrollbar: {
 			container:$('.swiper-gallery .swiper-scrollbar')[0]
 		}
-	})
-	swiperGallery.reInit()
+	});
+	swiperGallery.reInit();
 
-})
+});
