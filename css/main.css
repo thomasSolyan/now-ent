@@ -141,6 +141,10 @@ input[type="submit"]:active {
 	float: left;
 }
 
+.f-dropdown:after {
+	border-color: transparent transparent #fff transparent;
+}
+
 .split.button.secondary span:before {
 	border-color: #999 transparent transparent transparent;
 }
