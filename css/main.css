@@ -178,8 +178,9 @@ input[type="submit"]:active {
 }
 
 #utils.f-dropdown.content {
-	border: solid 1px #999;
+	border: solid 1px #CFCBCB;
 	border-radius: 0.3em;
+	overflow: hidden;
 }
 
 
@@ -235,10 +236,35 @@ input[type="search"] {
 
 #utils {
 	width: auto !important;
+	padding: 0;
+	margin: 0;
 }
 
 .linkico {
-	margin-bottom: 1.2em;
+	margin-bottom: 1.5em;
+}
+
+	.linkico:first-child {
+		margin-top: 1.3em;
+	}
+
+.linkico .label {
+	position: absolute;
+	bottom: 0;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: none;
+    display: block;
+    line-height: 1.3em;
+    font-size: 0.8em;
+	text-align: center;
+	width: 60px;
+}
+
+.linkico.foot {
+	background-color: #f4f4f4;
+	margin-bottom: 0;
 }
 
 .ico { 
@@ -257,20 +283,6 @@ input[type="search"] {
 	.ico.icon-fly { background: url('../img/now-ent-ui-sprite.png') -420px -150px no-repeat;}
 	.ico.icon-nfo { background: url('../img/now-ent-ui-sprite.png') 0px -220px no-repeat; }
 
-
-.linkico .label {
-	position: absolute;
-	bottom: 0;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    background: none;
-    display: block;
-    line-height: 1.3em;
-    font-size: 0.8em;
-	text-align: center;
-	width: 60px;
-}
 
 .trigger-categories { /* on hover shows full height panel from side */
 	display: block;
@@ -302,11 +314,12 @@ input[type="search"] {
 
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
-.bg-color-charcoal { background-color: #666 !important; }
+.bg-color-char { background-color: #666 !important; }
 .bg-color-blue { background-color: #369 !important; }
 .bg-color-red { background-color: #DF3106 !important; }
 
-
+.txt-color-grey { color: #ADADAD !important; }
+.txt-color-char { color: #666; }
 
 
 /***********************************
