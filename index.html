@@ -620,13 +620,19 @@
 
 <script language="javascript">
 
-var mt = '';
-(window.innerWidth < 480) ? mt = 'vertical' : mt = 'horizontal';
+var __stackDirection = '';
+var __freeMode = '';
+(window.innerWidth < 480) ? __stackDirection = 'vertical' : __stackDirection = 'horizontal';
+(window.innerWidth < 480) ? __freeMode = true : __freeMode = false;
+
+console.log("free falllllllin: "+__freeMode);
+
 
 var panelControl = new Swiper('.swiper-container', {
-	scrollContainer:false,
+	scrollContainer: false,
 	mousewheelControl : true,
-	mode: mt,
+	mode: __stackDirection,
+    freeMode: __freeMode,
 	scrollbar: {
 	  container :'.swiper-scrollbar',
 	  hide: true,
@@ -637,6 +643,7 @@ var panelControl = new Swiper('.swiper-container', {
 $('.nav-company').on('click', function(e){
 	e.preventDefault();
     panelControl.swipeTo(0);
+
 });
 
 $('.nav-space').on('click', function(e){
