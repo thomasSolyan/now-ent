@@ -1,6 +1,6 @@
 @charset "utf-8";
 /***********************************
-	NOW-ENT | SP2013 | Intranet
+	Hollister | SP2013 | Intranet
 	weo3 - 12.23.13
 
 1. HTML elements
@@ -161,7 +161,6 @@ input[type="submit"]:active {
 
 .fixed.height-special {
 	height: 100%;
-	pointer-events: none;
 }
 
 .f-dropdown:before {
@@ -175,7 +174,7 @@ input[type="submit"]:active {
 	position: absolute;
 	top: -12px;
 	left: 10px;
-	z-index: 98;
+	z-index: 99;
 }
 
 #utils.f-dropdown.content {
@@ -894,25 +893,120 @@ a.menu-drop-icon {
     padding: 0 15px;
 }
 
-.post-cell:last-child {
-	margin-bottom: 10px;
+.post-cell:last-child { margin-bottom: 10px; }
+
+.post-cell > p { margin-top: 0; }
+
+
+
+
+
+	.showcase {
+		position: absolute;
+		top: 40px;
+		width: 100%;
+		/*width: 640px;
+		height: 300px;
+		padding: 30px 40px;
+		border-radius: 20px;
+		background: #111;
+		border: 3px solid white;
+		margin: 5px auto;	
+		box-shadow: 0px 0px 5px #000;
+	*/
+	}
+		
+	.showcase .arrow-left,
+	.showcase .arrow-right {
+		position: absolute;
+    	z-index: 1000;
+		top: 30px;
+    	width: 50px;
+    	height: 50px;
+		border: 1px solid #555;
+		border-radius: 100%;
+	}
+
+	.showcase .arrow-left {
+		background: url('../img/arrows.png') no-repeat 14px 10px rgba(51, 53, 59, 0.3);
+		left: 10px;
+	}
+	.showcase .arrow-right {
+		background: url('../img/arrows.png') no-repeat 18px -76px rgba(51, 53, 59, 0.3);
+		right: 10px;
+	}
+
+	.showcase .arrow-left:hover { background-color: rgba(51, 53, 59, 0.5); }
+	.showcase .arrow-right:hover { background-color: rgba(51, 53, 59, 0.5); }
+
+
+/*.showcase > .swiper-wrapper > .swiper-slide {
+    opacity: 0;
+}
+.showcase.initialized > .swiper-wrapper > .swiper-slide {
+    opacity: 1;
+}
+*/
+
+
+/*
+.showcase .swiper-slide {
+    height: 100%;
+}
+.showcase .swiper-slide .inner {
+    height: 100%;
+    margin: 0 50px;
+    position: relative;
 }
 
-.post-cell > p {
-	margin-top: 0;
+.showcase .phone {
+    background: none repeat scroll 0 0 #000000;
+    border: 3px solid #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+    float: left;
+    height: 440px;
+    margin-top: 20px;
+    padding: 30px 20px 20px;
+    width: 280px;
 }
+.showcase .phone iframe {
+    height: 440px;
+    width: 280px;
+}
+.showcase .movies-phone {
+    width: 320px;
+}
+.showcase .movies-phone iframe {
+    height: 440px;
+    width: 320px;
+}
+.showcase .phone-right {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    float: right;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 280px;
+}
+.showcase .phone-right .title {
+    margin-top: 0;
+}
+.showcase .title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.showcase a {
+    /*color: #FFFFFF;
+}
+*/
 
-.showcase {
-	position: absolute;
-	top: 80px;
-	width: 100%;
-}
+
 
 
 .showcase iframe {
     display: block;
 }
-
 .showcase .phone-h, .showcase .phone-pad {
     background: none repeat scroll 0 0 #000000;
     border: 3px solid #FFFFFF;
@@ -923,12 +1017,10 @@ a.menu-drop-icon {
     padding: 30px 40px;
     width: 700px;
 }
-
 .showcase .phone-h iframe, .showcase .phone-pad iframe {
     height: 320px;
     width: 700px;
 }
-
 .showcase .phone-pad {
     border-bottom: medium none;
     border-radius: 20px 20px 0 0;
@@ -936,43 +1028,35 @@ a.menu-drop-icon {
     padding-bottom: 0;
     width: 768px;
 }
-
 .showcase .phone-pad iframe {
     height: 469px;
     width: 768px;
 }
-
 .showcase .appstore-slide {
     line-height: 1.2;
 }
-
 .showcase .appstore-slide .title {
     margin-top: 0;
 }
-
 .showcase .example-app {
     color: #FFFFFF;
     display: inline-block;
     margin: 0 5px;
     text-decoration: none;
 }
-
 .showcase .example-app img {
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     box-shadow: 0 1px 2px #000000;
 }
-
 .showcase .example-app .title {
     display: block;
     font-size: 18px;
     margin: 10px 0;
 }
-
 .showcase .example-app:hover {
     text-decoration: underline;
 }
-
 .showcase .left, .showcase .right {
     background: url("../img/arrow-left.png") no-repeat scroll center center #000000;
     cursor: pointer;
@@ -985,26 +1069,21 @@ a.menu-drop-icon {
     width: 40px;
     z-index: 10;
 }
-
 .showcase .left:hover, .showcase .right:hover {
    /* opacity: 1;*/
     width: 80px;
 }
-
 .showcase .right {
     background: url("../img/arrow-right.png") no-repeat scroll center center #000000;
     left: auto;
     right: 0;
 }
-
 .showcase .more-examples span {
     cursor: pointer;
 }
-
 .showcase .more-examples span:hover {
     text-decoration: underline;
 }
-
 .showcase .try-app {
     background: none repeat scroll 0 0 #000000;
     display: inline-block;

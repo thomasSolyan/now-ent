@@ -22,7 +22,7 @@ $(function(){
 	fixPagesHeight()
 
 	//Init Pages
-	var pages = $('.swiper-pages').swiper();
+	var pages = $('.swiper-pages').swiper()
 
 	//Scroll Containers
 	$('.scroll-container').each(function(){
@@ -46,6 +46,6 @@ $(function(){
 			container:$('.swiper-gallery .swiper-scrollbar')[0]
 		}
 	})
-	swiperGallery.reInit()
+	//swiperGallery.reInit()
 
 })
