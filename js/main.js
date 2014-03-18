@@ -1,4 +1,17 @@
 $(function() {
+    
+    // kill-pointer tweak to keep conflict of left corner buttons minimized
+    $('.nav-container').click(function() {
+        if( $(this).hasClass('kill-pointer') ) {
+            // awesome
+            $(this).removeClass('kill-pointer');
+        } else {
+            // more awesome
+            $(this).addClass('kill-pointer');
+        }
+    }
+
+
     var showcase = $('.showcase').swiper({
         slidesPerView: 'auto',
         keyboardControl: true,
@@ -33,5 +46,5 @@ $(function() {
         e.preventDefault()
         $('div.changelog').slideDown(600)
     });
-    $('.showcase').addClass('initialized')
+    $('.showcase').addClass('initialized');
 });
