@@ -40,10 +40,6 @@
 </head>
 <body>
 
-
-
-<!-- <a href="#" id="trigger" class="menu-trigger"></a> -->
-
 <div class="">
 	<nav class="top-bar" data-topbar data-options="is_hover: false">
 		<section class="top-bar-section"> 
@@ -739,13 +735,9 @@
 <script>
 
 var mySwiper = new Swiper('.swiper-container', {
-	scrollContainer:true,
+	scrollContainer:false,
 	mousewheelControl : true,
-	mode:'vertical',
-
-    //pagination: '.pagination',
-    //paginationClickable: true,
-	//Enable Scrollbar
+	mode:'horizontal',
 	scrollbar: {
 	  container :'.swiper-scrollbar',
 	  hide: true,
@@ -753,21 +745,29 @@ var mySwiper = new Swiper('.swiper-container', {
 	}
 })
 
+//mySwiper.swipeTo(index, speed, runCallbacks)
 
 var mySwiper2 = new Swiper('.swiper-pagi',{
 	pagination: '.pagination',
 	paginationClickable: true
-})
+});
 
-$('.arrow-left').on('click', function(e){
-	e.preventDefault()
-	mySwiper.swipePrev()
-})
+$('.aaasfd').on('click', function(e){
+	e.preventDefault();
+    mySwiper.swipeTo(0);
+});
 
-$('.arrow-right').on('click', function(e){
-	e.preventDefault()
-	mySwiper.swipeNext()
-})
+$('.arasdfdt').on('click', function(e){
+	e.preventDefault();
+    mySwiper.swipeTo(1);
+});
+
+$('.aaasfd').on('click', function(e){
+    e.preventDefault();
+    mySwiper.swipeTo(2);
+});
+
+
 </script>
 
 
