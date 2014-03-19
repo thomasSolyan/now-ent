@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -25,10 +26,50 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
+=======
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="description" content="Multi-Level Push Menu: Off-screen navigation with multiple levels" />
+	<meta name="keywords" content="multi-level, menu, navigation, off-canvas, off-screen, mobile, levels, nested, transform" />
+	<meta name="author" content="nope" />
+
+	<title>Multi-Level Push Menu</title>
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- Foundation core CSS -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/foundation.css" />
+	
+	<!-- Font Awesome icons -->
+	<!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+
+	<link rel="stylesheet" href="css/idangerous.swiper.css" />
+	<link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css" />
+	<!-- <link rel="stylesheet" href="css/simple-app.css" /> -->
+
+	<!-- Multi push menu -->
+	<!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+	<!-- <link rel="stylesheet" type="text/css" href="css/icons.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/mlpushmenu.css" /> -->
+
+	<!-- Custom Branding -->
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script src="js/modernizr.custom.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
 </head>
 <body>
 
+<<<<<<< HEAD
 <div>
 	<nav class="top-bar" data-topbar data-options="is_hover: false">
 		<section class="top-bar-section"> 
@@ -50,6 +91,35 @@
 
 				<a href="#" data-dropdown="utils" class="trigger-apps right"></a>
 				<div id="utils" data-dropdown-content class="f-dropdown small content utils">
+=======
+
+<div class="fixed">
+
+	<nav class="top-bar">
+
+		<div class="row">
+			<div class="small-1 columns alpha">
+				<a href="#" id="trigger-panel-main" class="ui-button-categories"></a>
+			</div>
+			<div class="small-5 columns push-4">
+			    <ul class="left">
+					<li class="has-form">
+				        <div class="row collapse">
+				            <div class="large-10 small-11 columns">
+				                <input type="text" value="Enter keywords..." name="ui-search-ne" class="ui-textfield-ne" onfocus="if(this.value == 'Enter keywords...') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Enter keywords...'; }">
+				            </div>
+				            <div class="large-2 small-1 columns">
+				                <a href="#" class="ui-button-magnifier"></a>
+				            </div>
+				        </div>
+					</li>		        
+			    </ul>
+			</div>
+			<div class="small-1 columns omega">
+				<a href="#" id="trigger-panel-apps" data-dropdown="apps" class="ui-button-apps"></a>
+				<!-- <a href="#" data-dropdown="utils" class="trigger-apps right"></a> -->
+				<div id="apps" data-dropdown-content class="f-dropdown medium content utils">
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 					<div class="drop-panel-bg">
 						<div class="row linkico">
 							<div class="small-4 columns"><a href="javascript:;" class="ico icon-you" alt="You"></a><span class="label secondary">You</span></div>
@@ -67,15 +137,20 @@
 							<div class="small-4 columns"><a href="javascript:;" class="ico icon-nfo" alt="Help Desk"></a><span class="label secondary">Help Desk</span></div>
 						</div><!-- /row -->
 
+<<<<<<< HEAD
 						<div class="row linkico foot text-center">
 							<a href="#" class="txt-color-char">+More</a>
 						</div>
 					</div> 
 				</div>
+=======
+					<div><a href="#">More →</a></div>
+				</div><!-- /drop panel -->			</div>
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
-		</section>
-	</nav>
+		</div>
 
+<<<<<<< HEAD
 	<a href="#" class="trigger-categories" title="Category View" data-dropdown="panel-categories"></a>
 	<div id="panel-categories" data-dropdown-content class="f-dropdown content now-categories">
 		<ul class="swiper-wrapper" data-dropdown-content>
@@ -593,10 +668,24 @@
 
     </div>
 </div>
+=======
+		
+	</nav>
+
+</div>
+
+
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
 
 
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/fastclick.js"></script>
+<script src="js/foundation/foundation.js"></script>
+<script src="js/foundation/foundation.topbar.js"></script>
+<script src="js/foundation/foundation.offcanvas.js"></script>
 
+<<<<<<< HEAD
 <!--<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
 <script src="js/jquery.min.js"></script>
 
@@ -610,12 +699,37 @@
 <script>
     // layer menu, left side panel slide in
 	new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
+=======
+
+<script src="js/main.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/mlpushmenu.js"></script>
+
+<script>
+$(document).foundation({
+  topbar : {
+    custom_back_text: false,
+    is_hover: false,
+    mobile_show_parent_link: true
+  }
+});
+</script>
+
+
+<script>
+	// new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger-panel-main' ) );
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 </script>
 
 <script src="js/idangerous.swiper-2.0.min.js"></script>
 <script src="js/idangerous.swiper.scrollbar-2.0.js"></script>
 
+<<<<<<< HEAD
 <script src="js/simple-app.js"></script>
+=======
+<!-- Custom Scripts -->
+<!-- <script src="js/simple-app.js"></script> -->
+>>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 <script src="js/main.js"></script>
 
 <script language="javascript">
@@ -657,6 +771,7 @@ $('.nav-daily').on('click', function(e){
 });
 
 </script>
+
 
 </body>
 </html>
