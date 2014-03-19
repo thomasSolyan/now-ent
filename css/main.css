@@ -1,15 +1,9 @@
 @charset "utf-8";
-<<<<<<< HEAD
 /***********************************
 	NOW-ENT | SP2013 | Intranet
 	weo3 - 12.23.13
-=======
-/*************************************************
-	NOW Enterprise | SP2013 | Intranet
-	weo3 - 3.3.14
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
-1. HTML Elements (and ID elements)
+1. HTML elements
 2. Foundation Overrides
 3. Structure
 4. Navigation
@@ -18,23 +12,19 @@
 7. General
 8. Queries
 
-*************************************************/
+***********************************/
 
+/***********************************
+	1. HTML Elements
+***********************************/
 
-<<<<<<< HEAD
 html {
 	overflow: hidden;
 }
 
-=======
-/*************************************************
-	1. HTML Elements (and ID elements)
-*************************************************/
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 body, html {
 	position: relative;
 	height: 100%;
-	overflow: hidden;
 }
 
 body {
@@ -42,10 +32,8 @@ body {
 	font-size: 100%;
 	/*font-size: 13px;*/
 	line-height: 1.5;
-	background: #132732 url("../img/bg-body-sm.jpg") no-repeat 0 0;
+	background: #132732 url("../img/bg-body-sm.jpg") repeat-x 0 0;
 	color: #fff;
-	transition: background 1s;
-    -webkit-transition: background 1s;
 }
 
 img {
@@ -79,47 +67,78 @@ b {
 
 small, .small { font-size: 85%; }
 
-form {
-	margin: 0;
-}
-
 input[type="text"], textarea {
-	height: inherit; /* might be a bad fix */
-	margin: 0;
-	padding: 0.25em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #262626;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#262626), to(#333));
+	background-image: -webkit-linear-gradient(top, #262626, #333);
+	background-image:    -moz-linear-gradient(top, #262626, #333);
+	background-image:      -o-linear-gradient(top, #262626, #333);
+	background-image:         linear-gradient(to bottom, #262626, #333);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3) inset, 0px 1px 0px rgba(255, 255, 255, 0.2);
+	border:1px solid #000;
+	border-radius: 5px;
+	padding: 9px 10px;
+	color: #fff;
+	width: 100%;
 }
-
-	input[type="text"].ui-textfield-ne:before {
-		content: "";
-		display: block;
-		width: 40px;
-		height: 40px;
-		background-color: #FF9900;
-	}
 
 input[type="submit"] {
-	height: inherit; /* might be a bad fix */
+	border-radius: 5px;
+	display: block;
+	text-align: center;
+	padding: 12px 20px;
+	font-weight: bold;
+	text-decoration: none;
+	border:1px solid #000;
+	font-size: 16px;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px rgba(255,255,255,.4) inset, 0px 1px 1px rgba(0,0,0,0.5);
+	color: #fff;
+	text-shadow: 0px 1px 0px rgba(0,0,0,1);
+	width: 100%;
+	background-color: #242424;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#242424), to(#070707));
+	background-image: -webkit-linear-gradient(top, #242424, #070707);
+	background-image:    -moz-linear-gradient(top, #242424, #070707);
+	background-image:      -o-linear-gradient(top, #242424, #070707);
+	background-image:         linear-gradient(to bottom, #242424, #070707);
 }
 
 input[type="submit"]:hover {
-
+	background-color: #282828;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#282828), to(#171717));
+	background-image: -webkit-linear-gradient(top, #282828, #171717);
+	background-image:    -moz-linear-gradient(top, #282828, #171717);
+	background-image:      -o-linear-gradient(top, #282828, #171717);
+	background-image:         linear-gradient(to bottom, #282828, #171717);
 }
 
 input[type="submit"]:active {
-
+	background: #111;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.4) inset;
 }
 
-/*************************************************
-	2. Foundation Overrides
-*************************************************/
 
+/***********************************
+	2. Foundation Overrides
+***********************************/
 
 .top-bar {
-	height: 40px;
-	line-height: 40px;
+	max-height: 40px;
 }
 
-<<<<<<< HEAD
+.top-bar-section ul {
+	background: #FFF;
+	top: 37px !important;
+}
+
+.top-bar-section {
+	height: 40px;
+}
+
 .top-bar input, .top-bar .button {
 	top: 5px;
 	height: 30px;
@@ -162,12 +181,6 @@ input[type="submit"]:active {
 	left: 10px;
 	z-index: 98;
 }
-=======
-.top-bar-section .has-form {
-	height: inherit;
-}
-
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
 #utils.f-dropdown.content {
 	border: solid 1px #CFCBCB;
@@ -175,47 +188,57 @@ input[type="submit"]:active {
 	overflow: hidden;
 }
 
-/*************************************************
+
+/***********************************
 	3. Structure
-*************************************************/
+***********************************/
+
+.search-wrapper {
+	min-width: 50%;
+}
+
+input[type="search"] {
+	display: inline-block;
+	max-width: 20em;
+	background: #fff;
+	border: none;
+	height: 30px;
+	top: 5px;
+	float: left;
+	margin: 0;
+}
+
+.search-box {
+
+}
 
 
 
-
-
-/*************************************************
+/***********************************
 	4. Navigation
-*************************************************/
+***********************************/
 
-
-.ui-button-apps {
+.trigger-apps {
 	display: block;
-	position: absolute;
-	right: 0;
 	height: 40px;
 	width: 40px;
 	background: url('../img/now-ent-ui-sprite.png') -80px 0 no-repeat;
 }
 
-.ui-button-search-category {
-	display: block;
+.search-category {
 	width: 20px;
 	padding-right: 3rem !important;
 	border-radius: 0.3em 0 0 0.3em;
 	background: url('../img/now-ent-ui-sprite.png') 5px -55px no-repeat;
 }
 
-.ui-button-magnifier {
-	display: block;
-	height: 26px;
-	width: 40px;
-	margin-top: 7px;
-	border-radius: 0 0.2em 0.2em 0;
+.search-magnifier {
+	height: 31px !important;
+	border-radius: 0 0.5em 0.5em 0;
 	border-bottom: 1px solid #454545;
-	background: url('../img/now-ent-ui-sprite.png') 0px -104px no-repeat;	
+	background: url('../img/now-ent-ui-sprite.png') 0px -100px no-repeat;	
 }
 
-<<<<<<< HEAD
 #utils {
 	width: auto !important;
 	padding: 0;
@@ -267,37 +290,32 @@ input[type="submit"]:active {
 
 
 .trigger-categories { /* on hover shows full height panel from side */
-=======
-.ui-button-categories {
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 	display: block;
 	height: 40px;
 	width: 40px;
-	background: url('../img/now-ent-ui-sprite.png') 0 0 no-repeat;
+	background: url('../img/now-ent-ui-sprite.png') -40px 0 no-repeat;
 }
-
-	.ui-button-categories:hover {
-		background: url('../img/now-ent-ui-sprite.png') 0 -40px no-repeat;
-	}
 
 .kill-pointer {
 	pointer-events:none;
 }
 
+.f-dropdown.now-categories {
+	width: 40px;
+	top: 78px !important;
+	background: #000;
+	height: 100%;
+	border: none;
+}
 
-/*************************************************
+.f-dropdown.now-categories:after, .f-dropdown.now-categoreis:before {
+	display: none;
+}
+
+
+/***********************************
 	4. Modular
-*************************************************/
-
-.alpha {
-	padding-left: 0;
-	margin-left: 0;
-}
-
-.omega {
-	padding-right: 0;
-	margin-right: 0;
-}
+***********************************/
 
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
@@ -309,22 +327,120 @@ input[type="submit"]:active {
 .txt-color-char { color: #666; }
 
 
-/*************************************************
+/***********************************
 	7. General
-*************************************************/
+***********************************/
 
 
 
 
 
+/* =swiper
+-------------------------------------------------------- */
+.swiper-nav {
+	height: 40px;
+	width: 100%;
+	background-color: #111;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+	background-image: -webkit-linear-gradient(top, #333, #111);
+	background-image:    -moz-linear-gradient(top, #333, #111);
+	background-image:      -o-linear-gradient(top, #333, #111);
+	background-image:         linear-gradient(to bottom, #333, #111);
+}
 
+.swiper-nav .swiper-wrapper {
+	margin: 0 auto;
+}
 
-/*************************************************
-	8. Queries
-*************************************************/
+.swiper-wrapper {
+	list-style-type: none;
+	margin: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
 
+	.swiper-wrapper li {
+		height: 40px;
+		width: 40px;
+		padding: 0;
+		margin: 0;
+	}
 
-<<<<<<< HEAD
+	.swiper-wrapper li.nav-company { background: url('../img/now-ent-ui-sprite.png') -120px 0px no-repeat;}
+		.swiper-wrapper li.nav-company:hover { background: url('../img/now-ent-ui-sprite.png') -120px -40px no-repeat;}
+	.swiper-wrapper li.nav-space { background: url('../img/now-ent-ui-sprite.png') -160px 0px no-repeat;}
+		.swiper-wrapper li.nav-space:hover { background: url('../img/now-ent-ui-sprite.png') -160px -40px no-repeat;}
+	.swiper-wrapper li.nav-daily { background: url('../img/now-ent-ui-sprite.png') -200px 0px no-repeat;}
+		.swiper-wrapper li.nav-daily:hover { background: url('../img/now-ent-ui-sprite.png') -200px -40px no-repeat;}
+
+.swiper-nav span {
+	cursor: pointer;
+	display: block;
+	line-height: 40px;
+	padding: 0 20px;
+	color: #fff;
+	text-align: center;
+	border-right: 1px solid #000;
+	border-left: 1px solid #333;
+}
+
+.swiper-nav span:active {
+	background: #000;
+}
+
+.swiper-nav .swiper-slide:first-child span {
+	border-left: none;
+}
+
+.swiper-nav .swiper-slide:last-child span {
+	border-right: none;
+}
+
+.swiper-pages {
+	height: 100%;
+}
+
+.scroll-container .swiper-slide {
+	width: 100%;
+}
+
+.page-inner {
+	padding: 15px 20px;
+}
+
+.swiper-slide h1 { color: #fff; }
+
+/* Gallery */
+.swiper-gallery {
+	width: 100%;
+	height: 100%;
+}
+.swiper-gallery .swiper-slide {
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.swiper-gallery .swiper-slide img {
+	opacity: 0.2;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	-webkit-transition: 1000ms;
+	-moz-transition: 1000ms;
+	-ms-transition: 1000ms;
+	-o-transition: 1000ms;
+	transition: 1000ms;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.swiper-gallery .swiper-slide-visible img {
+	opacity: 1;
+}
+
 /* Scrollbars */
 .swiper-scrollbar {
 	position: absolute;
@@ -715,19 +831,12 @@ a.menu-drop-icon {
 /***********************
 	8. Media Queries
 ************************/ 
-=======
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
 @media (min-width: 768px) {
-	body {
-		background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0;
-		transition: background 1s;
-    	-webkit-transition: background 1s;
-	}
+	body { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
 }
 
 @media (min-width: 992px) {
-<<<<<<< HEAD
 	body { background: #132732 url("../img/bg-body-lg.jpg") repeat-x 0 0; }
 }
 
@@ -872,13 +981,5 @@ a.menu-drop-icon {
 
 
 
-=======
-	body {
-		background: #132732 url("../img/bg-body-lg.jpg") repeat-x 0 0;
-		transition: background 1s;
-    	-webkit-transition: background 1s;
-	}
-}
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 
 
