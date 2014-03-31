@@ -290,7 +290,7 @@ input[type="search"] {
 
 
 .trigger-categories { /* on hover shows full height panel from side */
-	display: block;
+	display: inline-block;
 	height: 40px;
 	width: 40px;
 	background: url('../img/now-ent-ui-sprite.png') -40px 0 no-repeat;

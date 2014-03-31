@@ -629,12 +629,10 @@ var __freeMode = '';
 (window.innerWidth < 480) ? __stackDirection = 'vertical' : __stackDirection = 'horizontal';
 (window.innerWidth < 480) ? __freeMode = true : __freeMode = false;
 
-console.log("free falllllllin: "+__freeMode);
-
 
 var panelControl = new Swiper('.swiper-container', {
 	scrollContainer: false,
-	mousewheelControl : true,
+	mousewheelControl : false,
 	mode: __stackDirection,
     freeMode: __freeMode,
 	scrollbar: {
@@ -642,22 +640,28 @@ var panelControl = new Swiper('.swiper-container', {
 	  hide: true,
 	  draggable: false  
 	}
-})
+});
 
-$('.nav-company').on('click', function(e){
+
+$('.nav-company').click(function(e) {
+    e.stopImmediatePropagation();
 	e.preventDefault();
     panelControl.swipeTo(0);
-
+    $('.trigger-categories').trigger('click');
 });
 
-$('.nav-space').on('click', function(e){
-	e.preventDefault();
+$('.nav-space').click(function(e){
+    e.stopImmediatePropagation();
+    e.preventDefault();
     panelControl.swipeTo(1);
+    $('.trigger-categories').trigger('click');
 });
 
-$('.nav-daily').on('click', function(e){
+$('.nav-daily').click(function(e) {
+    e.stopImmediatePropagation();
     e.preventDefault();
     panelControl.swipeTo(2);
+    $('.trigger-categories').trigger('click');
 });
 
 </script>

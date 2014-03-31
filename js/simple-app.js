@@ -3,8 +3,8 @@ $(function() {
 	//Init Navigation
 	var nav = $('.swiper-nav').swiper({
 		slidesPerView: 'auto',
-		freeMode:true,
-		freeModeFluid:true,
+		freeMode :true,
+		freeModeFluid: true,
 		onSlideClick: function(nav){
 			pages.swipeTo(nav.clickedSlideIndex);
 		}
@@ -48,6 +48,6 @@ $(function() {
 			container:$('.swiper-gallery .swiper-scrollbar')[0]
 		}
 	});
-	swiperGallery.reInit();
+	//swiperGallery.reInit();
 
 });

@@ -14,7 +14,11 @@
 }
 
 .mp-pusher:after, .mp-level:after { background: none; }
-.mp-level { background-color: #e9e9e9; }
+
+.mp-level {
+
+}
+
 .mp-menu ul li:before { color: rgba(0, 0, 0, 0.5); }
 .mp-menu ul li > a { color: #333; }
 #mp-menu li a { font-family: inherit; }
