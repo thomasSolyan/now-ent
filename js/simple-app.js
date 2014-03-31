@@ -6,11 +6,7 @@ $(function() {
 		freeMode:true,
 		freeModeFluid:true,
 		onSlideClick: function(nav){
-<<<<<<< HEAD
-			//pages.swipeTo( nav.clickedSlideIndex )
-=======
 			pages.swipeTo(nav.clickedSlideIndex);
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 		}
 	});
 
@@ -24,10 +20,7 @@ $(function() {
 	$(window).on('resize',function(){
 		fixPagesHeight();
 	})
-<<<<<<< HEAD
-=======
 
->>>>>>> 17e39cedde4b4638c6bcf5a6fdb692be9420e438
 	fixPagesHeight();
 
 	//Init Pages
