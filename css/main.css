@@ -358,6 +358,11 @@ input[type="search"] {
 	border-bottom-style: solid;
 }
 
+.border-solo-bot {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
 .wrapit {
 	display: block;
 }
@@ -379,6 +384,8 @@ input[type="search"] {
 .icon-work:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -300px 0; }
 .icon-comp:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -320px 0; }
 .icon-sets:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -340px 0; }
+.icon-term:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -360px 0; }
+.icon-logs:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -380px 0; }
 
 a:hover.icon-home:before { background-position: -240px -20px; }
 a:hover.icon-proj:before { background-position: -260px -20px; }
@@ -386,6 +393,8 @@ a:hover.icon-huma:before { background-position: -280px -20px; }
 a:hover.icon-work:before { background-position: -300px -20px; }
 a:hover.icon-comp:before { background-position: -320px -20px; }
 a:hover.icon-sets:before { background-position: -340px -20px; }
+a:hover.icon-term:before { background-position: -360px -20px; }
+a:hover.icon-logs:before { background-position: -380px -20px; }
 
 .border-tb-lightgrey {
 	border-top: 1px solid #E6E6E6;
