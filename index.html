@@ -647,7 +647,8 @@ $('.nav-company').click(function(e) {
     e.stopImmediatePropagation();
 	e.preventDefault();
     panelControl.swipeTo(0);
-    $('.trigger-categories').trigger('click');
+    // $('.trigger-categories').trigger('click');
+    $(this).parent().fadeOut();
 });
 
 $('.nav-space').click(function(e){
