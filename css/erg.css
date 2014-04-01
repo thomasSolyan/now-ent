@@ -1,5 +1,3 @@
-<style>
-
 .menu-trigger:before {
 		box-shadow: 0 2px #34495E, 0 10px #FFFFFF, 0 8px #34495E, 0 20px #FFFFFF;
 		position: absolute;
@@ -13,25 +11,6 @@
 	height: 100%;
 }
 
-.mp-pusher:after, .mp-level:after { background: none; }
-
-.mp-level {
-
-}
-
-.mp-menu ul li:before { color: rgba(0, 0, 0, 0.5); }
-.mp-menu ul li > a { color: #333; }
-#mp-menu li a { font-family: inherit; }
-
-#mp-menu .title {
-	background-color: #d5d5d5;
-	border-bottom: 2px solid #555;
-	color: #333;
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-bottom: 0;
-	padding: 0.5em 0.8em;
-}
 
 #mp-menu hr {
     border-color: #909090;
@@ -39,10 +18,7 @@
     padding: 0;
 }
 
-
 #mp-menu .mp-level-overlay .title { border: none; background-color: transparent; }
-
-
 
 .swiper-nav.dropmenu { width: auto; background: none;  }
 .swiper-nav.dropmenu .swiper-wrapper { overflow: auto; }
@@ -53,11 +29,6 @@
     xposition: absolute;
     xwidth: 200px;
     z-index: 500;
-}
-
-
-.swiper-pagination-switch {
-
 }
 
 .pagination .swiper-pagination-switch { 
@@ -77,6 +48,3 @@
 @media only screen and (max-width: 40em) { 
 	.page-inner { padding: 15px 0; } 
 }
-
-
-</style>
