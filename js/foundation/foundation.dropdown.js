@@ -25,6 +25,7 @@
       $(this.scope)
         .off('.dropdown')
         .on('click.fndtn.dropdown', '[data-dropdown]', function (e) {
+          console.log('click.fndtn.dropdown, [data-dropdown]');
           var settings = $(this).data('dropdown-init') || self.settings;
           e.preventDefault();
 
@@ -83,7 +84,7 @@
         .on('fade.fndtn.dropdown', '[data-dropdown]', function (e) {
           var settings = $(this).data('dropdown-init') || self.settings;
           e.preventDefault();
-
+          console.log("am i right?");
           self.fade.call(self);
 
           if (!settings.is_hover || Modernizr.touch) self.toggle($(this));
@@ -106,6 +107,7 @@
     },
 
     close: function (dropdown) {
+      console.log("closing time");
       var self = this;
       dropdown.each(function () {
         if ($(this).hasClass(self.settings.active_class)) {
@@ -118,7 +120,7 @@
     },
 
     fade: function (dropdown) {
-      console.log('fade called?');
+      console.log("fade to black");
       var self = this;
       dropdown.each(function () {
         if ($(this).hasClass(self.settings.active_class)) {
@@ -138,6 +140,7 @@
     },
 
     open: function (dropdown, target) {
+      console.log("time to open");
         this
           .css(dropdown
             .addClass(this.settings.active_class), target);

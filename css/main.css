@@ -1,5 +1,5 @@
 @charset "utf-8";
-/***********************************
+/****************************************************
 	NOW-ENT | SP2013 | Intranet
 	weo3 - 12.23.13
 
@@ -7,14 +7,14 @@
 2. Foundation Overrides
 3. Structure
 4. Navigation
-5. Modular
+5. Modular / Icons
 6. Tiles
 7. General
 8. Queries
 
 ***********************************/
 
-/***********************************
+/****************************************************
 	1. HTML Elements
 ***********************************/
 
@@ -122,7 +122,7 @@ input[type="submit"]:active {
 }
 
 
-/***********************************
+/****************************************************
 	2. Foundation Overrides
 ***********************************/
 
@@ -189,7 +189,7 @@ input[type="submit"]:active {
 }
 
 
-/***********************************
+/****************************************************
 	3. Structure
 ***********************************/
 
@@ -214,7 +214,7 @@ input[type="search"] {
 
 
 
-/***********************************
+/****************************************************
 	4. Navigation
 ***********************************/
 
@@ -313,9 +313,9 @@ input[type="search"] {
 }
 
 
-/***********************************
-	4. Modular
-***********************************/
+/****************************************************
+	5. Modular / Icons
+****************************************************/
 
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
@@ -326,8 +326,21 @@ input[type="search"] {
 .txt-color-grey { color: #ADADAD !important; }
 .txt-color-char { color: #666; }
 
+.icon-global-menu {
+	width: 30px;
+	height: 40px;
+	background: url('../img/now-ent-ui-sprite.png') -100px 0 no-repeat;
+}
 
-/***********************************
+.ico-sm { width: 20px; height: 20px; }
+.ico-home { background: url('../img/now-ent-ui-sprite.png') -200px 0 no-repeat; }
+.ico-proj { background: url('../img/now-ent-ui-sprite.png') -220px 0 no-repeat; }
+.ico-huma { background: url('../img/now-ent-ui-sprite.png') -240px 0 no-repeat; }
+.ico-work { background: url('../img/now-ent-ui-sprite.png') -260px 0 no-repeat; }
+.ico-comp { background: url('../img/now-ent-ui-sprite.png') -280px 0 no-repeat; }
+.ico-sets { background: url('../img/now-ent-ui-sprite.png') -300px 0 no-repeat; }
+
+/****************************************************
 	7. General
 ***********************************/
 
@@ -465,7 +478,7 @@ input[type="search"] {
 
 
 /* =searchboxshit
------------------------------------------------------------- */
+/****************************************************
 /* top-bar searchbox */
 #searchdrop > li {
     display: block;
@@ -498,7 +511,7 @@ input[type="search"] {
 
 
 /* =Layout 
------------------------------------------------------------- */
+/****************************************************
 .container {
 /*    margin: 0 auto;
     width: 1160px; */
@@ -506,7 +519,7 @@ input[type="search"] {
 
 
 /* =Grid custom values 
------------------------------------------------------------- */
+/****************************************************
 
 /* narrow gutter */
 .row.narrow { margin: 0 -0.313em; }
@@ -556,7 +569,7 @@ input[type="search"] {
 
 
 /* =Tiles
------------------------------------------------------------- */
+/****************************************************/
 .tile-1 		{ min-height: 52px;  }
 .tile-2 		{ min-height: 115px; }
 .tile-3 		{ min-height: 178px; }
@@ -615,9 +628,10 @@ input[type="search"] {
     right: 10px;
     top: 0;
 }
+
 em.stat {
-		margin-right: 30px;
-		color: #31c7d8;
+	margin-right: 30px;
+	color: #31c7d8;
     font-family: Century Gothic,Verdana,Arial,sans-serif;
     font-size: 36px;
     font-weight: normal;
@@ -634,9 +648,9 @@ em.stat {
 		text-transform: uppercase;
 }
 
-.ic1 { color: #fff; }
+.ic1 { color: #FFF; }
 .ic2 { color: #828282; }
-.ic3 { color: #ffc34c; }
+.ic3 { color: #FFC34C; }
 
 
 
@@ -825,43 +839,30 @@ a.menu-drop-icon {
 
 
 
-
-
-
-/***********************
+/****************************************************
 	8. Media Queries
-************************/ 
+****************************************************/
+
+
+/****************************************************
+		768
+****************************************************/
 
 @media (min-width: 768px) {
 	body { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
 }
 
+/****************************************************
+		992px
+****************************************************/
 @media (min-width: 992px) {
 	body { background: #132732 url("../img/bg-body-lg.jpg") repeat-x 0 0; }
 }
 
 
-@media only screen and (max-width: 480px) {
-	.page-inner {
-		padding: 0;
-	}
-
-	.f-dropdown.now-categories.open {
-		height: 100%;
-		background: rgba(0,0,0,0.8) !important;
-		border: none;
-		left: 0 !important;
-		width: 40px !important;
-	}
-
-	.swiper-slide {
-		display: block;
-		float: none;
-	}
-
-}
-
-/* 640px */
+/****************************************************
+		768
+****************************************************/
 @media only screen and (max-width: 40.063em) {
 	.drop-panel-bg { width: 100%; }
 }
@@ -971,15 +972,25 @@ a.menu-drop-icon {
 
 
 
+/****************************************************
+		480px
+****************************************************/
+@media only screen and (max-width: 480px) {
+	.page-inner {
+		padding: 0;
+	}
 
+	.f-dropdown.now-categories.open {
+		height: 100%;
+		background: rgba(0,0,0,0.8) !important;
+		border: none;
+		left: 0 !important;
+		width: 40px !important;
+	}
 
+	.swiper-slide {
+		display: block;
+		float: none;
+	}
 
-
-
-
-
-
-
-
-
-
+}
