@@ -13,11 +13,11 @@
 8. Queries
 9. Yo Fonts Mama
 
-***********************************/
+****************************************************/
 
 /****************************************************
 	1. HTML Elements
-***********************************/
+****************************************************/
 
 html {
 	overflow: hidden;
@@ -125,7 +125,7 @@ input[type="submit"]:active {
 
 /****************************************************
 	2. Foundation Overrides
-***********************************/
+****************************************************/
 
 .top-bar {
 	max-height: 40px;
@@ -198,7 +198,7 @@ input[type="submit"]:active {
 
 /****************************************************
 	3. Structure
-***********************************/
+****************************************************/
 
 .search-wrapper {
 	min-width: 50%;
@@ -222,7 +222,7 @@ input[type="search"] {
 
 /****************************************************
 	4. Navigation
-***********************************/
+****************************************************/
 
 .trigger-apps {
 	display: block;
@@ -333,6 +333,29 @@ input[type="search"] {
 	    transition: all 0.25s ease;
 	}
 
+.mp-level-sub-drop {
+	margin: 1em;
+}
+
+	.mp-level-sub-drop li {
+		margin: 0.2em 0;
+	}
+
+	.mp-level-sub-drop li a {
+		display: block;
+		margin-left: 0.5em;
+		border-left: 4px solid #999;
+	}
+
+	.mp-menu ul li ul.mp-level-sub-drop li a {
+		padding: 0.5em;
+	}
+
+		.mp-menu ul li ul.mp-level-sub-drop li a:hover {
+			border-color: #31C7D8;
+			color: #31C7D8;
+		}
+
 
 /****************************************************
 	5. Modular / Icons
@@ -341,7 +364,7 @@ input[type="search"] {
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
 .bg-color-char { background-color: #666 !important; }
-.bg-color-blue { background-color: #369 !important; }
+.bg-color-blue { background-color: #31C7D8 !important; }
 .bg-color-red { background-color: #DF3106 !important; }
 
 .txt-color-grey { color: #ADADAD !important; }
@@ -363,6 +386,10 @@ input[type="search"] {
 	border-bottom-style: solid;
 }
 
+.height-force-min-40 {
+	height: 40px;
+}
+
 .wrapit {
 	display: block;
 }
@@ -371,11 +398,6 @@ input[type="search"] {
 	width: 40px;
 	height: 50px;
 	background: url('../img/now-ent-ui-sprite.png') -40px -90px no-repeat;
-}
-
-
-.ico-sm {
-
 }
 
 .icon-home:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -240px 0; }
@@ -403,7 +425,7 @@ a:hover.icon-logs:before { background-position: -380px -20px; }
 
 /****************************************************
 	7. General
-***********************************/
+****************************************************/
 
 .swiper-nav {
 	height: 40px;
@@ -484,11 +506,13 @@ a:hover.icon-logs:before { background-position: -380px -20px; }
 	width: 100%;
 	height: 100%;
 }
+
 .swiper-gallery .swiper-slide {
 	width: 100%;
 	position: relative;
 	text-align: center;
 }
+
 .swiper-gallery .swiper-slide img {
 	opacity: 0.2;
 	width: auto;
@@ -505,6 +529,7 @@ a:hover.icon-logs:before { background-position: -380px -20px; }
 	-o-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
+
 .swiper-gallery .swiper-slide-visible img {
 	opacity: 1;
 }
@@ -520,6 +545,7 @@ a:hover.icon-logs:before { background-position: -380px -20px; }
 	background: rgba(0,0,0,0.2);
 	z-index: 10;
 }
+
 .swiper-scrollbar-drag {
 	height: 100%;
 	width: 100%;
