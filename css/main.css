@@ -1102,7 +1102,7 @@ a.menu-drop-icon {
 
 	.swiper-slide {
 		display: block;
-		float: none;
+		float: left;
 	}
 
 }
