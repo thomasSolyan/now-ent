@@ -13,6 +13,11 @@
 8. Queries
 9. Yo Fonts Mama
 
+
+NOTES:	alpha/omega = first left, last right
+		kappa/sigma = first top, last bottom
+
+
 ****************************************************/
 
 /****************************************************
@@ -324,7 +329,7 @@ input[type="search"] {
 	text-transform: capitalize;
 }
 
-	.nav-left-panel:hover {
+	.nav-left-panel:hover, .nav-left-panel.active {
 		background: #31C7D8;
 		-webkit-transition: all 0.25s ease;
 	    -moz-transition: all 0.25s ease;
@@ -333,28 +338,46 @@ input[type="search"] {
 	    transition: all 0.25s ease;
 	}
 
-.mp-level-sub-drop {
-	margin: 1em;
+	.nav-left-panel.active > a {
+		color: #FFF;
+	}
+
+.mp-menu ul li ul.mp-level-sub-drop {
+	padding: 1em 0;
+	display: none;
 }
 
 	.mp-level-sub-drop li {
 		margin: 0.2em 0;
 	}
 
+		.mp-level-sub-drop li:first-child {
+			margin-top: 0;
+		}
+		.mp-level-sub-drop li:last-child {
+			margin-bottom: 0;
+		}
+
 	.mp-level-sub-drop li a {
 		display: block;
 		margin-left: 0.5em;
-		border-left: 4px solid #999;
+		border-left: 4px solid #CCC;
 	}
 
 	.mp-menu ul li ul.mp-level-sub-drop li a {
-		padding: 0.5em;
+		padding: 0 0 0 2em;
+		margin-left: 0.5em;
+		font-size: 1.3rem;
 	}
 
 		.mp-menu ul li ul.mp-level-sub-drop li a:hover {
 			border-color: #31C7D8;
 			color: #31C7D8;
 		}
+
+.mp-level[data-level="2"] ul li a:hover, .mp-level[data-level="2"] > ul > li:first-child > a:hover {
+	color: #999;
+}
 
 
 /****************************************************
@@ -417,6 +440,15 @@ a:hover.icon-comp:before { background-position: -320px -20px; }
 a:hover.icon-sets:before { background-position: -340px -20px; }
 a:hover.icon-term:before { background-position: -360px -20px; }
 a:hover.icon-logs:before { background-position: -380px -20px; }
+
+li.drop-down-custom.active a.icon-home:before { background-position: -240px -20px; }
+li.drop-down-custom.active a.icon-proj:before { background-position: -260px -20px; }
+li.drop-down-custom.active a.icon-huma:before { background-position: -280px -20px; }
+li.drop-down-custom.active a.icon-work:before { background-position: -300px -20px; }
+li.drop-down-custom.active a.icon-comp:before { background-position: -320px -20px; }
+li.drop-down-custom.active a.icon-sets:before { background-position: -340px -20px; }
+li.drop-down-custom.active a.icon-term:before { background-position: -360px -20px; }
+li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20px; }
 
 .border-tb-lightgrey {
 	border-top: 1px solid #E6E6E6;
@@ -1095,11 +1127,11 @@ a.menu-drop-icon {
 
 @font-face {
     font-family: 'SourceSansProReg';
-    src: url('sourcesanspro-regular-webfont.eot');
-    src: url('sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('sourcesanspro-regular-webfont.woff') format('woff'),
-         url('sourcesanspro-regular-webfont.ttf') format('truetype'),
-         url('sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
     font-weight: normal;
     font-style: normal;
 

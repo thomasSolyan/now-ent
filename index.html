@@ -109,7 +109,7 @@
 					<li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-proj">projects &amp; teams</a></li>
 					<li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-huma">employee center</a></li>
 					<li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-work">workplace services</a></li>
-					<li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-comp">company</a>
+					<li class="nav-left-panel border-white border-solo-bot drop-down-custom"><a href="#" class="icon-comp">company</a>
                         <ul class="mp-level-sub-drop bg-color-white">
                             <li class="nav-left-panel-sub"><a href="#" class="indicator-border-left">directory</a></li>
                             <li class="nav-left-panel-sub"><a href="#" class="indicator-border-left">news</a></li>
@@ -120,7 +120,7 @@
                     <li><span class="wrapit border-tb-lightgrey"><h4 class="title border-pair-tb border-white height-force-min-40"></h4></span></li>
                     <li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-sets">my settings</a></li>
                     <li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-term">terms and policies</a></li>
-                    <li class="nav-left-panel border-white border-solo-bot"><a href="#" clas#">logout</a></li>
+                    <li class="nav-left-panel border-white border-solo-bot"><a href="#" class="icon-logs">logout</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -673,6 +673,17 @@ $('.nav-daily').click(function(e) {
     e.preventDefault();
     panelControl.swipeTo(2);
     $('.trigger-categories').trigger('click');
+});
+
+$('.drop-down-custom').click(function(e) {
+    e.preventDefault();
+    if( $(this).hasClass('active') ) {
+        $(this).removeClass('active');
+        $(this).children('ul').slideUp();
+    } else {
+        $(this).addClass('active');
+        $(this).children('ul').slideDown();
+    }
 });
 
 </script>

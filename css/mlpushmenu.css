@@ -226,7 +226,7 @@ html, body, .nav-container, .scroller {
 	height: inherit;
 }
 
-.mp-menu ul li a:hover,
+.mp-menu ul li a:hover, .mp-menu ul li a.active,
 .mp-level > ul > li:first-child > a:hover {
 	color: #FFF;
 }
