@@ -231,6 +231,10 @@ html, body, .nav-container, .scroller {
 	color: #FFF;
 }
 
+	.mp-menu ul li a.mp-back:hover {
+		color: #999;
+	}
+
 .mp-menu .mp-level.mp-level-overlay > ul > li > a,
 .mp-level.mp-level-overlay > ul > li:first-child > a {
 
@@ -238,14 +242,15 @@ html, body, .nav-container, .scroller {
 
 .mp-back {
 	outline: none;
-	color: #656565;
+	color: #666;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
 	display: block;
 	font-size: 0.8em;
-	padding: 1em;
+	padding: 1em 3em 0 0;
 	position: relative;
+	text-align: right;
 }
 .mp-back:hover { color: #444; }
 .mp-back::after {
@@ -253,6 +258,7 @@ html, body, .nav-container, .scroller {
 	position: absolute;
 	content: "\e037";
 	right: 10px;
+	top: 9px;
 	font-size: 1.3em;
 	color: rgba(0,0,0,0.3);
 }

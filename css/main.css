@@ -325,7 +325,7 @@ input[type="search"] {
 
 .nav-left-panel {
 	font-family: 'SourceSansProLight', Helvetica, sans-serif;
-	font-size: 25px;
+	font-size: 1.563em;
 	text-transform: capitalize;
 }
 
@@ -375,8 +375,18 @@ input[type="search"] {
 			color: #31C7D8;
 		}
 
+
+
 .mp-level[data-level="2"] ul li a:hover, .mp-level[data-level="2"] > ul > li:first-child > a:hover {
-	color: #999;
+	color: #FFF;
+}
+
+.mp-level[data-level="2"] {
+	padding-top: 3em;
+}
+
+.swiper-container {
+	height: inherit;
 }
 
 
@@ -432,6 +442,10 @@ input[type="search"] {
 .icon-term:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -360px 0; }
 .icon-logs:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -380px 0; }
 
+.icon-inter:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -400px 0; }
+.icon-intra:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -420px 0; }
+.icon-extra:before { display: inline-block; background: url('../img/now-ent-ui-sprite.png') no-repeat; background-position: -440px 0; }
+
 a:hover.icon-home:before { background-position: -240px -20px; }
 a:hover.icon-proj:before { background-position: -260px -20px; }
 a:hover.icon-huma:before { background-position: -280px -20px; }
@@ -440,6 +454,11 @@ a:hover.icon-comp:before { background-position: -320px -20px; }
 a:hover.icon-sets:before { background-position: -340px -20px; }
 a:hover.icon-term:before { background-position: -360px -20px; }
 a:hover.icon-logs:before { background-position: -380px -20px; }
+
+a:hover.icon-inter:before { background-position: -400px -20px; }
+a:hover.icon-intra:before { background-position: -420px -20px; }
+a:hover.icon-extra:before { background-position: -440px -20px; }
+
 
 li.drop-down-custom.active a.icon-home:before { background-position: -240px -20px; }
 li.drop-down-custom.active a.icon-proj:before { background-position: -260px -20px; }

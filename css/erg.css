@@ -18,8 +18,6 @@
     padding: 0;
 }
 
-#mp-menu .mp-level-overlay .title { border: none; background-color: transparent; }
-
 .swiper-nav.dropmenu { width: auto; background: none;  }
 .swiper-nav.dropmenu .swiper-wrapper { overflow: auto; }
 .swiper-nav.dropmenu .swiper-slide { float: none; }
