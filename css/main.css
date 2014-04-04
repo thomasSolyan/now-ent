@@ -847,15 +847,19 @@ em.stat {
 
 .tc1 { background-color: #fff; color: #333; }
 .tc2 { background-color: #31c7d8; color: #fff; }
-.tc3 { background-color: #145e80; color: #fff; }
+.tc3 {
+	background-color: #145e80;
+	background-color: rgba(20,90,128,0.5);
+	color: #fff;
+}
 .tc4 { background-color: #eaeef3; color: #555; }
 .tc5 { background-color: #1dc39e; color: #fff; }
 
 .tc1, .tc2, .tc3, .tc4, tc5 {
-  -webkit-transition: background-color 0.4s ease-out;
-  -moz-transition: background-color 0.4s ease-out;
-  -o-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
 }
 .tc2:hover {
   background-color: #2cb3c2;
