@@ -70,7 +70,7 @@ b { /* why the fuck this? */
     vertical-align: baseline;
 }
 
-small, .small { font-size: .85em; }
+small, .small { font-size: .7em; }
 
 input[type="text"], textarea {
 	-webkit-box-sizing: border-box;
@@ -1027,6 +1027,7 @@ a.menu-drop-icon {
 
 .post-cell > p {
 	margin-top: 0;
+	font-size: 1em;
 }
 
 .showcase {
