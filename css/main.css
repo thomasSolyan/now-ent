@@ -36,8 +36,7 @@ body, html {
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 100%;
-	/*font-size: 13px;*/
-	line-height: 1.5;
+	line-height: 1.5em;
 	background: #132732 url("../img/bg-body-sm.jpg") repeat-x 0 0;
 	color: #fff;
 }
@@ -63,7 +62,7 @@ h5 { font-size: 0.875rem; }
 h6 { font-size: 0.75rem; }
 
 
-b {
+b { /* why the fuck this? */
     color: #999999;
     font-size: 20px;
     font-weight: normal;
@@ -71,7 +70,7 @@ b {
     vertical-align: baseline;
 }
 
-small, .small { font-size: 85%; }
+small, .small { font-size: .85em; }
 
 input[type="text"], textarea {
 	-webkit-box-sizing: border-box;
@@ -198,6 +197,12 @@ input[type="submit"]:active {
 	border: solid 1px #CFCBCB;
 	border-radius: 0.3em;
 	overflow: hidden;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 
@@ -398,10 +403,12 @@ input[type="search"] {
 .bg-color-grey { background-color: #ADADAD !important; }
 .bg-color-char { background-color: #666 !important; }
 .bg-color-blue { background-color: #31C7D8 !important; }
+.bg-color-bluer { background-color: #145e80 !important; }
 .bg-color-red { background-color: #DF3106 !important; }
 
 .txt-color-grey { color: #ADADAD !important; }
 .txt-color-char { color: #666; }
+.txt-color-white { color: #FFF; }
 
 .border-white {
 	border-color: #FFF;
@@ -477,6 +484,13 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 /****************************************************
 	7. General
 ****************************************************/
+
+.title-small-caps {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	padding: 0.25em 1em;
+	margin-bottom: 0.25em;
+}
 
 .swiper-nav {
 	height: 40px;
@@ -712,17 +726,13 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 .tile-full 	{ min-height: 493px; }
 
 .tile-1, .tile-2, .tile-3, .tile-4, .tile-5, .tile-6, .tile-7, .tile-full {  
-	/*overflow: hidden;*/
-	position: relative;
-	display: block;
-	margin-bottom: 11px;
-	font-size: 0.813rem;
+	margin-bottom: 0.9em;
 }
 
 .tile-1 p, .tile-2 p, .tile-3 p, .tile-4 p, .tile-5 p, .tile-6 p, .tile-7 p, .tile-full p { 
 	margin: 0 0 1em; 
-	font-size: 0.750rem;
-	line-height: 1.4;
+	font-size: 0.9rem;
+	line-height: 1.4em;
 }
 
 
@@ -732,6 +742,7 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	right: 15px;
 	top: 10px;
 }
+
 .tile-edit {
 	font-size: 20px;
 	position: absolute;
@@ -742,8 +753,8 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
   		 -o-transition: color 0.4s ease-out;
   				transition: color 0.4s ease-out;
 }
-.tile-edit:hover, 
-.tile-edit:focus { color: #108a15; text-decoration: none; }
+
+.tile-edit:hover, .tile-edit:focus { color: #108a15; text-decoration: none; }
 
 .tile-stat {  
     background: #fff url("../img/tile-bg1.png") no-repeat 0 0;
@@ -769,6 +780,7 @@ em.stat {
     font-weight: normal;
 		font-style: normal;
 }
+
 .tile-stat .tile-label { 
 		bottom: 0;
 		color: #333;
