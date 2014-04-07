@@ -399,6 +399,16 @@ input[type="search"] {
 	5. Modular / Icons
 ****************************************************/
 
+.alpha {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+	padding-right: 0;
+}
+
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
 .bg-color-char { background-color: #666 !important; }
@@ -743,6 +753,22 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	right: 15px;
 	top: 10px;
 }
+
+.rev-alpha-omega {
+	padding: 0 0.75em 0.75em;
+}
+
+.tile-img-rev {
+	margin: 0 -.75em;
+}
+
+	.tile-img-rev img {
+		width: 100%;
+	}
+
+	.tile-img img {
+		width: 100%;
+	}
 
 .tile-edit {
 	font-size: 20px;
