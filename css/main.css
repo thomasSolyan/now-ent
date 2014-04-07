@@ -726,7 +726,8 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 .tile-full 	{ min-height: 493px; }
 
 .tile-1, .tile-2, .tile-3, .tile-4, .tile-5, .tile-6, .tile-7, .tile-full {  
-	margin-bottom: 0.9em;
+	margin-bottom: 0.55em;
+	display: block;
 }
 
 .tile-1 p, .tile-2 p, .tile-3 p, .tile-4 p, .tile-5 p, .tile-6 p, .tile-7 p, .tile-full p { 
@@ -800,7 +801,7 @@ em.stat {
 
 .post-cell {
 	min-height: 1em;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.25em;
 	padding: 0.25em 0.5em 0.25em 0.5em;
 }
 
