@@ -727,9 +727,9 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 /* =Tiles
 /****************************************************/
 .tile-1 		{ min-height: 52px;  }
-.tile-2 		{ min-height: 115px; }
+.tile-2 		{ min-height: 127px; }
 .tile-3 		{ min-height: 178px; }
-.tile-4 		{ min-height: 240px; }
+.tile-4 		{ min-height: 260px; }
 .tile-5 		{ min-height: 304px; }
 .tile-6 		{ min-height: 367px; }
 .tile-7 		{ min-height: 430px; }
@@ -746,6 +746,12 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	line-height: 1.4em;
 }
 
+.tile-2 img.logo {
+	width: 90%;
+}
+	.tile-2 img.logo-2 {
+		width: 92%;
+	}
 
 .tile-type {
 	font-size: 20px;
@@ -758,6 +764,10 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	padding: 0.75em 0.75em 0.75em;
 	position: relative;
 }
+
+	.rev-alpha-omega.spec-200 {
+		min-height: 200px;
+	}
 
 .tile-img-rev {
 	margin: 0 -.75em;
@@ -802,11 +812,16 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 
 .tile-nav-blue {
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	right: 0;
 	width: 110px;
 	height: 35px;
 }
+
+	.tile-nav-blue.special-k {
+		bottom: 8px;
+		right: 5px;
+	}
 
 em.stat {
 	margin-right: 30px;
@@ -867,8 +882,14 @@ em.stat {
 }
 .tile-body h2, .tile-body h3, .tile-body h4, .tile-body h5, .tile-body h6  { padding-right: 30px; }
 .tile-body > p {
-/*    line-height: 1.2;
-*/}
+    line-height: 1.1em;
+}
+
+.tile-body h2, .tile-body h3, .tile-body h4, .tile-body h5, .tile-body h6  { padding-right: 30px; }
+.tile-body > p.special {
+	line-height: 1.3em;
+}
+
 .edge { padding: 0 !important; }
 
 
