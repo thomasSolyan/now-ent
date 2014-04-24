@@ -417,6 +417,15 @@ input[type="search"] {
 	padding-right: 0;
 }
 
+.zeta {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.marginbottom-2 {
+	margin-bottom: 2em;
+}
+
 .bg-color-white { background-color: #FFF !important; }
 .bg-color-grey { background-color: #ADADAD !important; }
 .bg-color-char { background-color: #666 !important; }
@@ -427,6 +436,7 @@ input[type="search"] {
 .txt-color-grey { color: #ADADAD !important; }
 .txt-color-char { color: #666; }
 .txt-color-white { color: #FFF; }
+.txt-color-spblue { color: #0072C6; }
 
 .border-white {
 	border-color: #FFF;
@@ -1201,6 +1211,11 @@ a.menu-drop-icon {
 		480px
 ****************************************************/
 @media only screen and (max-width: 480px) {
+
+	html {
+		overflow: auto;
+	}
+	
 	.page-inner {
 		padding: 0;
 	}
