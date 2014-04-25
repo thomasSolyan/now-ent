@@ -25,13 +25,14 @@ NOTES:	alpha/omega = first left, last right
 ****************************************************/
 
 html {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 body, html {
 	position: relative;
 	height: 100%;
 	background: #fff;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -137,6 +138,7 @@ input[type="submit"]:active {
 
 dl, dt {
 	color: #363636;
+	-webkit-font-smoothing: antialiased;
 }
 
 dl dd {
@@ -176,7 +178,7 @@ dl dt a {
 	padding: 0 1em;
 	line-height: inherit;
 	background: none;
-	font-size: 1em;
+	font-size: 0.825em;
 	color: #666;
 	-webkit-font-smoothing: antialiased;
 }
@@ -446,6 +448,10 @@ input[type="search"] {
 	height: inherit;
 }
 
+.subnav-inner-page li {
+	float: left;
+}
+
 
 /****************************************************
 	5. Modular / Icons
@@ -691,6 +697,10 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	border-radius: 10px;
 }
 
+.left-medium {
+	float: left;
+	max-width: 170px;
+}
 
 
 
@@ -1121,14 +1131,15 @@ a.menu-drop-icon {
 	8. Media Queries
 ****************************************************/
 
-
 /****************************************************
-		768
+		1400px
 ****************************************************/
-
-@media (min-width: 768px) {
-	body.background-nature { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
+@media (max-width: 1440px) {
+	.left-hard-margin-160 {
+		margin-left: 180px;
+	}
 }
+
 
 /****************************************************
 		992px
@@ -1142,113 +1153,116 @@ a.menu-drop-icon {
 		768
 ****************************************************/
 @media only screen and (max-width: 40.063em) {
+
+	body.background-nature { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
+
 	.drop-panel-bg { width: 100%; }
+
+	.fluid-container {
+	    margin: 0 auto;
+	    padding: 0 15px;
+	}
+
+	.post-cell:last-child {
+		margin-bottom: 10px;
+	}
+
+	.post-cell > p {
+		margin-top: 0;
+		font-size: 1em;
+		font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
+	}
+
+	.showcase {
+		position: absolute;
+		top: 80px;
+		width: 100%;
+	}
+
+	.showcase iframe {
+	    display: block;
+	}
+
+	.showcase .phone-h, .showcase .phone-pad {
+	    background: none repeat scroll 0 0 #000000;
+	    border: 3px solid #FFFFFF;
+	    border-radius: 20px;
+	    box-shadow: 0 0 10px #000000;
+	    height: 320px;
+	    margin: 20px auto 0;
+	    padding: 30px 40px;
+	    width: 700px;
+	}
+
+	.showcase .phone-h iframe, .showcase .phone-pad iframe {
+	    height: 320px;
+	    width: 700px;
+	}
+
+	.showcase .phone-pad {
+	    border-bottom: medium none;
+	    border-radius: 20px 20px 0 0;
+	    height: 469px;
+	    padding-bottom: 0;
+	    width: 768px;
+	}
+
+	.showcase .phone-pad iframe {
+	    height: 469px;
+	    width: 768px;
+	}
+
+	.showcase .appstore-slide {
+	    line-height: 1.2;
+	}
+
+	.showcase .appstore-slide .title {
+	    margin-top: 0;
+	}
+
+	.showcase .example-app {
+	    color: #FFFFFF;
+	    display: inline-block;
+	    margin: 0 5px;
+	    text-decoration: none;
+	}
+
+	.showcase .example-app img {
+	    border: 1px solid #FFFFFF;
+	    border-radius: 5px;
+	    box-shadow: 0 1px 2px #000000;
+	}
+
+	.showcase .example-app .title {
+	    display: block;
+	    font-size: 18px;
+	    margin: 10px 0;
+	}
+
+	.showcase .example-app:hover {
+	    text-decoration: underline;
+	}
+
+	.showcase .left:hover, .showcase .right:hover {
+	    width: 80px;
+	}
+
+	.showcase .more-examples span {
+	    cursor: pointer;
+	}
+
+	.showcase .more-examples span:hover {
+	    text-decoration: underline;
+	}
+
+	.showcase .try-app {
+	    background: none repeat scroll 0 0 #000000;
+	    display: inline-block;
+	    font-weight: normal;
+	    padding: 5px;
+	}
+
 }
-
-
-.fluid-container {
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.post-cell:last-child {
-	margin-bottom: 10px;
-}
-
-.post-cell > p {
-	margin-top: 0;
-	font-size: 1em;
-	font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
-}
-
-.showcase {
-	position: absolute;
-	top: 80px;
-	width: 100%;
-}
-
-.showcase iframe {
-    display: block;
-}
-
-.showcase .phone-h, .showcase .phone-pad {
-    background: none repeat scroll 0 0 #000000;
-    border: 3px solid #FFFFFF;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #000000;
-    height: 320px;
-    margin: 20px auto 0;
-    padding: 30px 40px;
-    width: 700px;
-}
-
-.showcase .phone-h iframe, .showcase .phone-pad iframe {
-    height: 320px;
-    width: 700px;
-}
-
-.showcase .phone-pad {
-    border-bottom: medium none;
-    border-radius: 20px 20px 0 0;
-    height: 469px;
-    padding-bottom: 0;
-    width: 768px;
-}
-
-.showcase .phone-pad iframe {
-    height: 469px;
-    width: 768px;
-}
-
-.showcase .appstore-slide {
-    line-height: 1.2;
-}
-
-.showcase .appstore-slide .title {
-    margin-top: 0;
-}
-
-.showcase .example-app {
-    color: #FFFFFF;
-    display: inline-block;
-    margin: 0 5px;
-    text-decoration: none;
-}
-
-.showcase .example-app img {
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
-    box-shadow: 0 1px 2px #000000;
-}
-
-.showcase .example-app .title {
-    display: block;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.showcase .example-app:hover {
-    text-decoration: underline;
-}
-
-.showcase .left:hover, .showcase .right:hover {
-    width: 80px;
-}
-
-.showcase .more-examples span {
-    cursor: pointer;
-}
-
-.showcase .more-examples span:hover {
-    text-decoration: underline;
-}
-
-.showcase .try-app {
-    background: none repeat scroll 0 0 #000000;
-    display: inline-block;
-    font-weight: normal;
-    padding: 5px;
-} 
 
 
 /****************************************************
@@ -1259,6 +1273,19 @@ a.menu-drop-icon {
 	html {
 		overflow: auto;
 	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.top-bar.full-bar {
+		height: 7em;
+		margin-bottom: 1em;
+	}
+
+		ul.subnav-inner-page {
+			display: none;
+		}
 	
 	.page-inner {
 		padding: 0;
