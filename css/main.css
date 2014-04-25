@@ -452,6 +452,33 @@ input[type="search"] {
 	float: left;
 }
 
+.nav-left-main {
+	margin-left: 0;
+}
+
+	.nav-left-main li {
+
+	}
+
+		.nav-left-main li a {
+			display: block;
+			font-size: 0.825rem;
+			color: #666;
+			padding: 0.5em 2em 0.5em 1.5em;		
+		}
+
+			.nav-left-main li a:hover {
+				background: #EFEFEF;
+			}
+
+			.nav-left-main li a.active {
+				color: #FFF;
+				background: #579fff;
+				font-size: 0.825rem;
+				cursor: default;
+			}
+
+
 
 /****************************************************
 	5. Modular / Icons
@@ -699,8 +726,20 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 
 .left-medium {
 	float: left;
+	display: block;
 	max-width: 170px;
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
+
+	.left-medium hr {
+		margin: 0;
+		padding: 0;
+		border: 0.2em solid #ddd;
+	}
 
 
 
@@ -1134,7 +1173,7 @@ a.menu-drop-icon {
 /****************************************************
 		1400px
 ****************************************************/
-@media (max-width: 1440px) {
+@media (max-width: 1500px) {
 	.left-hard-margin-160 {
 		margin-left: 180px;
 	}
@@ -1155,6 +1194,14 @@ a.menu-drop-icon {
 @media only screen and (max-width: 40.063em) {
 
 	body.background-nature { background: #132732 url("../img/bg-body-md.jpg") repeat-x 0 0; }
+
+	.left-medium {
+		display: none;
+	}
+
+		.left-hard-margin-160 {
+			margin-left: inherit;
+		}
 
 	.drop-panel-bg { width: 100%; }
 
