@@ -726,8 +726,8 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 
 .left-medium {
 	float: left;
-	display: block;
 	max-width: 170px;
+	position: absolute;
 	-webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -736,7 +736,7 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 }
 
 	.left-medium hr {
-		margin: 0;
+		margin: 1em 0 3em;
 		padding: 0;
 		border: 0.2em solid #ddd;
 	}
