@@ -176,6 +176,22 @@ dl dt a {
 	padding: 0 1em;
 	line-height: inherit;
 	background: none;
+	font-size: 1em;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+}
+
+	.top-bar-section li:not(.has-form):first-child a:not(.button) {
+		padding-left: 0;
+	}
+
+	.top-bar-section li:not(.has-form) a:not(.button):hover {
+		background: none;
+		color: #333;
+	}
+
+.top-bar .row.top-bar-center {
+	max-width: 72.5em;
 }
 
 .f-dropdown:after {
