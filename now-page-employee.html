@@ -252,61 +252,7 @@
 <script src="js/simple-app.js"></script>
 <script src="js/main.js"></script>
 
-<script language="javascript">
 
-var __stackDirection = '';
-var __freeMode = '';
-(window.innerWidth < 480) ? __stackDirection = 'vertical' : __stackDirection = 'horizontal';
-(window.innerWidth < 480) ? __freeMode = true : __freeMode = false;
-
-
-var panelControl = new Swiper('.swiper-container', {
-	scrollContainer: false,
-	mousewheelControl : false,
-	mode: __stackDirection,
-    freeMode: __freeMode,
-	scrollbar: {
-	  container :'.swiper-scrollbar',
-	  hide: true,
-	  draggable: false  
-	}
-});
-
-
-$('.nav-company').click(function(e) {
-    e.stopImmediatePropagation();
-	e.preventDefault();
-    panelControl.swipeTo(0);
-    // $('.trigger-categories').trigger('click');
-    $('.trigger-categories').trigger('fade');
-});
-
-$('.nav-space').click(function(e){
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    panelControl.swipeTo(1);
-    $('.trigger-categories').trigger('click');
-});
-
-$('.nav-daily').click(function(e) {
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    panelControl.swipeTo(2);
-    $('.trigger-categories').trigger('click');
-});
-
-$('.drop-down-custom').click(function(e) {
-    e.preventDefault();
-    if( $(this).hasClass('active') ) {
-        $(this).removeClass('active');
-        $(this).children('ul').slideUp();
-    } else {
-        $(this).addClass('active');
-        $(this).children('ul').slideDown();
-    }
-});
-
-</script>
 
 
 </body>
