@@ -29,10 +29,10 @@ html, body, .nav-container, .scroller {
 }
 
 .menu-trigger {
-	position: relative;
+	position: absolute;
 	width: 40px;
 	height: 40px;
-	display: inline-block;
+	display: block;
 	background: url('../img/now-ent-ui-sprite.png') 0 0 no-repeat;
 }
 

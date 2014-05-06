@@ -801,7 +801,6 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 
 /* narrow gutter */
 .row.narrow { margin: 0 -0.313em; }
-.row.narrow {min-height: 13em; }
 /*.row.narrow { margin: 0 -5px; }*/
 .row.narrow .columns { padding: 0 0.313em; }
 /*.row.narrow [class^="col-"] { padding: 0 5px; }*/
@@ -1334,6 +1333,20 @@ a.menu-drop-icon {
 
 	.row.narrow {min-height: inherit; }
 
+	.top-bar .button {
+		display: none;
+	}
+	
+	.search-wrapper.right {
+		float: none !important;
+		display: block;
+	}
+
+	input[type="search"] {
+		margin-left: 4.2em;
+		margin-top: 0.3em;
+	}
+
 }
 
 
@@ -1358,12 +1371,17 @@ a.menu-drop-icon {
 		ul.subnav-inner-page {
 			display: none;
 		}
+
+	/* gotta strap down the search box as we dont need full stuff */
+
+	.top-bar .button {
+		display: none;
+	}
 	
 	.search-wrapper.right {
-		float: left !important;
-		display: inline-block;
+		float: none !important;
+		display: block;
 	}
-
 
 	.page-inner {
 		padding: 0;
@@ -1380,6 +1398,12 @@ a.menu-drop-icon {
 	.swiper-slide {
 		display: block;
 		float: left;
+	}
+
+
+	input[type="search"] {
+		margin-left: 4.2em;
+		margin-top: 0.3em;
 	}
 
 }
