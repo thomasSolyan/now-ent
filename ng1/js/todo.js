@@ -1,6 +1,9 @@
-function TodoCtrl($scope) {
-	$scope.totalTodos = 4;
 
+/*
+
+*/
+
+function TodoCtrl($scope) {
 	$scope.todos = [
 		{text: 'Learn Angular', done: false},
 		{text: 'Build an app', done: false}
@@ -20,6 +23,9 @@ function TodoCtrl($scope) {
 		$scope.todos.push({text: $scope.formTodoText, done: false});
 		$scope.formTodoText = '';
 	};
-}
+};
 
+var firstModule = angular.module('firstModule', []),
+	controllers = {TodoCtrl: TodoCtrl};
 
+firstModule.controller(controllers);
