@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html ng-app>
-<head>
-	<script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
-	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-	<script src="js/todo.js"></script>
+<head>	
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/todo.css">
 </head>
@@ -18,10 +15,14 @@
 		</ul>
 		<form class="form-horizontal">
 			<input type="text" ng-model="formTodoText" ng-model-instant>
-			<button class="btn" ng-click="addTodo()"><i class="icon-plus"></i>Add</button>
+			<button class="btn" ng-click="addTodo()"><i class="glyphicon-plus"></i> Add</button>
 		</form>
 
-		<button class="btn-large" ng-click="clearCompleted()"><i class="icon-trash"></i>Clear Completed</button>
+		<button class="btn-large" ng-click="clearCompleted()"><i class="glyphicon-trash"></i> Clear Completed</button>
 	</div>
+
+	<script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+	<script src="js/todo.js"></script>
 </body>
 </html>
