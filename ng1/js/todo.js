@@ -1,8 +1,4 @@
 
-/*
-
-*/
-
 function TodoCtrl($scope) {
 	$scope.todos = [
 		{text: 'Learn Angular', done: false},
@@ -27,5 +23,14 @@ function TodoCtrl($scope) {
 
 var firstModule = angular.module('firstModule', []),
 	controllers = {TodoCtrl: TodoCtrl};
+
+firstModule.config(function($routeProvider) {
+	$routeProvider
+		.when('/',
+			{
+				controller: 'TodoCtrl',
+				templateUrl: 'templates/view1.html'
+			});
+});
 
 firstModule.controller(controllers);
