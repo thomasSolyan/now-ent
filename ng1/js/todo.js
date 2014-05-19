@@ -22,15 +22,8 @@ function TodoCtrl($scope) {
 };
 
 var firstModule = angular.module('firstModule', []),
-	controllers = {TodoCtrl: TodoCtrl};
+	controllers = {TodoCtrl: TodoCtrl},
+	template = '<div data-ng-controller="TodoCtrl"><h2>Total todos: {{ getTotalTodos() }}</h2><ul class="unstyled"><li data-ng-repeat="todo in todos"><input type="checkbox" data-ng-model="todo.done"> <span class="done-{{ todo.done }}">{{ todo.text }}</span></li></ul><form class="form-horizontal"><input type="text" data-ng-model="formTodoText" data-ng-model-instant> <button class="btn" data-ng-click="addTodo()"><i class="glyphicon-plus"></i> Add</button></form><button class="btn-large" data-ng-click="clearCompleted()"><i class="glyphicon-trash"></i> Clear Completed</button></div>'
 
-firstModule.config(function($routeProvider) {
-	$routeProvider
-		.when('/',
-			{
-				controller: 'TodoCtrl',
-				templateUrl: 'templates/view1.html'
-			});
-});
-
+$('#template').html(template);
 firstModule.controller(controllers);
