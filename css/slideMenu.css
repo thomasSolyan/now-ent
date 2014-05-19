@@ -1,9 +1,10 @@
 #nav-con { z-index: 99999; }
+.invisible { display: none; }
 
 .nav-container {
 	position: absolute;
 	overflow: hidden;
-	width: 310px;
+	width: 300px;
 	height: inherit;
 	top: 40px;
 	z-index: 100;
@@ -41,8 +42,9 @@
 	background: #FFF;
 }
 
-.mp-level { box-shadow: 0.25em 0 0.5em rgba(0,0,0,0.5) !important; }
+.mp-level { box-shadow: 0.25em 0 0.5em rgba(0,0,0,0.5); }
 .mp-level.mp-level-overlay { cursor: pointer; }
+.mp-level.secondary {box-shadow: none;}
 
 .mp-menu ul {
 	margin: 0;
@@ -140,7 +142,7 @@
 #nav-con.nav  {   
 	position: absolute;  
  	width: 180px;   
- 	height: 550px;  
+ 	min-height: 1000px;  
  	padding: 0px 8px;   
  	margin-left: -310px;  
 }
