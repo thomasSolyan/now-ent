@@ -43,7 +43,6 @@
 
 .mp-level { box-shadow: 0.25em 0 0.5em rgba(0,0,0,0.5); }
 .mp-level.mp-level-overlay { cursor: pointer; }
-
 .mp-level.secondary {box-shadow: none;}
 
 .mp-menu ul {
