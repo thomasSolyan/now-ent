@@ -1,4 +1,5 @@
 #nav-con { z-index: 99999; }
+.invisible { display: none; }
 
 .nav-container {
 	position: absolute;
