@@ -2,7 +2,7 @@
     var data = {
             'urls': {'home': '#', 'projectsTeams': '#', 'employeeCenter': '#', 'workplaceServices': '#', 'company': '#', 'mySettings': '#', 'terms': '#', 'logout': '#', 'internet': '#', 'intranet': '#', 'extranet': '#', 'directory': '#', 'news': '#', 'events': '#', 'leadership': '#'},
 
-            'copy': {'home': 'home', 'projectsTeams': 'projects & teamssssss', 'employeeCenter': 'employee center', 'workplaceServices': 'workplace services', 'company': 'company', 'mySettings': 'my settings', 'terms': 'terms and policies', 'logout': 'logout', 'internet': 'internet', 'intranet': 'intranet', 'extranet': 'extranet', 'directory': 'directory', 'news': 'news', 'events': 'events', 'leadership': 'leadership'},
+            'copy': {'home': 'home', 'projectsTeams': 'projects & teams', 'employeeCenter': 'employee center', 'workplaceServices': 'workplace services', 'company': 'company', 'mySettings': 'my settings', 'terms': 'terms and policies', 'logout': 'logout', 'internet': 'internet', 'intranet': 'intranet', 'extranet': 'extranet', 'directory': 'directory', 'news': 'news', 'events': 'events', 'leadership': 'leadership'},
 
             'hide': {'home': '', 'projectsTeams': '', 'employeeCenter': '', 'workplaceServices': '', 'company': '', 'mySettings': '', 'terms': '', 'logout': '', 'internet': '', 'intranet': '', 'extranet': '', 'directory': '', 'news': '', 'events': '', 'leadership': ''},
         },
