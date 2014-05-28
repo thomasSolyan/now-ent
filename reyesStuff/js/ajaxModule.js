@@ -11,7 +11,7 @@ var AjaxModule = new (function() {
                 console.log(data);
             },
             error: function(jqxhr) {
-                console.log(jqxhr.statusText)
+                console.log(jqxhr.statusText);
             }
         });      
     }   

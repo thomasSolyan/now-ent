@@ -578,13 +578,15 @@
                                         <ul>
                                         {{#each this.d.results}}
                                             <li class="announcements-container">
-                                                <h6>{{Title}}</h6> 
+                                                <h6 data-expand class="{{nullCheck Body}}">{{Title}}</h6>                                                
                                                 <p>{{dateFormat Modified}}</p>
+                                                <article style="display: none;">{{{Body}}}</article>
                                             </li>
                                         {{/each}}
                                         </ul>
                                     </script>
                                 </section>
+
 
                             </SharePoint:AjaxDelta>
                         </div>
@@ -648,6 +650,15 @@
                 dataUrl = "http://tpdesignbox/sites/foundation/_api/web/lists/getbytitle('Company%20Announcements')/items",
                 appendTo = '[data-append=announcements]';
             window.onload = function() { AjaxModule.setDataTemplate(content, dataUrl, appendTo); }
+
+            Handlebars.registerHelper('nullCheck', function(val) {
+                if (!val) { return 'no-pointer'}
+            });
+
+            $('[data-append=announcements]').on('click', '[data-expand]', function(ev) {
+                $(ev.target).siblings('article').slideToggle('slow');
+                
+            });
         </script>
     </body>
 </SharePointWebControls:SPHtmlTag>

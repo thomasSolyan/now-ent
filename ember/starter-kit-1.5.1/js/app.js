@@ -2,11 +2,9 @@ Ember.Handlebars.helper('dateFormat', function(val) {
     return val.toString().split(' ').splice(1,3).join(' ');
 });
 
-Ember.Handlebars.helper('noTags', function(val) {
-    return val.replace(/(<([^>]+)>)/ig,"");
-});
-
 App = Ember.Application.create();
+
+App.initialize();
 
 App.Router.map(function() {
 	this.resource('about');
@@ -18,21 +16,23 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
 	model: function() {
-		return $.getJSON('http://tomdale.net/api/get_recent_posts/?callback=?').then(function(data) {
-			return data.posts.map(function(post) {
-				post.body = post.content;
-				return post;
-			});
-		});
+		return $.getJSON('http://tomdale.net/api/get_recent_posts/?callback=?')
+					.then(function(data) {
+						return data.posts.map(function(post) {
+							post.body = post.content;
+							return post;
+						});
+					});
 	}
 });
 
 App.PostRoute = Ember.Route.extend({
 	model: function(params) {
-		return $.getJSON('http://tomdale.net/api/get_post/?id=' + params.post_id + '&callback=?').then(function(data) {
-				data.post.body = data.post.content;
-				return data.post;
-		});
+		return $.getJSON('http://tomdale.net/api/get_post/?id=' + params.post_id + '&callback=?')
+					.then(function(data) {
+						data.post.body = data.post.content;
+						return data.post;
+					});
 	}
 });
 

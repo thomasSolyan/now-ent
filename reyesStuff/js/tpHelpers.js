@@ -3,9 +3,9 @@ Handlebars.registerHelper('dateFormat', function(val) {
 });
 
 Handlebars.registerHelper('visible', function(val) {
-	if (val === 'false' || !val) { return 'invisible' }
+	if (val === 'false' || !val) { return 'invisible'; }
 });
 
-Handlebars.registerHelper('noMarkup', function(val) {
+Handlebars.registerHelper('noTags', function(val) {
     return val.replace(/(<([^>]+)>)/ig,"");
 });

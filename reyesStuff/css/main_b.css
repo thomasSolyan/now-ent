@@ -742,7 +742,7 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 .announcements-container {
 	list-style-type: none;
 	margin-left: -40px;
-	height: 60px;
+	min-height: 60px;
 }
 
 .announcements-container h6 {
@@ -751,6 +751,10 @@ li.drop-down-custom.active a.icon-logs:before { background-position: -380px -20p
 	width: 420px;
 }
 
+.announcements-container h6:hover { cursor: pointer; }
+.announcements-container h6.no-pointer { color: #000; pointer-events: none; }
+.announcements-container h6.no-pointer:hover { cursor: default; }
+.announcements-container article { clear: both; }
 .announcements-container p,
 .title-container h3 { display: inline; }
 .title-container h3:nth-child(2) { float: right; margin-right: 100px; }
