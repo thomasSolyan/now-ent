@@ -1,0 +1,12 @@
+﻿<div data-template="company-announcements" style="color: #000">hereherehere</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ <script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/vendor/handlebars.js%>' />"></script>
+ <script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/js/ajaxModule.js%>' />"></script>
+<!--script>
+    var content = '{{#each this.d.results}}<h6>{{Title}}</h6><p>Modified on{{Modified}}</p>{{/each}}',
+        url = "http://tpdesignbox/sites/foundation/_api/web/lists/getbytitle('Company%20Announcements')/items",
+        target = '[data-template=company-announcements]';
+    window.onload = function() { AjaxModule.getTemplateData(content, url, target); }
+</script-->
+

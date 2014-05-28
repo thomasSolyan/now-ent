@@ -1,8 +1,4 @@
 (function() {
-    Handlebars.registerHelper('visible', function(val) {
-        if (val === 'false' || !val) { return 'invisible' }
-    });
-
     var data = {
             'link-1': {'displayName': 'home', 'url': '#', 'visible': 'true'},
             'link-2': {'displayName': 'projects & teams', 'url': '#', 'visible': 'true'},
