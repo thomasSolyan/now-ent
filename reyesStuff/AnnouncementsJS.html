@@ -1,12 +1,36 @@
-﻿<div data-template="company-announcements" style="color: #000">hereherehere</div>
+﻿ <!-- data-append attribute used to plug in data to template -->
+<!-- <section class="announcements-wrapper" data-append="announcements">
+    <div class="title-container"><h3>Announcement</h3><h3>Modified</h3></div> -->
+    
+    <!-- necessary template for ajaxModule menu -->
+    <!-- <script data-template="company-announcements" type="text/x-handlebars-template">
+        <ul>
+        {{#each this.d.results}}
+            <li class="announcements-container">
+                <h6 data-expand class="{{#unless Body}}no-pointer{{/unless}}">{{Title}}</h6>
+                <p>{{dateFormat Modified}}</p>
+                <article style="display: none;">{{{Body}}}</article>
+            </li>
+        {{/each}}
+        </ul>
+    </script>
+</section>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
- <script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/vendor/handlebars.js%>' />"></script>
- <script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/js/ajaxModule.js%>' />"></script>
-<!--script>
-    var content = '{{#each this.d.results}}<h6>{{Title}}</h6><p>Modified on{{Modified}}</p>{{/each}}',
-        url = "http://tpdesignbox/sites/foundation/_api/web/lists/getbytitle('Company%20Announcements')/items",
-        target = '[data-template=company-announcements]';
-    window.onload = function() { AjaxModule.getTemplateData(content, url, target); }
-</script-->
+<script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/vendor/handlebars.js%>' />"></script>
+<script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/tpHelpers.js%>' />"></script>
+<script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/slideMenu.js%>' />"></script>
+<script src="<asp:Literal runat='server' Text='<%$SPUrl:~sitecollection/_catalogs/masterpage/responsive/js/ajaxModule.js%>' />"></script> -->
+
+<!-- announcments template instantiation -->
+<!-- <script>
+    var content = $('[data-template=company-announcements]').html(),
+        dataUrl = "http://tpdesignbox/sites/foundation/_api/web/lists/getbytitle('Company%20Announcements')/items",
+        appendTo = '[data-append=announcements]';
+    window.onload = function() { AjaxModule.setDataTemplate(content, dataUrl, appendTo); }
+
+    $('[data-append=announcements]').on('click', '[data-expand]', function(ev) {
+        $(ev.target).siblings('article').slideToggle('slow');
+        
+    });
+</script> -->
 

@@ -98,6 +98,6 @@
                 $('[data-id=hidden-links]').hide();
             }
         }
-    });   
+    });
 })();
 

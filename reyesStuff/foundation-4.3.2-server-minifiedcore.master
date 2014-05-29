@@ -16,10 +16,10 @@
         <SharePoint:RobotsMetaTag runat="server">
         </SharePoint:RobotsMetaTag>
         <SharePoint:PageTitle runat="server">
-			<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
-				<SharePoint:ProjectProperty Property="Title" runat="server">
-				</SharePoint:ProjectProperty>
-			</asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
+                <SharePoint:ProjectProperty Property="Title" runat="server">
+                </SharePoint:ProjectProperty>
+            </asp:ContentPlaceHolder>
         </SharePoint:PageTitle>
 
         <%-- sharepoint script and style --%>
@@ -60,8 +60,8 @@
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-	       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
     </head>
@@ -354,14 +354,14 @@
                     <!-- necessary trigger for slideOut menu -->
                     <a href="#" id="trigger-panel-main" class="menu-trigger" data-trigger data-id="main" data-no></a>
                     <div data-target="template"></div>
-                    <!-- necessary content target div for slideOut menu -->                                     
+                    <!-- necessary content target div for slideOut menu -->
 
                     <div class="row masthead ms-dialogHidden">
                         <div class="header larger-12 columns clearfix">
                             <div class="headlogo">
                                 <SharePoint:AjaxDelta ID="DeltaSiteLogo" BlockElement="true" runat="server">
                                     <SharePoint:SPSimpleSiteLink CssClass="ms-siteicon-a" runat="server" ID="onetidProjectPropertyTitleGraphic">
-			                                <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/15/images/siteIcon.png?rev=23" runat="server"/>
+                                            <SharePoint:SiteLogoImage CssClass="ms-siteicon-img" name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/15/images/siteIcon.png?rev=23" runat="server"/>
                                     </SharePoint:SPSimpleSiteLink>
                                 </SharePoint:AjaxDelta>
                             </div>
@@ -578,7 +578,7 @@
                                         <ul>
                                         {{#each this.d.results}}
                                             <li class="announcements-container">
-                                                <h6 data-expand class="{{nullCheck Body}}">{{Title}}</h6>                                                
+                                                <h6 data-expand class="{{#unless Body}}no-pointer{{/unless}}">{{Title}}</h6>
                                                 <p>{{dateFormat Modified}}</p>
                                                 <article style="display: none;">{{{Body}}}</article>
                                             </li>
@@ -586,7 +586,6 @@
                                         </ul>
                                     </script>
                                 </section>
-
 
                             </SharePoint:AjaxDelta>
                         </div>
@@ -651,13 +650,8 @@
                 appendTo = '[data-append=announcements]';
             window.onload = function() { AjaxModule.setDataTemplate(content, dataUrl, appendTo); }
 
-            Handlebars.registerHelper('nullCheck', function(val) {
-                if (!val) { return 'no-pointer'}
-            });
-
             $('[data-append=announcements]').on('click', '[data-expand]', function(ev) {
                 $(ev.target).siblings('article').slideToggle('slow');
-                
             });
         </script>
     </body>
