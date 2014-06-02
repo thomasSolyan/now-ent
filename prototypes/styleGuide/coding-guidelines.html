@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Style Guide</title>
+	
+	<!-- Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	
+	<!-- Page-Level Plugin CSS -->
+	
+	<!-- Main CSS -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+	<nav class="navbar navbar-default navbar-fixed-top navigation" role="navigation" style="margin-bottom: 0">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="index.html"><img src="images/logo-bcbs-shield.png" width="83px"  alt=""/> Style Guide</a> </div>
+		<!-- /.navbar-header --> 
+		
+
+
+
+
+		<!-- nav links -->
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Building Blocks</a></li>
+				<li><a href="foundations.html">Foundations</a></li>
+				<li><a href="styling.html">Styling</a></li>
+				<li><a href="components.html">Components</a></li>
+				<!--<li><a href="javascript:;">Responsive</a></li>-->
+				<li class="active"><a href="javascript:;">Coding Guidelines</a></li>
+			</ul>
+
+
+
+
+
+      <div class=" side-menu">
+			<ul class="nav" id="side-menu">
+				<li class="sidebar-search">
+					<div class="input-group custom-search-form">
+						<input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+						<button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
+						</span> </div>
+					<!-- /input-group --> 
+				</li>
+        <li><a href="#sga-html">HTML</a></li>
+        <li><a href="#sga-doctype-declaration">Doctype Declaration</a></li>
+        <li><a href="#sga-character-encoding">Character Encoding</a></li>
+        <li><a href="#sga-character-set">Character Set</a></li>
+        <li><a href="#sga-ie-compatibility">Prevent IE Compatibility Mode</a></li>
+        <li><a href="#sga-page-descriptions">Page Descriptions</a></li>
+        <li><a href="#sga-page-keywords">Page Keywords</a></li>
+        <li><a href="#sga-page-title">Page Title</a></li>
+        <li><a href="#sga-browser-support">Browser Support</a></li>
+        <li><a href="#sga-general-markup-guidelines">General Markup Guidelines</a></li>
+        <li><a href="#sga-paragraphs">Paragraphs</a></li>
+        <li><a href="#sga-tables">Tables</a></li>
+        <li><a href="#sga-tags-attributes">Tags and Attributes</a></li>
+        <li><a href="#sga-self-closing-elements">Self-closing Elements</a></li>
+        <li><a href="#sga-alternative-image-text">Alternative Text for Images</a></li>
+        <li><a href="#sga-deprecated">Do Not Use Deprecated Tags</a></li>
+        <li><a href="#sga-links">Links</a></li>
+        <li><a href="#sga-links-downloadable">Links to Downloadable Documents</a></li>
+        <li><a href="#sga-image-formats">Image Formats</a></li>
+        <li><a href="#sga-class-ids">Classes vs. IDs</a></li>
+        <li><a href="#sga-css-guidelines">CSS Guidelines</a></li>
+        <li><a href="#sga-linked-style-sheets">Linked Style Sheets</a></li>
+        <li><a href="#sga-inline-styles">Inline Styles</a></li>
+        <li><a href="#sga-browser-workarounds">Browser Workarounds</a></li>
+        <li><a href="#sga-id-class-naming">ID and Class Naming Conventions</a></li>
+        <li><a href="#sga-css-style-definition">CSS Style Definition parts</a></li>
+        <li><a href="#sga-selectors">Selectors</a></li>
+        <li><a href="#sga-css-shorthand">CSS Shorthand</a></li>
+        <li><a href="#sga-css-formatting">CSS Formatting</a></li>
+        <li><a href="#sga-links-styling">Links Styling</a></li>
+        <li><a href="#sga-vendor-prefix">Vendor-specific Extensions</a></li>
+
+
+				
+					<br><br><br><br>
+			</ul><!-- /.sidebar-collapse --> 
+      </div><!-- /.side-menu -->		
+		</div><!-- /.navbar-collapse --> 
+		
+	</nav>
+	
+	
+	
+	
+	
+	
+	
+<div id="page-wrapper">
+<div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header sg-anchor" id="sga-coding-guidelines">Coding Standards and Guidelines</h1>
+    </div><!-- /.col-lg-12 --> 
+</div><!-- /.row --> 
+
+
+<div class="row">
+<div class="col-lg-12">
+  
+  
+  
+<!--  <h3 class="sg-anchor" id="sga-branding-guidelines">Title</h3>
+  <p>some more copy</p>		
+  <p class="lead">copy here</p>
+  
+  
+    
+  <div class="sg-example">
+  sample
+  </div>
+  
+  
+  <div class="highlight">
+  <pre><code class="html">
+  code
+  </code></pre>
+  </div>
+
+-->
+
+
+
+
+
+
+
+
+
+
+  <p>This document is a detailed guide to assist in the  production, implementation and continuing development of the company website.   The document's primary goal is to set  rules for code consistency and best practices.  This guide outlines the overall file  structure, naming conventions, design and coding guidelines, styles and  resources used in the construction of this site.  To ensure design  continuity and maintain the life span of this site, it is important that  everybody involved in the development, maintenance and updating of this site  read, understand and use these guidelines.   By adhering to best practices, we ensure  optimized page loading, performance and maintainable code.</p>
+  
+  <h1 class="sg-anchor" id="sga-html">HTML</h1>
+  <h2 class="sg-anchor" id="sga-doctype-declaration">DOCTYPE Declaration</h2>
+  
+  <p>HTML5 will be used.  In order to conform to HTML5, every HTML page on the site must start with the following DOCTYPE declaration.</p>
+  
+<div class="highlight">
+<pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span></code></pre>
+</div>
+
+  
+  <p>
+    The DOCTYPE declaration indicates to the web browser the particular language  you intend to use within the document and the level of adherence to the standard you intend to follow.   Proper usage of the DOCTYPE declaration can  affect the display of the page, the interpretation of style sheets and the  ability to validate html syntax.  Browsers&rsquo; modes vary greatly based on DOCTYPE.</p>
+    
+  <h2 class="sg-anchor" id="sga-character-encoding">Character Encoding</h2>
+  <p>All pages should use the Unicode UTF-8 character set.</p>
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span> <span class="nt">/&gt;</span></code></pre>
+</div>
+
+
+  <h2 class="sg-anchor" id="sga-character-set">Character Set</h2>
+  <p>All special characters should be marked up using the correct named entity or Unicode equivalent in order for the page  to display correctly across browsers and to validate.  In particular, use the following codes for  common special characters:</p>
+  <table class="table table-bordered" cellspacing="0" cellpadding="0">
+    <tr>
+      <th>Name</td>
+      <th><p align="center">Symbol</p></td>
+      <th>Code</td>
+    </tr>
+    <tr>
+      <td><p>Ampersand</p></td>
+      <td><p align="center">&amp;</p></td>
+      <td><p>&amp;amp;</p></td>
+    </tr>
+    <tr>
+      <td><p>Left Double Quote</p></td>
+      <td><p align="center">&ldquo;</p></td>
+      <td><p>&amp;ldquo;</p></td>
+    </tr>
+    <tr>
+      <td><p>Right Double Quote</p></td>
+      <td><p align="center">&rdquo;</p></td>
+      <td><p>&amp;rdquo;</p></td>
+    </tr>
+    <tr>
+      <td><p>Less Than</p></td>
+      <td><p align="center">&lt; </p></td>
+      <td><p>&amp;lt;</p></td>
+    </tr>
+    <tr>
+      <td><p>Greater Than</p></td>
+      <td><p align="center">&gt; </p></td>
+      <td><p>&amp;gt;</p></td>
+    </tr>
+    <tr>
+      <td><p>en-dash</p></td>
+      <td><p align="center">-</p></td>
+      <td><p>&amp;endash;</p></td>
+    </tr>
+    <tr>
+      <td><p>em-dash</p></td>
+      <td><p align="center">–</p></td>
+      <td><p>&amp;emdash;</p></td>
+    </tr>
+    <tr>
+      <td><p>Ellipsis</p></td>
+      <td><p align="center">…</p></td>
+      <td><p>&amp;helip;</p></td>
+    </tr>
+  </table>
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-ie-compatibility">Prevent IE Compatibility Mode</h2>
+  <p>Internet Explorer  includes a  Compatibility View feature that displays websites that were created for older  browsers as they were designed to appear.  Sometimes IE will switch to  compatibility mode (Quirks mode) without you knowing.   Include the following attributes in the site &lt;head&gt; to  prevent your site from defaulting to compatibility mode.  It will  change the engine that is being used to first Chrome Frame, if the plugin is installed, and then to Edge (the highest supported document mode of the browser). </p>
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge,chrome=1"</span><span class="nt">&gt;</span></code></pre>
+</div>
+
+
+
+
+  <h2 class="sg-anchor" id="sga-page-descriptions">Page Descriptions</h2>
+  <p>Page descriptions should describe the content and purpose of the page in 1-3 short sentences.</p>
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"Description"</span> <span class="na">content=</span><span class="s">"Page summary goes here."</span> <span class="nt">/&gt;</span></code></pre>
+</div>
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-page-keywords">Page Keywords</h2>
+  <p>Page keywords are used to add synonyms and additional  meaning to a page.  Keywords should not  be used to add irrelevant or unrelated words to a page.</p>
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"keywords"</span> <span class="na">content=</span><span class="s">"keyword 1, keyword 2, keyword 3"</span> <span class="nt">/&gt;</span></code></pre>
+</div>
+
+  
+  
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-page-title">Page Title</h2>
+  <p>To encourage ease of navigation and good search engine  ranking, all pages should contain a title, description and keywords.  These content elements should be created by  the content editor and should not be left to the developer.<br>
+    Page title should be simple, descriptive and distinct,  avoiding marketing hyperbole.  For  consistency, all titles should be in the format:</p>
+    
+    
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;title&gt;</span>[Site Name] &ndash; [Section] : [Page]<span class="nt">&lt;/title&gt;</span></code></pre>
+</div>
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-browser-support">Browser Support</h2>
+  <p>There is currently quite a large pool of web browsers  available, each providing a slightly (or dramatically) different experience.   The following table outlines browser support  requirements.  <br>
+  </p>
+  <div align="center">
+    <table class="table table-bordered" cellspacing="0" cellpadding="0">
+      <tr>
+        <th>Browser</th>
+        <th>Support Level</th>
+      </tr>
+      <tr>
+        <td><p>IE6</p></td>
+        <td><p>Unsupported</p></td>
+      </tr>
+      <tr>
+        <td><p>IE7</p></td>
+        <td><p>Unsupported</p></td>
+      </tr>
+      <tr>
+        <td><p>IE8</p></td>
+        <td><p>Partially supported</p></td>
+      </tr>
+      <tr>
+        <td><p>IE9</p></td>
+        <td><p>Supported</p></td>
+      </tr>
+      <tr>
+        <td><p>IE10</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>IE11</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>Firefox</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>Chrome</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>Safari</p></td>
+        <td><p>Supported</p></td>
+      </tr>
+      <tr>
+        <td><p>Safari for iOS</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>WebKit for Android OS</p></td>
+        <td><p>Target</p></td>
+      </tr>
+      <tr>
+        <td><p>Opera</p></td>
+        <td><p>Partially supported</p></td>
+      </tr>
+    </table>
+  </div>
+  
+  
+  <br class="clearfix">
+
+  
+  
+  <ul>
+    <li>Target  – Most popular browsers.  Everything must  work as intended</li>
+    <li>Supported  – All content  and functionality must work with minimal degradation.</li>
+    <li>Partially  supported – Old or unpopular browsers.  Not supported but not officially unsupported.  Content and functionality must work.  Degradation must be graceful and should not obscure content.</li>
+    <li>Unsupported  – Buggy and unsupported browsers.  Advice users to upgrade</li>
+  </ul>
+  
+  
+  
+  
+  
+  <h1 class="sg-anchor" id="sga-general-markup-guidelines">General Markup Guidelines</h1>
+  <h2>Markup</h2>
+  <p>The following are general guidelines for structuring your  HTML markup.  Authors are reminded to  always use markup which represents the semantics of the content in the document  being created.</p>
+  
+  <ul>
+    <li>We recommend all indentation to be done via soft  tabs (using the space character).  Hitting  Tab in your text editor shall be equivalent to four spaces.   The reason for this is when multiple  developers use different tab settings the code becomes difficult to read or  print, which is why spaces are preferable to tabs.  </li>
+    <li>Make use of &lt;DL&gt; (definition lists) and  &lt;BLOCKQUOTE&gt;, when appropriate.</li>
+    <li>Use label fields to label each form  field, the [for] attribute should associate itself with the input  field, so users can click the labels </li>
+    <li>Set the width of input fields using CSS width  and not inline like the size attribute.</li>
+  </ul>
+  
+  
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-paragraphs">Paragraphs</h2>
+  <p>Use actual &lt;P&gt; elements for paragraph delimiters as  opposed to multiple &lt;BR&gt; tags.</p>
+ 
+<p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+
+<div class="highlight">
+<pre><code class="html">
+<p>&lt;p&gt;This is content within a paragraph&lt;/p&gt;<br>
+&lt;p&gt;This is another paragraph with content&lt;/p&gt;</p></code></pre></div>  
+<p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+
+<div class="highlight">
+<pre><code class="html"><p>&lt;p&gt;This is content within a paragraph<br>
+&lt;br&gt;&lt;br&gt;<br>
+This is another paragraph with content, but the break tags above is bad  markup&lt;/p&gt;</p></code></pre></div>
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-tables">Tables</h2>
+  <ul>
+    <li>Tables should not be used for page layout.  HTML tables are intended for tabular data  only.  All layout and structure will be  done in the CSS files.</li>
+    <li>Make use of THEAD, TBODY, and TH tags and Scope  attribute when appropriate.  <br>
+      Example table:</li>
+  </ul>
+
+
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">cellspacing=</span><span class="s">"1"</span> <span class="na">cellpadding=</span><span class="s">"10"</span> <span class="na">summary=</span><span class="s">"This will describe the contents of this table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>
+  This is the Table Title
+  <span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column Head 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column Head 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span><span class="nt">&gt;</span>Column Head 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Row Head 1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Row Head 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-tags-attributes">Tags and Attributes</h2>
+  <p>Always use lowercase text in your HTML tags and  attributes.  All attributes for tags must  have a value and be surrounded by double quotes.</p>
+  
+<p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+
+<div class="highlight">
+<pre><code class="html">&lt;img src=&quot;image.gif&quot; alt=&quot;picture&quot;  width=&quot;50&quot; height=&quot;50&quot; /&gt;
+</code></pre></div>
+
+<p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+
+<div class="highlight">
+<pre><code class="html">&lt;IMG SRC=&quot;image.gif&quot; ALT=&quot;picture&quot; WIDTH=50 HEIGHT=&quot;  &quot; /&gt;
+</code></pre></div>
+
+
+  <p>Some attributes that did not require descriptive elements  in HTML require them in XHTML.  For example the &lsquo;nowrap&rsquo; attribute for &lt;td  nowrap&gt; tags or the &lsquo;selected&rsquo; attribute for &lt;option selected&gt;.   To make  these XHTML compliant, you need to add a description of the attribute.  For example:  &lt;td nowrap=&quot;nowrap&quot;&gt;</p>
+  
+  
+  
+  <h2>Close all of Your Tags</h2>
+  <p>All tags should have an opening and a closing tag.   As an  example make sure all of your &lt;p&gt; tags are followed by  a &lt;/p&gt; tag at the end of the paragraph and all of  your &lt;li&gt; tags are followed by a &lt;/li&gt; at the  end of the list item.</p>
+
+
+
+
+  <h2 class="sg-anchor" id="sga-self-closing-elements">Self-closing Elements</h2>
+  <p>A space is required before the forward slash of a  self-closing element.</p>
+  
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"image.gif"</span> <span class="na">alt=</span><span class="s">"picture"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+  <p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+<div class="highlight"><pre><code><span class="nt">&lt;br/&gt;</span>
+
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"image.gif"</span> <span class="na">alt=</span><span class="s">"picture"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span><span class="nt">/&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-alternative-image-text">Alternative Text for Images</h2>
+  <p>Alternative text is required for every image element on the  site.  Alt text must provide an adequate  description of the content or function of the image.  As a rule of thumb, consider what you might  say if you were reading the web page to someone over the telephone.  You do not need to include the words  &quot;image of&quot; or &quot;graphic of.&quot;   For images that contain words or letters - use alternate text that  includes the same words or letters.</p>
+  
+  
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/graphic.gif"</span> <span class="na">alt=</span><span class="s">"Image Description Here"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-deprecated">Do Not Use Deprecated Tags</h2>
+  <p>Some tags that used to be used have been deprecated and  should not be used.  One still common  example is the &lt;font&gt; tag.   Font tags should be replaced with their appropriate style sheet  alternatives set with classes.  As well,  the &lt;b&gt; bold tags should be defined with &lt;strong&gt; tags  and &lt;i&gt; italics should be defined with &lt;em&gt; tags.  The &lt;center&gt; Center tags should be  replaced with &lt;div align=&quot;center&quot;&gt;.  Here are some common deprecated tags and  their replacement:</p>
+  
+  
+  <table class="table table-bordered" cellspacing="0" cellpadding="0">
+    <tr>
+      <th class="text-success"><i class="fa fa-check text-success"></i> Good: </td>
+      <th class="text-danger"><p align="center"><i class="fa fa-times text-danger"></i> Bad:</p></td>
+      <th><p >Tag Description</p></td>
+    </tr>
+    <tr>
+      <td><p>&lt;strong&gt;</p></td>
+      <td><p>&lt;b&gt;</p></td>
+      <td><p>Bold Text</p></td>
+    </tr>
+    <tr>
+      <td><p>&lt;em&gt;</p></td>
+      <td><p>&lt;i&gt;</p></td>
+      <td><p>Italic Text</p></td>
+    </tr>
+    <tr>
+      <td><p>&lt;div align=&rdquo;center&rdquo;&gt;</p></td>
+      <td><p>&lt;center&gt;</p></td>
+      <td><p>Centered Text</p></td>
+    </tr>
+    <tr>
+      <td><p>&lt;ul&gt;</p></td>
+      <td><p>&lt;dir&gt;</p></td>
+      <td><p>Directory List</p></td>
+    </tr>
+    <tr>
+      <td><p>&lt;ul&gt;</p></td>
+      <td><p>&lt;menu&gt;</p></td>
+      <td><p>Menu List</p></td>
+    </tr>
+    <tr>
+      <td><p>CSS    equivalent -&gt;  font:  Arial</p></td>
+      <td><p>&lt;font&gt;</p></td>
+      <td><p>Defines    font  type, size, color</p></td>
+    </tr>
+    <tr>
+      <td><p>CSS    equivalent -&gt;  text-decoration:  line-through</p></td>
+      <td><p>&lt;s&gt;</p></td>
+      <td><p>Strikethrough    Text</p></td>
+    </tr>
+    <tr>
+      <td><p>CSS    equivalent -&gt;  text-decoration:  line-through</p></td>
+      <td><p>&lt;strike&gt;</p></td>
+      <td><p>Strikethrough    Text</p></td>
+    </tr>
+    <tr>
+      <td><p>CSS    equivalent -&gt;  text-decoration:  underline<br>
+        or    border-bottom: 1px solid #ccc;</p></td>
+      <td><p>&lt;u&gt;</p></td>
+      <td><p>Underline    Text</p></td>
+    </tr>
+  </table>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-links">Links</h2>
+  <p>The text within links should be unique and describe the  destination of the link.  Links saying  &ldquo;Click Here&rdquo; or &ldquo;More&rdquo; should be avoided.</p>
+  
+  <p><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"news.html"</span><span class="nt">&gt;</span>More News Stories<span class="nt">&lt;/a&gt;</span></pre></p>
+  
+  
+  
+  <p>You can provide additional, non-critical link information in  the form of a tool-tip by adding a title attribute.</p>
+  <p><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"news.html"</span> <span class="na">title=</span><span class="s">"News Archive"</span><span class="nt">&gt;</span>More News Stories<span class="nt">&lt;/a&gt;</span>
+</pre></p>
+
+
+
+
+  <h2 class="sg-anchor" id="sga-links-downloadable">Links to downloadable documents</h2>
+  <p>Links to downloadable documents – such as PDF&rsquo;s and Word  documents – should contain the document size, format and the fact that they are  downloads rather than links to another page.</p>
+  
+  
+  <p><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"minutes.pdf"</span><span class="nt">&gt;</span>Download the Minutes in PDF format (25KB)<span class="nt">&lt;/a&gt;</span>
+</pre></p>
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-image-formats">Image formats</h2>
+  <p>There are four main image formats that should be used,  detailed here:<br>
+    <strong>JPEG</strong>  -  This will cover all photography-based images,  such as page promo images, or anything with a very high color count.</p>
+  <p><strong>PNG24</strong>  -  This format outputs high-color  count imagery and fully supports graded opacity by pixel.  Relatively, it's quite a heavy format as far  as kilobyte weight.  Note that IE6 has an  issue rendering the transparent pixels, where PNG24's appear to have a gray or  light-blue background.  In many cases,  you should use a GIF fallback for IE6, in place of a PNG24.  You can apply a PNGfix but they are very slow  and expensive on page weight and performance, so it's best to avoid using them.</p>
+    <p><strong>PNG8</strong>  -  Offers 256 colors.  PNG&rsquo;s offer good color and are sometimes a  lot more compressible than GIF.  This  format allows graded opacity in nearly all browsers, but in IE6.</p>
+    <p><strong>GIF</strong> 89a. -  GIF 89a offers the flexibility of transparency and wide browser support, but  the constraints of no graded opacity or a color depth above 256.  The file size is comparably very small.  All low-color count imagery such as illustrations,  icons and thumbnails should be done in PNG8.   It's the most size-efficient of these four.   </p>
+  
+  
+  
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-class-ids">Classes vs. IDs</h2>
+  <p>You should only give elements an ID attribute if they are  unique.  They should be applied to that  element only and nothing else.  Classes  can be applied to multiple elements that share the same style properties.  Things that should look and work in the same  way can have the same class name.</p>
+  
+  
+  
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"nav-bar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>Category 1<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>Category 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>Category 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div> 
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-css-guidelines">CSS Guidelines</h2>
+  <p>CSS describes all presentation aspects of the page via a  description of its visual properties.  These  properties are mixed and matched via identifiers to control the page's layout  and visual characteristics through the layering of style rules.</p>
+	<p>Inline style attributes should be avoided  (style=&quot;...&quot;).  Please use  external style sheets or style tag declarations in the head section.  Do not put style tag declarations outside of  the head section.</p>
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-linked-style-sheets">Linked Style Sheets</h2>
+  <p>Add CSS through external files, minimizing the amount of  code needed for each page of the site.  It  should always be in the HEAD of the document.</p>
+
+<p>Use the &lt;link&gt; tag to include the  stylesheet</p>
+
+
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"myStylesheet.css"</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-inline-styles">Inline Styles</h2>
+  <p>Don't use inline styles in the document.  It's harder to track down these style rules.  It also adds to the page weight and code  clutter.<br>
+
+
+<p class="text-danger"><i class="fa fa-times text-danger"></i> Bad: </p>
+
+<div class="highlight">
+<pre><code class="html"><span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"font-size: 12px; color: #FFFFFF"</span><span class="nt">&gt;</span>No Inline Styles Please<span class="nt">&lt;/p&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-browser-workarounds">Browser Workarounds</h2>
+  <p>Hacks are  dangerous, since they are based on non-standard exploits, you can't predict how  they are going to behave in future browsers.  The tool of choice for fighting IE problems is  the conditional stylesheets.   When  implementing browser-specific workarounds, they should be kept in separate  files if possible.   For IE browsers, you  can selectively target them in your HTML:</p>
+  
+  
+  
+	<p>Target IE 7 ONLY</p>
+<div class="highlight">
+<pre><code class="html"><span class="c">&lt;!--[if IE 7]&gt;</span>
+<span class="c">&lt;link rel="stylesheet" type="text/css" href="ie7.css"&gt;</span>
+<span class="c">&lt;![endif]--&gt;</span></code></pre></div>
+
+  <p>Target IE 7 and LOWER</p>
+<div class="highlight">
+<pre><code class="html"><span class="c">&lt;!--[if lte IE 7]&gt;</span>
+<span class="c">&lt;link rel="stylesheet" type="text/css" href="ie7-and-down.css" /&gt;</span>
+<span class="c">&lt;![endif]--&gt;</span></code></pre></div>
+
+  <p>Target IE 8 ONLY</p>
+<div class="highlight">
+<pre><code class="html"><span class="c">&lt;!--[if IE 8]&gt;</span>
+<span class="c">&lt;link rel="stylesheet" type="text/css" href="ie8.css"&gt;</span>
+<span class="c">&lt;![endif]--&gt;</span></code></pre></div>
+
+  <p>Target IE 9 and LOWER</p>
+<div class="highlight">
+<pre><code class="html"><span class="c">&lt;!--[if lte IE 9]&gt;</span>
+<span class="c">&lt;link rel="stylesheet" type="text/css" href="ie9-and-down.css" /&gt;</span>
+<span class="c">&lt;![endif]--&gt;</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-id-class-naming">ID and Class Naming Conventions</h2>
+  <p>ID and Class names will use compound words or phrases in  which the elements are joined by the – hyphen character.  All lower case words will be used.</p>
+	<p>It is always preferable to name something, be it an ID or a  class, by the nature of what it is rather than by where it is or what  it looks like.  For instance, a class  name of big-blue-text for  a special note on a page is quite meaningless if it has been changed to have a  small red text color.  Using a more  intelligent and generic convention such as note-text is  better because when the visual style changes it still makes sense.</p>
+  
+  
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+
+<div class="highlight">
+<pre><code class="html">note-text
+tooltip
+sidebar
+external-link
+</code></pre></div>
+
+
+  <p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+<div class="highlight">
+<pre><code class="html">big-blue-text
+curved-border-box
+right-column
+red-link
+</code></pre></div>
+
+
+
+
+
+  <h2 class="sg-anchor" id="sga-css-style-definition">CSS Style Definition parts</h2>
+
+<div class="highlight">
+<pre><code class="html">selector {
+  property:  value;
+}
+</code></pre></div>
+
+
+
+
+  <h2 class="sg-anchor" id="sga-selectors">Selectors</h2>
+  <p>Write selectors that are optimized for speed.   Where  possible, avoid expensive CSS selectors.   For  example, avoid the * wildcard selector and don't qualify ID selectors (ex:   div#myid) or class selectors (ex:  table.style-02).   This is  especially important with web applications where speed is paramount and there  can be thousands of DOM elements.</p>
+
+
+
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#myid
+.style-02
+</code></pre></div>
+
+
+  <p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+<div class="highlight">
+<pre><code class="html">div#myid
+table.style-02
+</code></pre></div>
+
+
+<!--
+
+  <h2 class="sg-anchor" id="sga-pixels-ems">Pixels  vs. Ems</h2>
+  <p>Using the px unit  of measurement to define font size is recommended, because it offers  absolute control over text.  Using  the em unit for font  sizing used to be popular, to accommodate for Internet Explorer 6 not resizing  pixel based text.  However, all major  browsers (including IE7 and IE8) now support text resizing of  pixel units and/or full-page zooming.  Since IE6 is  largely considered deprecated, pixels sizing is preferred.  Additionally, unit-less line-height is preferred because  it does not inherit a percentage value of its parent element, but instead is  based on a multiplier of the font-size.</p>
+  
+  
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  font-size: 13px;
+  line-height: 1.5;
+}</code></pre></div>
+
+
+  <p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  font-size: 0.813em;
+  line-height: 1.25em;
+}</code></pre></div>
+    
+    -->
+    
+
+
+  <h2 class="sg-anchor" id="sga-css-shorthand">CSS  Shorthand</h2>
+  <p>The use of CSS shorthand will be used whenever  possible.   Shorthand properties can be  used to set several properties at once, in a single declaration, instead of  using a separate declaration for each individual property.  This can save a lot of space in the CSS file.   This is not a requirement but a  recommendation.  So you can type out all  property value pairs if you are not comfortable with shorthand coding.</p>
+  
+  
+    <p>The following examples show the most common shorthand  properties:<br>
+    Background Property:</p>
+    
+    <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  background: #fff  url(../images/graphic.png) repeat-x fixed left bottom;
+}</code></pre></div>
+
+
+  <p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  background-color: #fff;
+  background-image:  url(../images/graphic.png);
+  background-repeat:  repeat-x;
+  background-attachment:  fixed;
+  background-position:  left bottom;
+}</code></pre></div>
+
+  <p>Font Property:<p>
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  font: 13px/1.5 bold  italic serif;
+}</code></pre></div>
+
+	<p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-style: italic;
+  font-family: serif;
+}</code></pre></div>
+
+
+
+
+  <p>Omit any of these commands from the background CSS shorthand  property, and the browser will use the default values. If you leave out the  background-position command then any background image will be place in the  top-left of the container and then repeated both horizontally and vertically.</p>
+    <p>Lists</p>
+    <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  list-style: disc  outside url(image.gif); 
+}</code></pre></div>
+
+  <p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+ list-style: #fff;
+ list-style-type: disc;
+ list-style-position:  outside;
+ list-style-image:  url(image.gif);
+}</code></pre></div>
+
+
+  <p>Margin</p>
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  margin: 2px 1px 3px 4px;<br>
+}</code></pre></div>
+
+
+  <p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  margin-top: 2px;
+  margin-right: 1px;
+  margin-bottom: 3px;
+  -left: 4px; 
+}</code></pre></div>
+
+
+  <p>Padding</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  padding: 0; (top,  bottom, right and left)
+}</code></pre></div>
+
+
+<p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}</code></pre></div>
+
+
+
+  <p>Border</p>
+  <p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  border: 1px black solid
+}</code></pre></div>
+    
+  <p>Longhand is unnecessary:</p>
+<div class="highlight">
+<pre><code class="html">#selector {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+}</code></pre></div>
+    
+    
+    
+    
+    
+    
+    
+  <h2 class="sg-anchor" id="sga-css-formatting">CSS Formatting</h2>
+  <p>To ease potential headaches for maintenance, it is  recommended that all CSS must be written in a consistent manner. For one, all  CSS selectors must be listed on their own line.  If multiple selectors are listed for a rule,  each selector should be followed by a line break.  So as a general rule of thumb, if there is a  comma in CSS rule, it should immediately be followed by a line break.  This way, we know that all text on a single  line is part of the same selector.  Likewise, all property/value pairs must be on  their own line with standard indentation (4 spaces), and end with a semicolon.  All property values must begin with a space  (after the colon).  The closing brace  must be on the same level of indentation as the selector that began it - flush  left.</p>
+  
+  
+	<p class="text-success"><i class="fa fa-check text-success"></i> Good:</p>
+<div class="highlight">
+<pre><code class="css">#selector-1 span,
+#selector-2 span,
+#selector-3 span {
+  background: #fff;
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+}</code></pre></div>
+
+
+  <p class="text-danger"><i class="fa fa-times text-danger"></i> Bad:</p>
+<div class="highlight">
+<pre><code class="html">#selector-1 span, #selector-2 span, #selector-3 span {
+    background:#fff;  color:#000; font-size:13px; font-weight:bold; }</code></pre></div>
+    
+    
+    
+    
+    
+    
+    
+  <h2 class="sg-anchor" id="sga-links-styling">Links Styling</h2>
+  <p>Default styles for links should be declared and different  from the main text styling, and with differing styles for hover state.</p>
+  
+  
+  
+  
+  
+  <h2 class="sg-anchor" id="sga-vendor-prefix">Vendor-specific extensions</h2>
+  <p>In CSS, keywords and property names beginning with - (dash)  or _ (underscore) are reserved for vendor-specific extensions.  <br>
+    If you must use extensions, you should use those that are  closely related to equivalent CSS properties (be that CSS1, 2, or 3), so that  you can switch to the standard property later on, and remove the extension when  the browser implements the correct specification.  Note that prefixes are used by browsers to  try out new experimental properties.  These  extensions may be subject to change at the vendor&rsquo;s whim, as they don&rsquo;t form  part of the CSS specifications.  So it is  recommended that you avoid using them unless it&rsquo;s absolutely necessary. </p>
+<p>The following list is some of the most common vender  prefixes in use today:  </p>
+
+  <table class="table table-bordered" cellspacing="0" cellpadding="0">
+    <tr>
+      <th>prefix </td>
+      <th>organization</td>
+    </tr>
+    <tr>
+      <td><p>-ms-</p></td>
+      <td><p>Microsoft</p></td>
+    </tr>
+    <tr>
+      <td><p>-moz-</p></td>
+      <td><p>Mozilla Firefox</p></td>
+    </tr>
+    <tr>
+      <td><p>-o-</p></td>
+      <td><p>Opera Software</p></td>
+    </tr>
+    <tr>
+      <td valign="top"><p>-webkit-</p></td>
+      <td valign="top"><p>Apple Safari, Google Chrome</p></td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+</div><!-- /.col-lg-12 --> 
+</div><!-- /.row -->
+
+
+
+	</div><!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Core Scripts - Include with every page --> 
+<script src="js/jquery-1.10.2.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script> 
+
+<!-- Page-Level Plugin Scripts - Blank --> 
+
+<!-- SG Admin Scripts - Include with every page --> 
+<script src="js/sg-admin.js"></script> 
+
+<!-- Page-Level Demo Scripts  -->
+<script type="text/javascript">
+  $(function () {
+      $("[rel='tooltip']").tooltip();
+  });
+		
+</script>
+</body>
+</html>

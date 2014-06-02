@@ -572,7 +572,6 @@
                                 <!-- data-append attribute used to plug in data to template -->
                                 <section class="announcements-wrapper" data-append="announcements">
                                     <div class="title-container"><h3>Announcement</h3><h3>Modified</h3></div>
-                                    
                                     <!-- necessary template for ajaxModule menu -->
                                     <script data-template="company-announcements" type="text/x-handlebars-template">
                                         <ul>
