@@ -1,0 +1,10 @@
+#home div:first-child {
+    margin-top: 50px;
+    height: 500px;
+    margin-left: 40px;
+}
+
+#home h3,
+#home h1:first-child { color: #fff; }
+#home h3 { margin-left: 75px; }
+#home h1:first-child { text-transform: uppercase; font-size: 68px; }

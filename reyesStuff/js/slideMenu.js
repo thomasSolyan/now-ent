@@ -1,6 +1,6 @@
 (function() {
     var data = {
-            'link-1': {'displayName': 'home', 'url': '#', 'visible': 'true'},
+            'link-1': {'displayName': 'my farm', 'url': '#', 'visible': 'true'},
             'link-2': {'displayName': 'projects & teams', 'url': '#', 'visible': 'true'},
             'link-3': {'displayName': 'employee center', 'url': '#', 'visible': 'true'},
             'link-4': {'displayName': 'workplace services', 'url': '#', 'visible': 'true'},
