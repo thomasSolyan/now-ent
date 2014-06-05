@@ -30,598 +30,537 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-  <!--favicon image-->
+  <!-- favicon image -->
   <link rel="shortcut icon" href="images/favicon.png">
 </head>
 
 <body>
-<!-- Preloader -->
-<div id="preloader">
-  <div id="status">
-    <p>Loading Content...</p>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">
+      <p>Loading Content...</p>
+    </div>
   </div>
-</div>
 
-<!--HOME SECTION START-->
-<section class="clearfix">
-  <div class="header clearfix">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-5 col-sm-4"> 
-            <a class="logo" href="#home"><img alt="logo" src="images/logo.png"></a>
-        </div><!--/.col-md-4-->
+  <!-- HOME SECTION START -->
+  <section class="clearfix">
+    <div class="header clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-5 col-sm-4"> 
+              <a class="logo" href="#home"><img alt="logo" src="images/logo.png"></a>
+          </div>
+          <div class="col-md-8">
+            <ul class="branch-menu nav navbar-nav navbar-right pull-right">
+              <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bars"></i>
+                  <small class="title-caption">MENU</small>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Site link 1</a></li>
+                  <li><a href="#">Another Site</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
 
-        <div class="col-md-8">
+            <!-- MENU BUTTON(ON TABLET/MOBILE) START -->
+            <div class="menu-btn main-menu" data-target=".nav-collapse" data-toggle="collapse"><span class="fa fa-th"></span></div>
 
-          <ul class="branch-menu nav navbar-nav navbar-right pull-right">
-            <li class="dropdown">
-              <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-bars"></i>
-                <small class="title-caption">MENU</small>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Site link 1</a></li>
-                <li><a href="#">Another Site</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <!--MENU BUTTON(ON TABLET/MOBILE) START-->
-          <div class="menu-btn main-menu" data-target=".nav-collapse" data-toggle="collapse"><span class="fa fa-th"></span> </div>
-          <!--MENU BUTTON END-->
-
-          <!--NAVIGATION START-->
-          <ul class="navigation nav-collapse">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#challenge">Challenge</a></li>
-            <li><a href="#solution">Solution</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#get-started">Get Started</a></li>
-          </ul>
-          <!--/.navigation-->
-          <!--NAVIGATION END-->
-
+            <!-- NAVIGATION START -->
+            <ul class="navigation nav-collapse">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#challenge">Challenge</a></li>
+              <li><a href="#solution">Solution</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#get-started">Get Started</a></li>
+            </ul>
+            <!-- NAVIGATION END -->
+          </div>
         </div>
-        <!--/.col-md-4--> 
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </section>
+  <!-- HOME SECTION END -->
+
+  <!--MAIN BANNER -->
+  <section id="home">
+    <div class="container align-center">
+      <article>
+        <h1>Sharepoint,<br> A hero&rsquo;s tale</h1>
+        <h3>Are you ready to go from scapegoat to hero?</h3>
+      </article>
+
+      <!-- placeholder -->
+      <figure></figure>
+      <div class="align-right">
+        <a href="#" class="btn btn-primary btn-lg"  data-toggle="modal" data-target="#self_assesment">Take our free SharePoint 2013 <br>Self Assessment</a>
+      </div>
+    </div>
+  </section>
+  <!-- MAIN BANNER END -->
+
+  <!-- CHALLANGE SECTION START -->
+  <section id="challenge" data-layout class="clearfix content">
+    <div class="container">
+
+      <!-- Challenge TAB NAVIGATION START -->
+      <div class="white-bg clearfix flat-tabs">
+        <ul class="nav margin align-right nav-tabs">
+          <li class="active"><a href="#statistics"  data-target="#statistics_1, #statistics_2" data-toggle="tab">Proof</a></li>
+          <li><a href="#scapegoat"  data-target="#scapegoat_1, #scapegoat_2" data-toggle="tab">Scapegoat</a></li>
+          <li><a href="#challenges"  data-target="#challenges_1, #challenges_2" data-toggle="tab">Future</a></li>
+        </ul>
+      </div>
+      <!-- Challenge TAB NAVIGATION END -->
+      <div class="tab-content">
+          <div class="tab-pane fade in active" id="statistics_1">
+              <figure class="chart-container">
+                <img src="images/chart.png">
+              </figure>
+          </div>
+          <div class="tab-pane fade" id="scapegoat_1">
+              <img src="images/about/2.jpg" alt="about">
+          </div>
+          <div class="tab-pane fade" id="challenges_1">
+              <img src="images/about/3.jpg" alt="about">
+          </div>
+      </div>
+
+      <!-- CHALLENGE TAB START -->
+      <div class="tab-content white-bg">
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane active fade in active" id="statistics_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>CHALLENGE</p>
+                  <h2 class="about-title">PROOF</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                  <h4>There&rsquo;s no doubt about it - you&rsquo;re not alone; <br>implementing SharePoint can be challenging.</h4>
+                  <p>A 2013 Industry Watch Report from AIIM found that 61% of SharePoint ECM projects had stalled or did not meet expectations.</p>
+                  <p class="heavy">And, as an IT leader, you&rsquo;ve heard the complaints...</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane fade" id="scapegoat_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>CHALLENGE</p>
+                  <h2 class="about-title">Scapegoat</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                  <h4>Even after you get SharePoint live, users still aren&rsquo;t happy</h4>
+                  <p>&ldquo;SharePoint isn&rsquo;t easy to use.&rdquo;<br>
+                  &ldquo;I can&rsquo;t find what I&rsquo;m looking for.&rdquo;<br>
+                  &ldquo;It dosen&rsquo;t make me more productive. It actually makes my job harder.&rdquo;<br>
+                  &ldquo;I&rsquo;d rather walk on hot coals... (well maybe not yet)&rdquo;</p>
+                  <p>And then your team weighs in, &ldquo;This is a mess. I can&rsquo;t support it.&rdquo;</p>
+                  <p class="heavy">And there is the future to consider...</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane fade" id="challenges_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>CHALLENGE</p>
+                  <h2 class="about-title">FUTURE</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                  <h4>Future trends compound the challenges.</h4>
+                  <p>Millennials will soon make up 75% of the workforce.<br>
+                  Tablets are outselling PC&rsquo;s aand smart phones are ubiquitous<br>
+                  Social technology has changed the way people interact.</p>
+                  <p class="heavy">Becoming the hero seems as though it will only get harder.<br>
+                  So, where can you go from here?</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+      </div>
+      <!-- CHALLENGE TAB END -->
+      <div class="spacing40 clearfix"></div>
+
+      <!-- TEAM LIST START -->
+      <div class="team-container">
+        <div class="col-md-4"> 
+          <a href="http://blog.tahoepartners.com/index.php/career-development-millennials-nowenterprise-next-generation/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team"class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">GET READY FOR THE MILLENNIALS</h3>
+            <p class="team-position">By Mike Davidson - Apr 2, 2014</p>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <a href="http://blog.tahoepartners.com/index.php/future-knowledge-worker-nowenterprise/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">FUTURE OF THE KNOWLEDGE WORKER</h3>
+            <p class="team-position">By David Sidwell - Mar 17, 2014</p>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <a href="http://blog.tahoepartners.com/index.php/social-and-mobile-must-be-part-of-all-digital-solutions/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">SOCIAL AND MOBILE MUST BE PART OF THE SOLUTIONS</h3>
+            <p class="team-position">By David Sidwell - June 5, 2013</p>
+          </div>
+        </div>
+      </div>
+      <!-- TEAM LIST END -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="spacing40 clearfix"></div>
+          <button class="btn btn-lg pull-right" data-toggle="modal" data-target="#blog_subscription">Subscribe to our Blog  <i class="fa fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CHALLANGE SECTION END -->
+
+  <!-- SOLUTION SECTION START -->
+  <section id="solution"  data-layout class="clearfix content">
+    <div class="container">
+
+      <!-- SOLUTION NAVIGATION TAB START -->
+      <div class="white-bg clearfix flat-tabs">
+        <ul class="nav margin align-right nav-tabs">
+          <li class="active"><a href="#be-a-hero"  data-target="#be-a-hero_1, #be-a-hero_2" data-toggle="tab">Be a Hero</a></li>
+          <li><a href="#benefits"  data-target="#benefits_1, #benefits_2" data-toggle="tab">Benefits</a></li>
+        </ul>
+      </div>
+      <!-- SOLUTION NAVIGATION TAB END -->
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="be-a-hero_1">
+          <figure class="chart-container">
+            <img src="images/services/1.jpg" alt="Be a hero">
+          </figure>
+        </div>
+        <div class="tab-pane fade" id="benefits_1">
+          <figure class="chart-container">
+            <img src="images/services/2.jpg" alt="Benefits">
+          </figure>
+        </div>
+      </div>
+
+      <!-- SOLUTION TAB START -->
+      <div class="tab-content white-bg"> 
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane active fade in active" id="be-a-hero_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>SOLUTION</p>
+                  <h2 class="about-title">BE A HERO</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                <h4>Can you go from SharePoint scapegoat to hero and save the day? Yes you can.</h4>
+                <p>The answer starts with an Enterprise Collaboration Roadmap.</p>
+                <p>Galvanize your organization around a common set of priorities and set a course for high adoption. It&rsquo;s amazing what buy-in and alignment can do</p>
+                <p class="heavy">
+                  <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-strategy-ready-fire-aim/" target="_blank">READ HOW ONE CLIENT DID IT</a>
+                </p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane fade" id="benefits_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>SOLUTION</p>
+                  <h2 class="about-title">IT CAN BE DONE</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                <h4>Reyes Holding conquered funding concerns with an<br>Enterprise Collaboration Roadmap</h4>
+                <p>&ldquo;It quickly became a recommendation very easy to defend as it just resonated as common sense.&rdquo;<br>
+                  &ldquo;We now have a roadmap from which to selectively choose which step to take next and when and substantial requirements that serve as valuable input into each project.&rdquo;</p>
+                <p>Reyes Holdings is the 11th largest privately held company in America with annual sales in excess of 22 billion dollars.</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+      </div>
+      <!-- SOLUTION TAB END -->
+    </div>
+  </section>
+  <!-- SOLUTION SECTION END -->
+
+  <!-- ROADMAP SECTION START -->
+  <section id="roadmap"  data-layout class="clearfix content">
+    <div class="container">
+
+      <!-- ROADMAP NAVIGATION TAB START -->
+      <div class="white-bg clearfix flat-tabs">
+        <ul class="nav margin align-right nav-tabs">
+          <li class="active"><a href="#benefits_roadmap"  data-target="#benefits_roadmap_1, #benefits_roadmap_2" data-toggle="tab">Benefits</a></li>
+          <li><a href="#how"  data-target="#how_1, #how_2" data-toggle="tab">How</a></li>
+          <li><a href="#what"  data-target="#what_1, #what_2" data-toggle="tab">What</a></li>
+        </ul>
+      </div>
+      <!-- ROADMAP NAVIGATION TAB END -->
+
+      <div id="" class="tab-content">
+        <div class="tab-pane fade in active" id="benefits_roadmap_1">
+          <figure class="chart-container">
+            <img src="images/services/chart1.png" alt="Benefits">
+          </figure>
+        </div>
+        <div class="tab-pane fade" id="how_1">
+          <figure class="chart-container">
+            <img src="images/services/chart2.png" alt="Be a hero">
+          </figure>
+        </div>
+        <div class="tab-pane fade" id="what_1">
+          <figure class="chart-container">
+            <img src="images/services/chart3.png" alt="Be a hero">
+          </figure>
+        </div>
+      </div>
+
+      <!-- ROADMAP TAB START -->
+      <div class="tab-content white-bg"> 
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane fade in active" id="benefits_roadmap_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>ROADMAP</p>
+                  <h2 class="about-title">BENEFITS</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                <h4>Being a hero is always better than being the scapegoat.</h4>
+                <p>When you plan ahead and start SharePoint projects from an enterprise collaboration roadmap, adoption increases through applied consistency, appropriate information access, and an architecture with speedy response times.</p>
+                <p class="heavy">And it deesn&rsquo;t take much to get started...</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+
+        <!-- TAB CONTENT START -->
+        <div class="tab-pane fade" id="how_2">
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>ROADMAP</p>
+                  <h2 class="about-title">how it works</h2>
+                </div>
+              </div>
+              <div class="col-md-8 challenge-copy">
+                <h4>To know where to go, start with where you are.</h4>
+                <p>The process of developing a roadmap means taking stock of your current state - your sites, tools, infrastructure, and processes, defining your vision for the future, and analyzing and documenting the initiatives required to move forward.</p>
+                <div class="spacing40 clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+
+        <!--TAB CONTENT START-->
+        <div class="tab-pane fade" id="what_2"> 
+          <div class="white-bg clearfix">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <div class="padding">
+                  <p>SOLUTION</p>
+                  <h2 class="about-title">what it takes</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TAB CONTENT END -->
+      </div>
+      <!-- ROADMAP TAB END -->
+      <div class="spacing40 clearfix"></div>
+
+      <!-- TEAM LIST START -->
+      <div class="team-container">
+        <div class="col-md-4">
+          <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-strategy-and-roadmap/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team"class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">COLLABORATION STRATEGY & ROADMAP</h3>
+            <p class="team-position">By David Sidwell - June 17, 2013</p>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <a href="http://blog.tahoepartners.com/index.php/future-knowledge-worker-nowenterprise/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">COLLABORATION OBSTACLES</h3>
+            <p class="team-position">By Ralph Keipert - June 26, 2013</p>
+          </div>
+        </div>
+        <div class="col-md-4"> 
+          <a href="http://blog.tahoepartners.com/index.php/social-and-mobile-must-be-part-of-all-digital-solutions/" target="_blank">
+            <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          </a>
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">blog article title</h3>
+            <p class="team-position">by line</p>
+          </div>
+        </div>
+      </div>
+      <!-- TEAM LIST END -->
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="spacing40 clearfix"></div>
+          <button class="btn btn-lg pull-right" data-toggle="modal" data-target="#blog_subscription">Subscribe to our Blog  <i class="fa fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ROADMAP SECTION START -->
+
+  <!-- PORTFOLIO SECTION START -->
+  <section id="portfolio" class="clearfix content">
+    <div class="container">
+      <div class="title-content clearfix">
+        <div class="title-inner">
+          <h3>Our Clients, Our Heros</h3>
+        </div>
+      </div>
+
+      <div class="row"> 
+        <!--PORTFOLIO ITEM START-->
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+          	<a class="box-40 hovers bwWrapper" href="images/work/1.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/1.jpg"> </a> <a class="more" href="#" data-link="work1.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>Reyes Holdings</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-html5" data-link="work1.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6-->
+        
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+         	 <a class="box-40 hovers bwWrapper" href="images/work/2.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/2.jpg"> </a> <a class="more" href="#" data-link="work2.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>Huron Consulting</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-android" data-link="work2.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6-->
+        
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+         	 <a class="box-40 hovers bwWrapper" href="images/work/3.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/3.jpg"> </a> <a class="more" href="#" data-link="work3.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>Hollister</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-css3" data-link="work3.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6-->
+        
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+         	 <a class="box-40 hovers bwWrapper" href="images/work/4.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/4.jpg"> </a> <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>Navistar</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-pagelines" data-link="work4.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6-->
+        
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+          	<a class="box-40 hovers bwWrapper" href="images/work/5.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/5.jpg"> </a> <a class="more" href="#" data-link="work5.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>U.S. Army Corps of Engineers</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-html5" data-link="work5.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6-->
+        
+        <div class="col-md-6 port-item">
+          <div class="port-inner white-bg clearfix"> 
+          	<a class="box-40 hovers bwWrapper" href="images/work/6.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/6.jpg"> </a> <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
+            <div class="padding box-60">
+              <h3>Protective</h3>
+              <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
+              <i class="cat-icon fa fa-youtube" data-link="work4.html"></i> </div>
+            <!--/.padding--> 
+          </div>
+          <!--/.port-inner--> 
+        </div>
+        <!--/.col-md-6--> 
+        <!--PORTFOLIO ITEM END--> 
+        
       </div>
       <!--/.row--> 
     </div>
     <!--/.container--> 
-  </div>
-  <!--/.header-->
-  <div class="clearfix"></div>
-  
-</section>
-<!--/home--> 
-<!--HOME SECTION END--> 
-
-<!-- slideshow -->
-<!--
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="slider-content clearfix"> 
-          <div class="title-caption">
-            <h4>We are creative agency</h4>
-          </div>
-          <div id="slidecaption"></div>
-          <div class="centering">
-            <div id="progress-back">
-              <div id="progress-bar"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-
-<!--MAIN BANNER -->
-<section id="home" class="">
-  <div class="container align-left">
-    <h1>Sharepoint, <br> A hero&rsquo;s tale</h1>
-    <h3>Are you ready to go from scapegoat to hero?</h3>
-    <div class="align-right">
-      <a href="#" class="btn btn-primary btn-lg">Take our free SharePoint 2013 <br>Self Assessment</a>
-    </div>
-  </div>
-</section>
-<!--/.bg-dark-->
-<!--/MAIN BANNER-->
-
-<section id="challenge" class="clearfix content">
-  <div class="container">
-    <div class="title-content clearfix">
-      <div class="title-inner">
-        <h3>Challenge</h3>
-        <p>The Things you Should Know</p>
-      </div>
-      <!--/.title-inner--> 
-    </div>
-    <!--/.title-content--> 
-
-    <div id="" class="tab-content">
-        <div class="tab-pane fade in active" id="statistics_1">
-            <img src="images/about/1.jpg" alt="about">
-        </div>
-        <div class="tab-pane fade" id="scapegoat_1">
-            <img src="images/about/2.jpg" alt="about">
-        </div>
-        <div class="tab-pane fade" id="challenges_1">
-            <img src="images/about/3.jpg" alt="about">
-        </div>
-    </div>
-    
-    
-    <!--Challenge TAB NAVIGATION START-->
-    <div class="white-bg clearfix flat-tabs">
-      <ul class="nav margin align-right nav-tabs">
-        <li class="active"><a href="#statistics"  data-target="#statistics_1, #statistics_2" data-toggle="tab">Statistics</a></li>
-        <li><a href="#scapegoat"  data-target="#scapegoat_1, #scapegoat_2" data-toggle="tab">Scapegoat</a></li>
-        <li><a href="#challenges"  data-target="#challenges_1, #challenges_2" data-toggle="tab">Challenges</a></li>
-      </ul>
-    </div>
-    <!--Challenge TAB NAVIGATION END-->
-
-    <!--CHALLENGE TAB START-->
-    <div class="tab-content white-bg"> 
-
-
-      <!--TAB CONTENT START-->
-      <div class="tab-pane active fade in active" id="statistics_2"> 
-        <div class="white-bg clearfix">
-          <div class="row clearfix">
-            <div class="col-md-4">
-              <div class="padding">
-                <!--<p class="black-text">0.1</p>-->
-                <p class="gray-text">CHALLENGE</p>
-                <h2 class="about-title">Statistics</h2>
-              </div>
-              <!--/.padding--> 
-            </div>
-            <!--/col-md-4-->
-            <div class="col-md-8">
-              <div class="padding">
-                <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. Now he is given </p>
-                <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
-              </div>
-              <!--/.padding-->
-              <div class="spacing40 clearfix"></div>
-            </div>
-            <!--/col-md-8--> 
-          </div>
-          <!--/.row--> 
-        </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.tab-pane--> 
-      <!--TAB CONTENT END--> 
-
-      <!--TAB CONTENT START-->
-      <div class="tab-pane fade" id="scapegoat_2"> 
-        <div class="white-bg clearfix">
-          <div class="row clearfix">
-            <div class="col-md-4">
-              <div class="padding">
-                <!--<p class="black-text">0.2</p>-->
-                <p class="gray-text">CHALLENGE</p>
-                <h2 class="about-title">Scapegoat</h2>
-              </div>
-              <!--/.padding--> 
-            </div>
-            <!--/col-md-4-->
-            <div class="col-md-8">
-              <div class="padding">
-                <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. Now he is given </p>
-                <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
-              </div>
-              <!--/.padding-->
-              <div class="spacing40 clearfix"></div>
-            </div>
-            <!--/col-md-8--> 
-          </div>
-          <!--/.row--> 
-        </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.tab-pane--> 
-      <!--TAB CONTENT END--> 
-
-      <!--TAB CONTENT START-->
-      <div class="tab-pane fade" id="challenges_2"> 
-        <div class="white-bg clearfix">
-          <div class="row clearfix">
-            <div class="col-md-4">
-              <div class="padding">
-                <!--<p class="black-text">0.3</p>-->
-                <p class="gray-text">CHALLENGE</p>
-                <h2 class="about-title">Challenges</h2>
-              </div>
-              <!--/.padding--> 
-            </div>
-            <!--/col-md-4-->
-            <div class="col-md-8">
-              <div class="padding">
-                <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
-
-                <!--ACHIEVEMENT LIST START-->
-                <ul class="achievement-list">
-                  <li>
-                    <p class="strong"><span>Jun 2013</span> - Featured in kompaz magazine</p>
-                    <p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
-                  </li>
-                  <li>
-                    <p class="strong"><span>Jul 2013</span> - Best agency of the year</p>
-                    <p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
-                  </li>
-                  <li>
-                    <p class="strong"><span>Aug 2013</span> - Featured on intisary</p>
-                    <p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
-                  </li>
-                  <li>
-                    <p class="strong"><span>Oct 2013</span> - Best Actor of the month</p>
-                    <p>When Alice discovers that her father is in Wonderland, they begin healing their broken relationship, which leads to her having to make a difficult decision. In flashback, a young Jafar is emotionally distraught after.</p>
-                  </li>
-                </ul>
-                <!--ACHIEVEMENT LIST END--> 
-                
-              </div>
-              <!--/.padding-->
-              <div class="spacing40 clearfix"></div>
-            </div>
-            <!--/col-md-8--> 
-          </div>
-          <!--/.row--> 
-        </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.tab-pane--> 
-      <!--TAB CONTENT END--> 
-      
-    </div>
-    <!--/.tab-content--> 
-    <!--CHALLENGE TAB END--> 
-
-    <div class="spacing40 clearfix"></div>
-
-    <!--TEAM LIST START-->
-    <div class="row" id="team">
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team1.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner white-bg padding">
-          <h3 class="team-name">Titi Haryati</h3>
-          <p class="team-position">Web Designer</p>
-          <i class="fa fa-css3 team-icon" data-link="team1.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4-->
-
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team2.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner  white-bg padding">
-          <h3 class="team-name">Cucu Maricu</h3>
-          <p class="team-position">Web Developer</p>
-          <i class="fa fa-html5 team-icon" data-link="team2.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4-->
-      
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team3.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner  white-bg padding">
-          <h3 class="team-name">Marimas</h3>
-          <p class="team-position">Photographer</p>
-          <i class="fa fa-camera team-icon" data-link="team3.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4--> 
-      
-    </div><!--/.row--> 
-    <!--TEAM LIST END-->
-
-<div class="row">
-  <div class="col-md-12">
-    <div class="spacing40 clearfix"></div>
-    <button class="btn btn-lg pull-right" data-toggle="modal" data-target="#myModal-1">Subscribe to our Blog  <i class="fa fa-angle-right"></i></button>
-  </div>
-</div>
-
-    <!--AJAX TEAM WILL SHOW HERE-->
-    <div id="teamlist">
-      <div class="clearfix teamajax"> </div>
-    </div>
-    <!--AJAX TEAM END--> 
-    
-  </div>
-  <!--/.container--> 
-</section>
-<!--/about--> 
-<!--ABOUT SECTION END--> 
-
-<!--TEXT WITH DARK BG START-->
-<section class="bg-dark bg1">
-  <div class="dark-mask"></div>
-  <div class="container align-center">
-    <h2 class="slogan">Success is a journey, not a destination. The doing is often more important than the outcome.</h2>
-    <div class="slogan-divider"><span class="line-left"></span><span class="fa fa-quote-left"></span><span class="line-right"></span></div>
-    <h3 class="author-slogan">Arthur Ashe</h3>
-  </div>
-  <!--/.container--> 
-</section>
-<!--/.bg-dark--> 
-<!--TEXT WITH DARK BG END-->
-
-<!--SOLUTION SECTION START-->
-<section id="solution" class="clearfix content">
-  <div class="container">
-    <div class="title-content clearfix">
-      <div class="title-inner">
-        <h3>Solution</h3>
-        <p>What we really can provide</p>
-      </div>
-      <!--/.title-inner--> 
-    </div>
-    <!--/.title-content--> 
-
-    <div id="" class="tab-content">
-        <div class="tab-pane fade in active" id="be-a-hero_1">
-            <img src="images/services/1.jpg" alt="Be a hero">
-        </div>
-        <div class="tab-pane fade" id="benefits_1">
-            <img src="images/services/2.jpg" alt="Benefits">
-        </div>
-    </div>
-
-
-
-    <!--SERVICES NAVIGATION TAB START-->
-    <div class="white-bg clearfix flat-tabs">
-      <ul class="nav margin align-right nav-tabs">
-        <li class="active"><a href="#be-a-hero"  data-target="#be-a-hero_1, #be-a-hero_2" data-toggle="tab">Be a Hero</a></li>
-        <li><a href="#benefits"  data-target="#benefits_1, #benefits_2" data-toggle="tab">Benefits</a></li>
-      </ul>
-    </div>
-    <!--SERVICES NAVIGATION TAB END-->
-
-    
-    <!--SERVICES TAB START-->
-    <div class="tab-content white-bg"> 
-      
-      <!--TAB CONTENT START-->
-      <div class="tab-pane active fade in active" id="be-a-hero_2"> 
-        <div class="white-bg clearfix">
-          <div class="row clearfix">
-            <div class="col-md-4">
-              <div class="padding">
-                <!--<p class="black-text">Technic:</p>-->
-                <p class="gray-text">Solution</p>
-                <h2 class="about-title">Be a Hero</h2>
-              </div>
-              <!--/.padding--> 
-            </div>
-            <!--/col-md-4-->
-            <div class="col-md-8">
-              <div class="padding">
-                <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. Now he is given </p>
-                <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
-              </div>
-              <!--/.padding-->
-              <div class="spacing40 clearfix"></div>
-            </div>
-            <!--/col-md-8--> 
-          </div>
-          <!--/.row--> 
-        </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.tab-pane--> 
-      <!--TAB CONTENT END--> 
-      
-      <!--TAB CONTENT START-->
-      <div class="tab-pane fade" id="benefits_2"> 
-        <div class="white-bg clearfix">
-          <div class="row clearfix">
-            <div class="col-md-4">
-              <div class="padding">
-                <!--<p class="black-text">Technic:</p>-->
-                <p class="gray-text">Solution</p>
-                <h2 class="about-title">Benefits</h2>
-              </div>
-              <!--/.padding--> 
-            </div>
-            <!--/col-md-4-->
-            <div class="col-md-8">
-              <div class="padding">
-                <p>When the moral values of a longtime wetwork black ops agent is tested during his last operation, he receives an unfavorable psych evaluation. Now he is given </p>
-                <p>Jeremy Clarkson and Richard Hammond go on a seven-day road trip from Venice, Italy, to Pau, France, in this special episode from the BBC motoring series. Along the way the pair visit the Autodromo Nazionale Monza race track and take to the road in Monaco. The show features a range of cars including a Ford ModelT, a Ferrari F12 Berlinetta, a Porsche Cayman S and an Aston Martin Vanquish.</p>
-              </div>
-              <!--/.padding-->
-              <div class="spacing40 clearfix"></div>
-            </div>
-            <!--/col-md-8--> 
-          </div>
-          <!--/.row--> 
-        </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.tab-pane--> 
-      <!--TAB CONTENT END--> 
-      
-    </div>
-    <!--/.tab-content--> 
-    <!--SERVICES TAB END--> 
-    
-    
-    <div class="spacing40 clearfix"></div>
-
-    <!--TEAM LIST START-->
-    <div class="row" id="team2">
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team1.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner white-bg padding">
-          <h3 class="team-name">Titi Haryati</h3>
-          <p class="team-position">Web Designer</p>
-          <i class="fa fa-css3 team-icon" data-link="team1.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4-->
-      
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team2.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner  white-bg padding">
-          <h3 class="team-name">Cucu Maricu</h3>
-          <p class="team-position">Web Developer</p>
-          <i class="fa fa-html5 team-icon" data-link="team2.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4-->
-      
-      <div class="col-md-4"> 
-      	<a href="#" class="bwWrapper team-ajax" data-link="team3.html"> <img src="images/team/ph1.jpg" alt="team"> </a>
-        <div class="clearfix team-inner  white-bg padding">
-          <h3 class="team-name">Marimas</h3>
-          <p class="team-position">Photographer</p>
-          <i class="fa fa-camera team-icon" data-link="team3.html"></i> </div>
-        <!--/.white-bg--> 
-      </div>
-      <!--/.col-md4--> 
-      
-    </div><!--/.row--> 
-    <!--TEAM LIST END-->
-    
-
-
-<div class="row">
-  <div class="col-md-12">
-    <div class="spacing40 clearfix"></div>
-    <button class="btn btn-lg pull-right" data-toggle="modal" data-target="#myModal-1">Subscribe to our Blog  <i class="fa fa-angle-right"></i></button>
-  </div>
-</div>
-
-    
-    <!--AJAX TEAM WILL SHOW HERE-->
-    <div id="teamlist">
-      <div class="clearfix teamajax"> </div>
-    </div>
-    <!--AJAX TEAM END--> 
-
-  </div>
-  <!--/.container-->
-</section>
-<!--services--> 
-<!--SERVICES SECTION START--> 
-
-<!--PORTFOLIO SECTION START-->
-<section id="portfolio" class="clearfix content">
-  <div class="container">
-    <div class="title-content clearfix">
-      <div class="title-inner">
-        <h3>Portfolio</h3>
-        <!--<p>What we've done so far</p>-->
-      </div>
-      <!--/.title-inner--> 
-    </div>
-    <!--/.title-content--> 
-    
-    <!--AJAX PORTFOLIO WILL SHOWN HERE-->
-    <div id="workslist">
-      <div class="clearfix worksajax"> </div>
-      <!--/.worksajax --> 
-    </div>
-    <!--/workslist--> 
-    <!--AJAX PORTFOLIO END-->
-    
-    <div class="row"> 
-      <!--PORTFOLIO ITEM START-->
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-        	<a class="box-40 hovers bwWrapper" href="images/work/1.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/1.jpg"> </a> <a class="more" href="#" data-link="work1.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>Reyes Holdings</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-html5" data-link="work1.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6-->
-      
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-       	 <a class="box-40 hovers bwWrapper" href="images/work/2.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/2.jpg"> </a> <a class="more" href="#" data-link="work2.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>Huron Consulting</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-android" data-link="work2.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6-->
-      
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-       	 <a class="box-40 hovers bwWrapper" href="images/work/3.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/3.jpg"> </a> <a class="more" href="#" data-link="work3.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>Hollister</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-css3" data-link="work3.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6-->
-      
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-       	 <a class="box-40 hovers bwWrapper" href="images/work/4.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/4.jpg"> </a> <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>Navistar</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-pagelines" data-link="work4.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6-->
-      
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-        	<a class="box-40 hovers bwWrapper" href="images/work/5.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/5.jpg"> </a> <a class="more" href="#" data-link="work5.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>U.S. Army Corps of Engineers</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-html5" data-link="work5.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6-->
-      
-      <div class="col-md-6 port-item">
-        <div class="port-inner white-bg clearfix"> 
-        	<a class="box-40 hovers bwWrapper" href="images/work/6.jpg" data-rel="prettyPhoto"> <img alt="Portfolio" src="images/work/6.jpg"> </a> <a class="more" href="#" data-link="work4.html"><span class="hov-desc">View Detail</span><i class="fa fa-chain"></i></a>
-          <div class="padding box-60">
-            <h3>Protective</h3>
-            <p>Jesse makes a decision about his personal life, and Mike visits each of his crew.</p>
-            <i class="cat-icon fa fa-youtube" data-link="work4.html"></i> </div>
-          <!--/.padding--> 
-        </div>
-        <!--/.port-inner--> 
-      </div>
-      <!--/.col-md-6--> 
-      <!--PORTFOLIO ITEM END--> 
-      
-    </div>
-    <!--/.row--> 
-  </div>
-  <!--/.container--> 
-</section>
-<!--/portfolio--> 
-<!--PORTFOLIO SECTION END--> 
+  </section>
+  <!--/portfolio--> 
+  <!--PORTFOLIO SECTION END--> 
 
 <!--TEXT WITH DARK BG START-->
 <section class="bg-dark bg1">
@@ -872,6 +811,76 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     </div>
   </div>
 </div><!-- /.modal -->
+
+<div class="modal fade" id="self_assesment" tabindex="-1" role="dialog" aria-labelledby="self_assesmentLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row"> 
+          <div class="col-sm-8">
+            <h3>People in our organization use SharePoint because:</h3>
+          </div><!--/.col-md-6-->
+        </div><!--/.row--> 
+          <form id="assesment_survey">
+              <input type="checkbox">
+              <label class="assesment-label"><span>I make them</span></label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+              <div class="secondary-label">
+                <input type="checkbox">
+                <label class="assesment-label">IT makes us</label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div><!-- /.modal -->
+
+
+<div class="modal fade" id="blog_subscription" tabindex="-1" role="dialog" aria-labelledby="blog_subscriptionLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row"> 
+          <div class="col-sm-8">
+            <h4>POWER UP - Become TahoeSmart!</h4>
+            <p>Sign up to recieve weekly industry updates, insights, and more...</p>
+          </div><!--/.col-md-6-->
+        </div><!--/.row--> 
+          <form id="blog_signup">
+              <p>Interest:</p>
+              <div class="check-container">
+                <input type="checkbox" checked>
+                <label class="assesment-label"><span>SharePoint</span></label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+                <div class="secondary-label">
+                  <input type="checkbox">
+                  <label class="assesment-label">Workforce Productivity</label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+                </div>
+                <div class="secondary-label">
+                  <input type="checkbox">
+                  <label class="assesment-label">Customer Engagement</label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+                </div>
+                <div class="secondary-label">
+                  <input type="checkbox">
+                  <label class="assesment-label">Healthcare</label>​​​​​​​​​​​​​​​​​​​​​​​​​​
+                </div>
+              </div>
+              <input type="text" placeholder="Email*" required>
+              <input type="text" placeholder="First Name">
+              <input type="text" placeholder="Last Name">
+              <input type="text" placeholder="Your Phone">
+              <input type="text" placeholder="Your Company">
+              <button>Power Up Now!</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div><!-- /.modal -->
+
 
     </div><!-- /col -->
   </div><!-- /row -->
@@ -1242,7 +1251,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 $(window).load(function() { // makes sure the whole site is loaded
 	$("#status").fadeOut(); // will first fade out the loading animation
 	$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
-})
+});
 //]]>
 </script> 
 <script src="js/jquery.easing.js"></script> 

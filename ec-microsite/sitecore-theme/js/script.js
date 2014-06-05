@@ -27,10 +27,8 @@ jQuery(function ($) {
         ]
 
     });
+
 });
-
-
-
 
 
 //sticky navigation
@@ -241,6 +239,8 @@ $(document).ready(function () {
         speed: 10000,
         effect: 'fade'
     })
+
+    
 });
 
 
