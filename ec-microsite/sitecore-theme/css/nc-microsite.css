@@ -1,19 +1,63 @@
-.branch-menu { margin-left: 10px; }
-.navigation li a { padding: 15px 10px;}
-.container { padding-left: 0; padding-right: 0; }
-.team-inner { min-height: 120px; }
-.padding { padding: 20px }
-.btn { margin: 20px 20px 20px 0; }
-#self_assesment .modal-header,
-#blog_subscription .modal-header { border-bottom: none; }
-
-#self_assesment .modal-body {
-    background: #ddd;
-    padding: 0;
-    margin: 20px;
+.invisible { 
+    display: none;
 }
 
-#assesment_survey { margin-left: 8%; }
+.hidden {
+  visibility: hidden;
+  display: block !important;
+}
+
+.branch-menu {
+  margin-left: 10px;
+}
+
+.navigation li a {
+  padding: 15px 10px;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.team-inner {
+  min-height: 120px;
+}
+
+.team-name {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.team-position {
+  font-size: 12px;
+}
+
+.about-title {
+  font-size: 48px;
+}
+
+.padding {
+  padding: 20px;
+}
+.btn {
+  margin: 20px 20px 20px 0;
+}
+
+#self_assesment .modal-header,
+#blog_subscription .modal-header {
+  border-bottom: none;
+}
+
+#self_assesment .modal-body {
+  background: #ddd;
+  padding: 0;
+  margin: 20px;
+}
+
+#assesment_survey {
+  margin-left: 8%;
+}
 
 #assesment_survey .assesment-label,
 #blog_signup .assesment-label {
@@ -24,7 +68,9 @@
 }
 
 #assesment_survey .secondary-label,
-#blog_signup .secondary-label { margin-top: -25px; }
+#blog_signup .secondary-label {
+  margin-top: -25px;
+}
 
 #blog_signup {
   background: #ddd;
@@ -33,22 +79,65 @@
   color: #fff;
   padding: 40px;
 }
-#blog_signup  .check-container { margin-left: 50px; }
-#blog_signup input[type=text],
-#blog_signup button { margin-bottom: 10px };}
-#self_assesment .modal-body .col-sm-8 { text-align: center !important; margin-left: 5%; }
-#self_assesment .modal-body h3 { color: #fff; }
 
-.heavy { font-weight: 700; color: #000; }
-.content { background-color: #fff; }
-#home article { text-align: left; margin-top: 50px;}
+#blog_signup .check-container {
+  margin-left: 50px;
+}
+
+#blog_signup input[type=text],
+#blog_signup button {
+  margin-bottom: 10px;
+}
+
+#self_assesment .modal-body .col-sm-8 {
+  text-align: center !important;
+  margin-left: 5%;
+}
+
+#self_assesment .modal-body h3 {
+  color: #fff;
+}
+
+.heavy {
+  font-weight: 700;
+  color: #000;
+}
+
+.content {
+  background-color: #fff;
+}
+
+#home article {
+  text-align: left;
+  margin-top: 50px;
+}
+
 #home h3,
-#home h1:first-child { color: #fff; }
-#home h3 { margin-left: 75px; }
-#home h1:first-child { text-transform: uppercase; font-size: 68px; }
-#home figure { height: 300px; }
-[data-layout] .container {  border: 1px solid #ddd; padding: 0;}
-[data-layout].content{ padding-top: 0; }
+#home h1:first-child {
+  color: #fff;
+}
+
+#home h3 {
+  margin-left: 75px;
+}
+
+#home h1:first-child {
+  text-transform: uppercase;
+  font-size: 68px;
+}
+
+#home figure {
+  height: 400px;
+}
+
+[data-layout] .container {
+  border: 1px solid #ddd;
+  padding: 0;
+}
+
+[data-layout].content {
+  padding-top: 0;
+}
 
 [data-layout] .chart-container {
   padding-top: 25px;
@@ -57,13 +146,73 @@
   background-color: #ddd;
 }
 
-[data-layout] .chart-container img{ max-height: 370px; max-width: 960px; }
+[data-layout] .chart-container img {
+  max-height: 370px;
+  max-width: 960px;
+}
 
-[data-layout] .about-title { color: #ddd; margin-top: -10px; }
-.challenge-copy { text-align: center;}
+[data-layout] .about-title {
+  color: #ddd;
+  margin-top: -10px;
+}
 
-[data-layout] .article-link { border: 1px solid #ddd; }
+.challenge-copy {
+  text-align: center;
+}
 
-#portfolio .title-content h3 { background-color: transparent; }
-#portfolio .title-inner:before,
-#portfolio .title-inner:after {bottom: 20px; width: 29%;}
+.lower-container {
+  margin: 0 auto;
+}
+
+[data-layout] .article-link,
+.port-item,
+.col-md-3.cape-container {
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  width: 22%;
+}
+
+[data-layout] .article-link {
+  width: 100%;
+}
+
+.col-md-3.cape-container:last-child {
+  margin-right: 0;
+}
+
+.port-title {
+  background-color: #fff !important;
+  z-index: 99999;
+  padding: 10px;
+}
+
+.col-md-6.port-item {
+  width: 45%;
+  margin-left: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.port-item h5 {
+  color: #999;
+}
+
+.pricing-table {
+  padding: 15px;
+  min-height: 360px;
+}
+
+.pricing-table h3 {
+  font-size: 16px;
+  border-bottom: none;
+}
+
+.cape-title {
+  min-height: 50px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.cape-link {
+  text-align: center;
+  margin-bottom: 20px;
+}
