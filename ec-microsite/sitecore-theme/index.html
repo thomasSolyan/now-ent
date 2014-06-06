@@ -25,11 +25,6 @@
     <script src="js/respond.min.js"></script>
   <![endif]-->
 
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
   <!-- favicon image -->
   <link rel="shortcut icon" href="images/favicon.png">
 </head>
@@ -585,45 +580,31 @@
               <a class="view-more" href="#">See the Results <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
-
         </div>
-        <!--/.row-->
-      </div><!-- /container -->
-      <!--PRICING TABLE END--> 
-
+      </div>
+      <!-- PRICING TABLE END -->
       <div class="spacing40 clearfix"></div>
 
-      <!--CONTACT TAB START-->
-      <div class="white-bg"> 
+      <!-- CONTACT TAB START -->
+      <div class="white-bg">
 
-        <!--TAB CONTENT START-->
-        <div class="" id="message-us"> <img src="images/contact/1.jpg" alt="contact">
+        <!-- TAB CONTENT START -->
+        <div id="message-us"> <img src="images/contact/1.jpg" alt="contact">
           <div class="white-bg clearfix">
             <div class="row clearfix">
               <div class="col-md-4">
-                <div class="padding">
-                  <!--<p class="black-text">Info:</p>-->
-                  <p class="gray-text">We'd Love To Hear From You</p>
+                <div class="padding" data-layout>
+                  <p>We'd Love To Hear From You</p>
                   <h2 class="about-title">Leave Message</h2>
                 </div>
-                <!--/.padding--> 
 
-                  <!--ADDRESS LIST START-->
+                  <!-- ADDRESS LIST START -->
                   <ul class="address-list padding">
-                    <li><i class="fa fa-phone"></i><a href="tel:+1987654321">987-654-321</a></li>
+                    <li><i class="fa fa-phone"></i><a href="tel:+1987654321">312.491.3300</a></li>
                   </ul>
-                  <!--/.address-list--> 
-                  <!--ADDRESS LIST END--> 
-                
-                <ul class="team-social padding">
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-                
+                  <!-- ADDRESS LIST END -->
               </div>
-              <!--/col-md-4-->
+
               <div class="col-md-8">
                 <div class="padding">
                   <div id="form-wrapper">
@@ -632,16 +613,21 @@
                       <div id="MainResult"><!-- retrive response Here --></div>
                       <div id="MainContent">
                         <form id="MyContactForm" name="MyContactForm" method="post">
+                          <p class="radio"><span>Inquiry Type:</span> <span><input type="radio" id="general"> General</span> <span><input type="radio" id="careers"> Careers</span></p>
                           <p class="name">
-                            <input type="text" name="name" id="name" placeholder="Your Name ...">
-                            <label for="name" id="nameLb"><span class="error">*Name Field Required</span></label>
+                            <input type="text" name="first-name" id="first_name" placeholder="First Name*" required>
+                            <label for="first_name" id="first_nameLb"><span class="error">*First Name Field Required</span></label>
+                          </p>
+                          <p class="name">
+                            <input type="text" name="last-name" id="last_name" placeholder="Last Name*" required>
+                            <label for="last_name" id="last_nameLb"><span class="error">*Last Name Field Required</span></label>
                           </p>
                           <p>
-                            <input type="email" name="email" id="email" placeholder="Your Email ...">
+                            <input type="email" name="email" id="email" placeholder="Email*">
                             <label for="email" id="emailLb"> <span class="error error1">*Email Field Required</span> <span class="error error2">*Email Not Valid</span> </label>
                           </p>
                           <p>
-                            <input type="text" name="phone" id="phone" placeholder="Your Telephone ...">
+                            <input type="text" name="phone" id="phone" placeholder="Your Phone ...">
                             <label for="phone" id="phoneLb"><span class="error">*Telephone Field Required</span></label>
                           </p>
                           <p class="textarea">
@@ -652,33 +638,20 @@
                           <a href="#" class="contact-btn">Send Message</a>
                         </form>
                       </div>
-                      <!--MainContent-->
                     </div>
-                    <!--form-inner-->
                   </div>
-                  <!--form-wrapper-->
                 </div>
-                <!--/.padding-->
                 <div class="spacing40 clearfix"></div>
               </div>
-              <!--/col-md-8-->
             </div>
-            <!--/.row--> 
           </div>
-          <!--/.white-bg--> 
         </div>
-        <!--/.tab-pane--> 
-        <!--TAB CONTENT END--> 
-        
+        <!-- TAB CONTENT END -->
       </div>
-      <!--/.tab-content--> 
-      <!--CONTACT TAB END--> 
-
+      <!-- CONTACT TAB END -->
     </div>
-    <!--/.container--> 
   </section>
-  <!--contact--> 
-  <!--CONTACT SECTION END-->
+  <!-- CONTACT SECTION END -->
 
 <!-- Modal SECTION START --------------------------------------------------------------- -->
 <section id="modals-test" class="clearfix content">
@@ -1209,13 +1182,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 <script src="js/jquery.js"></script> 
 
 <script type="text/javascript">
-//<![CDATA[
-$(window).load(function() { // makes sure the whole site is loaded
-	$("#status").fadeOut(); // will first fade out the loading animation
-	$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
-});
-//]]>
-</script> 
+  $(window).load(function() {
+    $("#status").fadeOut();
+    $("#preloader").delay(350).fadeOut("slow");
+  });
+</script>
 <script src="js/jquery.easing.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.sticky.js"></script> 

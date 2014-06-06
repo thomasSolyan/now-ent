@@ -15,14 +15,20 @@ $(document).ready(function () {
     $(".contact-btn").click(function () { //User clicks on Submit button
 
         // Fetch data from input fields.
-        var js_name = $("#name").val();
+        var js_firstName = $("#first_name").val();
+        var js_lastName = $("#last_name").val();
         var js_email = $("#email").val();
         var js_phone = $("#phone").val();
         var js_message = $("#message").val();
 
         // Do a simple validation
-        if (js_name == "") {
-            $("#nameLb .error").fadeIn('slow').idle(1000).fadeOut('slow'); // If Field is empty, we'll just show error text inside <span> tag for 1 sec idle and then hide it with fade out.
+        if (js_firstName == "") {
+            $("#first_nameLb .error").fadeIn('slow').idle(1000).fadeOut('slow'); // If Field is empty, we'll just show error text inside <span> tag for 1 sec idle and then hide it with fade out.
+            return false;
+        }
+
+        if (js_lastName == "") {
+            $("#last_nameLb .error").fadeIn('slow').idle(1000).fadeOut('slow'); // If Field is empty, we'll just show error text inside <span> tag for 1 sec idle and then hide it with fade out.
             return false;
         }
 
@@ -40,17 +46,8 @@ $(document).ready(function () {
             return false;
         }
 
-        if (js_phone == "") {
-            $("#phoneLb .error").fadeIn('slow').idle(1000).fadeOut('slow');
-            return false;
-        }
-        if (js_message == "") {
-            $("#messageLb .error").fadeIn('slow').idle(1000).fadeOut('slow');
-            return false;
-        }
-
         //let's put all data together
-        var myData = 'postName=' + js_name + '&postEmail=' + js_email + '&postPhone=' + js_phone + '&postMessage=' + js_message;
+        var myData = 'postFirstName=' + js_firstName + 'postLastName=' + js_lastName +'&postEmail=' + js_email + '&postPhone=' + js_phone + '&postMessage=' + js_message;
 
         jQuery.ajax({
             type: "POST",

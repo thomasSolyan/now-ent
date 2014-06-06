@@ -216,3 +216,39 @@
   text-align: center;
   margin-bottom: 20px;
 }
+
+input, textarea {
+  background-color: #ddd;
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+}
+
+.radio {
+  margin-left: -20px;
+}
+
+.radio span {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.radio input {
+  top: 15px;
+  display: block;
+  position: relative;
+}

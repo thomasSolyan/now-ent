@@ -3,15 +3,21 @@ $toEmail 		= "asd@asdasd"; //Replace it recipient email address
 $subject 		= 'Ah!! My email from Somebody out there...'; //Subject line for emails
 
 //Let's clean harmful characters from raw POST data using PHP Sanitize filters.
-$postName 		= filter_var($_POST["postName"], FILTER_SANITIZE_STRING); 
+$postFirstName 		= filter_var($_POST["postFirstName"], FILTER_SANITIZE_STRING);
+$postLastName 		= filter_var($_POST["postLastName"], FILTER_SANITIZE_STRING); 
 $postEmail 		= filter_var($_POST["postEmail"], FILTER_SANITIZE_EMAIL);
 $postPhone 		= filter_var($_POST["postPhone"], FILTER_SANITIZE_STRING);
 $postMessage 	= filter_var($_POST["postMessage"], FILTER_SANITIZE_STRING);
 
 //Let's put additional php validation here
-if(strlen($postName)<1) // If length is less than 1 we will throw an HTTP error.
+if(strlen($postFirstName)<1) // If length is less than 1 we will throw an HTTP error.
 {
-	header('HTTP/1.1 500 Name Field Empty'); 
+	header('HTTP/1.1 500 First Name Field Empty'); 
+	exit();
+}
+f(strlen($postLastName)<1) 
+{
+	header('HTTP/1.1 500 Last Name Field Empty'); 
 	exit();
 }
 //similar validation applies to all data, unless you want to replace with some other strong validation.
@@ -38,8 +44,12 @@ $headers = 'From: '.$postEmail.'' . "\r\n" .
 	
 //Email Body
 $Body = "";
-$Body .= "Name: ";
-$Body .= $postName;
+$Body .= "First Name: ";
+$Body .= $postFirstName;
+$Body .= "\n";
+$Body .= "\n";
+$Body .= "Last Name: ";
+$Body .= $postLastName;
 $Body .= "\n";
 $Body .= "\n";
 $Body .= "Email: ";
