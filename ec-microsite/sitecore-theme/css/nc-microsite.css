@@ -165,7 +165,6 @@
 }
 
 [data-layout] .article-link,
-.port-item,
 .col-md-3.cape-container {
   border: 1px solid #ddd;
   margin-right: 20px;
@@ -180,6 +179,7 @@
   margin-right: 0;
 }
 
+.port-container { padding-left: 30px; }
 .port-title {
   background-color: #fff !important;
   z-index: 99999;
@@ -187,10 +187,11 @@
 }
 
 .col-md-6.port-item {
-  width: 45%;
-  margin-left: 40px;
+  width: 48%;
+  margin-right: 15px;
   padding-left: 0;
   padding-right: 0;
+  border: 1px solid #ddd;
 }
 
 .port-item h5 {
@@ -217,24 +218,24 @@
   margin-bottom: 20px;
 }
 
-input, textarea {
+#get-started input,
+#get-started textarea {
   background-color: #ddd;
   color: #fff;
 }
-
-::-webkit-input-placeholder {
+#get-started ::-webkit-input-placeholder {
    color: #fff;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+#get-started :-moz-placeholder { /* Firefox 18- */
    color: #fff;  
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+#get-started ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;  
 }
 
-:-ms-input-placeholder {  
+#get-started :-ms-input-placeholder {  
    color: #fff;  
 }
 
@@ -242,7 +243,8 @@ input, textarea {
   margin-left: -20px;
 }
 
-.radio span {
+.radio span,
+.radio label {
   display: inline-block;
   margin-right: 40px;
 }
@@ -251,4 +253,7 @@ input, textarea {
   top: 15px;
   display: block;
   position: relative;
+   margin-left: -30px !important;
 }
+
+.footer { margin-bottom: 0; border: 1px solid #ddd; background: #fff;}

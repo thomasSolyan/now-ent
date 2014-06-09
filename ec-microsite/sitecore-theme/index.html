@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -477,7 +477,7 @@
           <h3 class="port-title">Our Clients, Our Heros</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row port-container">
 
         <!-- PORTFOLIO ITEM START -->
         <div class="col-md-6 port-item">
@@ -613,7 +613,7 @@
                       <div id="MainResult"><!-- retrive response Here --></div>
                       <div id="MainContent">
                         <form id="MyContactForm" name="MyContactForm" method="post">
-                          <p class="radio"><span>Inquiry Type:</span> <span><input type="radio" id="general"> General</span> <span><input type="radio" id="careers"> Careers</span></p>
+                          <p class="radio"><span>Inquiry Type:</span> <label><input type="radio" id="general" value="general"> General</label> <label><input type="radio" id="careers" value="careers"> Careers</labelß></p>
                           <p class="name">
                             <input type="text" name="first-name" id="first_name" placeholder="First Name*" required>
                             <label for="first_name" id="first_nameLb"><span class="error">*First Name Field Required</span></label>
@@ -652,6 +652,30 @@
     </div>
   </section>
   <!-- CONTACT SECTION END -->
+
+  <!-- FOOTER SECTION START -->
+  <section class="footer clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>&copy; 2014 <a href="#">Tahoe Partners</a></p>
+        </div>
+        <div class="col-sm-6">
+          <ul class="soc-footer">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER SECTION END -->
+
+
+
+
 
 <!-- Modal SECTION START --------------------------------------------------------------- -->
 <section id="modals-test" class="clearfix content">
@@ -699,6 +723,10 @@
 
   </div><!--/.container--> 
 </section><!--contact--> 
+
+
+
+
 <!--Modal SECTION END-->
 
 <!-- MODALS ------------------------------------------------------------- -->
@@ -1152,28 +1180,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
   </div>
 </div><!-- /.modal -->
 
-<section class="footer clearfix">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <p>Copyright 2013 <a href="#">Your Website</a></p>
-      </div>
-      <!--/.col-sm-6-->
-      <div class="col-sm-6">
-        <ul class="soc-footer">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-        </ul>
-        <!--/.soc-footer--> 
-      </div>
-      <!--/.col-sm-6--> 
-    </div>
-    <!--/.row--> 
-  </div>
-</section>
-<!--footer--> 
+
 
 
 <!-- javascript
@@ -1203,7 +1210,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 <script src="js/jquery.easing.js"></script> 
 <script src="js/supersized.3.2.7.min.js"></script> 
 <script src="js/supersized.shutter.js"></script> 
-<script src="js/jquery.BlackAndWhite.min.js"></script> 
+<!--script src="js/jquery.BlackAndWhite.min.js"></--> 
 <script src="js/script.js"></script>
 </body>
 </html>

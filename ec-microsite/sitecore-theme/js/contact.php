@@ -65,17 +65,15 @@ $Body .= $postMessage;
 $Body .= "\n";
 $Body .= "\n";
 
-echo $toEmail;
-echo $postFirstName;
 
-@$sentMail = mail($toEmail, $subject, $Body .'  -'.$postFirstName,  $headers);
+@$sentMail = mail($toEmail, $subject, $Body .'  -'.$postName,  $headers);
 
 if(!$sentMail)
 	{
 		header('HTTP/1.1 500 Couldnot send mail! Sorry..'); 
 		exit();
 	}else{
-		echo '<h3>Hi '.$postFirstName.', Thank you for your email</h3>
+		echo '<h3>Hi '.$postName.', Thank you for your email</h3>
 		<p>Your email has already arrived in our Inbox, all We need to do is Check it..
 		<br />Good day.</p>';
 	}

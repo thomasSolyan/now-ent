@@ -20,6 +20,8 @@ $(document).ready(function () {
         var js_email = $("#email").val();
         var js_phone = $("#phone").val();
         var js_message = $("#message").val();
+        var js_careers = $('#careers').val();
+        var js_general = $('#general').val();
 
         // Do a simple validation
         if (js_firstName == "") {
@@ -47,7 +49,7 @@ $(document).ready(function () {
         }
 
         //let's put all data together
-        var myData = 'postFirstName=' + js_firstName + 'postLastName=' + js_lastName +'&postEmail=' + js_email + '&postPhone=' + js_phone + '&postMessage=' + js_message;
+        var myData = 'postFirstName=' + js_firstName + '&postLastName=' + js_lastName +'&postEmail=' + js_email + '&postPhone=' + js_phone + '&postMessage=' + js_message;
 
         jQuery.ajax({
             type: "POST",
