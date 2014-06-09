@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-//sticky navigation
 $(document).ready(function () {
 
     jQuery(function ($) {
