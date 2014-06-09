@@ -179,7 +179,10 @@
   margin-right: 0;
 }
 
-.port-container { padding-left: 30px; }
+.port-container {
+  padding-left: 30px;
+}
+
 .port-title {
   background-color: #fff !important;
   z-index: 99999;
@@ -227,16 +230,16 @@
    color: #fff;
 }
 
-#get-started :-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
+#get-started :-moz-placeholder {
+   color: #fff;
 }
 
-#get-started ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
+#get-started ::-moz-placeholder {
+   color: #fff;
 }
 
-#get-started :-ms-input-placeholder {  
-   color: #fff;  
+#get-started :-ms-input-placeholder {
+   color: #fff;
 }
 
 .radio {
@@ -256,4 +259,10 @@
    margin-left: -30px !important;
 }
 
-.footer { margin-bottom: 0; border: 1px solid #ddd; background: #fff;}
+.footer {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+#self-assesment-wrapper { min-height: 500px; }
+#self_assesment .modal-body { min-height: 400px; }
