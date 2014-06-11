@@ -242,7 +242,8 @@
   margin-bottom: 20px;
 }
 
-#get-started input,
+#get-started input[type=text],
+#get-started input[type=email],
 #get-started textarea {
   background-color: #ddd;
   color: #fff;
@@ -271,13 +272,16 @@
 .radio label {
   display: inline-block;
   margin-right: 40px;
+  
 }
 
-.radio input {
+.radio input[type=radio] {
   top: 15px;
   display: block;
   position: relative;
-   margin-left: -30px !important;
+  margin-left: -30px !important;
+  background: transparent;
+  border: none;
 }
 
 .footer {
@@ -288,3 +292,6 @@
 #self-assesment-wrapper { min-height: 500px; }
 #self_assesment .modal-body { min-height: 400px; }
 .image-replacment { min-height: 100px; padding: 100px 50px; color: #fff; font-size: 18px;}
+
+#get-started,
+#portfolio { padding-top: 0; }

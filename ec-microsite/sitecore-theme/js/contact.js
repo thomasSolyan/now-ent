@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         jQuery.ajax({
             type: "POST",
-            url: "contact.php",
+            url: "../contact.php",
             dataType: "html",
             data: myData,
             success: function (response) {
