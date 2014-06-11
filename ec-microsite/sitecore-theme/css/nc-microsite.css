@@ -1,5 +1,5 @@
 .invisible { 
-    display: none;
+  display: none;
 }
 
 .hidden {
@@ -222,6 +222,11 @@
   color: #999;
 }
 
+.port-item img:hover,
+.port-inner:hover {
+  cursor: pointer;
+}
+
 .pricing-table {
   padding: 15px;
   min-height: 360px;
@@ -249,19 +254,19 @@
   color: #fff;
 }
 #get-started ::-webkit-input-placeholder {
-   color: #fff;
+  color: #fff;
 }
 
 #get-started :-moz-placeholder {
-   color: #fff;
+  color: #fff;
 }
 
 #get-started ::-moz-placeholder {
-   color: #fff;
+  color: #fff;
 }
 
 #get-started :-ms-input-placeholder {
-   color: #fff;
+  color: #fff;
 }
 
 .radio {
@@ -272,7 +277,6 @@
 .radio label {
   display: inline-block;
   margin-right: 40px;
-  
 }
 
 .radio input[type=radio] {
@@ -289,9 +293,23 @@
   border: 1px solid #ddd;
   background: #fff;
 }
-#self-assesment-wrapper { min-height: 500px; }
-#self_assesment .modal-body { min-height: 400px; }
-.image-replacment { min-height: 100px; padding: 100px 50px; color: #fff; font-size: 18px;}
+
+#self-assesment-wrapper {
+  min-height: 500px;
+}
+
+#self_assesment .modal-body {
+  min-height: 400px;
+}
+
+.image-replacment {
+  min-height: 100px;
+  padding: 100px 50px;
+  color: #fff;
+  font-size: 18px;
+}
 
 #get-started,
-#portfolio { padding-top: 0; }
+#portfolio {
+  padding-top: 0;
+}
