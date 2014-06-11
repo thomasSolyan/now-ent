@@ -15,11 +15,6 @@
   padding: 15px 10px;
 }
 
-.container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .team-inner {
   min-height: 120px;
 }
@@ -40,6 +35,7 @@
 .padding {
   padding: 20px;
 }
+
 .btn {
   margin: 20px 20px 20px 0;
 }
@@ -123,7 +119,6 @@
 
 #home h1:first-child {
   text-transform: uppercase;
-  font-size: 68px;
 }
 
 #home figure {
@@ -132,7 +127,6 @@
 
 [data-layout] .container {
   border: 1px solid #ddd;
-  padding: 0;
 }
 
 [data-layout].content {
@@ -146,10 +140,6 @@
   background-color: #ddd;
 }
 
-[data-layout] .chart-container img {
-  max-height: 370px;
-  max-width: 960px;
-}
 
 [data-layout] .about-title {
   color: #ddd;
@@ -166,22 +156,48 @@
 
 [data-layout] .article-link {
   border: 1px solid #ddd;
-  margin-right: 20px;
   width: 22%;
 }
 
 .col-md-3.cape-container {
   border: 1px solid #ddd;
-
-
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
 }
+
+  @media (max-width:480px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+  @media (max-width:570px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+  @media (max-width: 767px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width : 768px) and (max-width:979px) {
+    .col-md-3.cape-container:first-child { margin-left: 50px; }
+  }
 
 [data-layout] .article-link {
   width: 100%;
-}
-
-.col-md-3.cape-container:last-child {
-  margin-right: 0;
 }
 
 .port-container {
@@ -195,10 +211,10 @@
 }
 
 .col-md-6.port-item {
-  width: 48%;
-  margin-right: 15px;
   padding-left: 0;
-  padding-right: 0;
+}
+
+.port-inner {
   border: 1px solid #ddd;
 }
 
