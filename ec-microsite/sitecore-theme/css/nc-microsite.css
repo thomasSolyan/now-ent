@@ -164,11 +164,16 @@
   margin: 0 auto;
 }
 
-[data-layout] .article-link,
-.col-md-3.cape-container {
+[data-layout] .article-link {
   border: 1px solid #ddd;
   margin-right: 20px;
   width: 22%;
+}
+
+.col-md-3.cape-container {
+  border: 1px solid #ddd;
+
+
 }
 
 [data-layout] .article-link {
