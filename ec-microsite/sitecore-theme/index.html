@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <p><button class="hidden" id="launch" data-toggle="modal" data-target="#self_assesment">Launch modal 1</button></p>
+  <p><button class="hidden" data-id="launch" data-toggle="modal" data-target="#self_assesment">Launch modal 1</button></p>
 
   <!-- SELF ASSESMENT START -->
   <div class="modal fade" id="self_assesment" tabindex="-1">
@@ -29,11 +29,11 @@
               <h3>People in our organization use SharePoint because:</h3>
             </div>
           </div>
-            <form id="assesment_survey">
-                <input type="checkbox" id="index1">
+            <form id="assesment_survey" data-id="survey">
+                <input type="checkbox" data-id="index1">
                 <label class="assesment-label"><span>I make them</span></label>​​​​​​​​​​​​​​​​​​​​​​​​​​
                 <div class="secondary-label">
-                  <input type="checkbox" id="index2">
+                  <input type="checkbox" data-id="index2">
                   <label class="assesment-label">IT makes us</label>​​​​​​​​​​​​​​​​​​​​​​​​​​
                 </div>
                 <div class="secondary-label">
@@ -56,9 +56,9 @@
       // if ((ls && ls === 'index1') || (ls && ls === 'index2')) {
       //   window.location = ls + '.html';
       // } else {
-        $('#launch').click();
-        $('#assesment_survey').on('click', 'input', function() {
-          var thisId = $(this).attr('id');
+        $('[data-id=launch]').click();
+        $('[data-id=survey]').on('click', 'input', function() {
+          var thisId = $(this).data('id');
           if (this.checked) {
             window.location = thisId + '.html';
             path = thisId;
