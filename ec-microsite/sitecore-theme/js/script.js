@@ -73,20 +73,49 @@ $(document).ready(function () {
     });
 
 
-    $.ajax({
-            method: 'GET',
-            url: "data/blogs.json",
-            dataType: 'json',
-            success: function (data) {
-                //var template = Handlebars.compile(content),
-                    //html = template(data);
-                //data = $.parseXML(data)
-                console.log(data);
-
-            },
-            error: function(jqxhr) {
-                console.log(jqxhr.statusText);
+    var destroyModal = function() {
+            if ($('#generic_blog .modal-header').length > 1) {
+                $('#generic_blog .modal-header')[0].remove();
             }
+            if ($('#generic_blog .modal-body').length > 1) {
+                $('#generic_blog .modal-body')[0].remove();
+            }
+        },
+
+        setBlogTemplate = function(content, dataUrl, appendTo, title) {
+        var modalOpen = false;
+            $.ajax({
+                url: dataUrl,
+                method: 'GET',
+                success: function (data) {
+                    $.each(data, function(i, el){
+                        var dataTitle = el.title.toLowerCase();
+                        title = title.toLowerCase();
+                        if (dataTitle === title) {
+                            console.log(title);
+                            console.log(title);
+                            var template = Handlebars.compile(content),
+                                html = template(el);
+                            $(appendTo).append(html);
+                            destroyModal();
+                        }
+                    })
+
+                },
+                error: function(jqxhr) {
+                    console.log(jqxhr.statusText);
+                }
+            });
+        },
+
+        content = $('[data-template=blog-template]').html(),
+        dataUrl = "data/blogs.json",
+        appendTo = '[data-append=modal-content]';
+    
+        $('[data-modal=blogs]').on('click', '[data-toggle=modal]', function(ev) {
+            var title = $(this).data('title');
+            console.log(title);
+            setBlogTemplate(content, dataUrl, appendTo, title);
         });
 
 

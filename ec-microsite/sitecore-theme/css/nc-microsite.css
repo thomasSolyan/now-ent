@@ -224,7 +224,8 @@ strong {
 }
 
 .port-item img:hover,
-.port-inner:hover {
+.port-inner:hover,
+.modal-target:hover {
   cursor: pointer;
 }
 

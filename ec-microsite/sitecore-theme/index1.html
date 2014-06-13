@@ -198,15 +198,16 @@
 
       <!-- TEAM LIST START -->
       <div class="team-container">
-        <div class="col-md-4"> 
-          <a href="http://blog.tahoepartners.com/index.php/career-development-millennials-nowenterprise-next-generation/" target="_blank">
+        
+        <!-- http://blog.tahoepartners.com/index.php/career-development-millennials-nowenterprise-next-generation/ -->
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Career Development for Millennials: the NowEnterprise for the Next Generation"> 
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">GET READY FOR THE MILLENNIALS</h3>
               <p class="team-position">By Mike Davidson - Apr 2, 2014</p>
             </div>
-          </a>
         </div>
+
         <div class="col-md-4"> 
           <a href="http://blog.tahoepartners.com/index.php/future-knowledge-worker-nowenterprise/" target="_blank">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
@@ -216,6 +217,7 @@
             </div>
           </a>
         </div>
+        
         <div class="col-md-4"> 
           <a href="http://blog.tahoepartners.com/index.php/intranets-say-hello-nowenterprise/" target="_blank">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
@@ -365,37 +367,33 @@
       <!-- SOLUTION TAB END -->
     </div>
     <div class="spacing40 clearfix"></div>
-    <div class="container">
+    <div class="container" data-modal="blogs">
       <div class="spacing40 clearfix"></div>
 
       <!-- TEAM LIST START -->
       <div class="team-container">
-        <div class="col-md-4">
-          <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-strategy-and-roadmap/" target="_blank">
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration Strategy and Roadmap">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION STRATEGY & ROADMAP</h3>
               <p class="team-position">By David Sidwell - June 17, 2013</p>
             </div>
-          </a>
         </div>
 
         <!-- http://blog.tahoepartners.com/index.php/enterprise-collaboration-obstacles-breaking-down-organizational-silos/ -->
-        <div class="col-md-4" data-toggle="modal" data-target="#generic_blog"> 
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration Obstacles: Breaking Down Organizational Silos"> 
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION OBSTACLES</h3>
               <p class="team-position">By Ralph Keipert - June 26, 2013</p>
             </div>
         </div>
-        <div class="col-md-4">
-          <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-user-experience-and-change-resilient-design/" target="_blank">
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration: User Experience and Change Resilient Design">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION: USER EXPERIENCE, RESILIENT DESIGN</h3>
               <p class="team-position">by Mike Davidson</p>
             </div>
-          </a>
         </div>
       </div>
       <!-- TEAM LIST END -->
@@ -718,35 +716,33 @@
   <!-- PORTFOLIO MODAL END -->
 
   <!-- GENERIC BLOG MODAL START -->
-  <div class="modal fade" id="generic_blog" tabindex="-1">
+  <div class="modal fade" id="generic_blog">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Enterprise Collaboration Obstacles: Breaking Down Organizational Silos</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row"> 
-            <div class="col-sm-4 port-item">
-              <div class="port-inner white-bg clearfix">
-                <img alt="Portfolio" src="http://blog.tahoepartners.com/wp-content/uploads/2013/09/Silos.jpg">
+      <div class="modal-content" data-append="modal-content">
+
+      <!--- HANDLEBARS TEMPLATE START -->
+        <script data-template="blog-template" type="text/x-handlebars-template">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">{{title}}</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row"> 
+              <div class="col-sm-4 port-item">
+                <div class="port-inner white-bg clearfix">
+                  <img alt="Portfolio" src="{{imageLocation}}">
+                </div>
+              </div>
+              <div class="col-sm-8">
+                {{{description}}}
               </div>
             </div>
-            <div class="col-sm-8">
-              <p>We’ve talked before about <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-obstacles-two-reasons-for-poor-adoption/" target="_blank">low adoption as a killer of effective collaboration</a>, but organizational silos can be a huge obstacle as well. We have seen cases where collaboration tools are used with reasonable effectiveness within departments, but the broader enterprise benefits go unrealized. Why is this?</p>
+            <div class="row">
+              {{{content}}}
             </div>
           </div>
-            <h5>The problem with departmental adoption only. </h5>
-            <p>Content and knowledge are generally not only useful and relevant to one specific department. It may not be valuable to everyone within an organization, but it’s rarely of importance to just one group. Further, many business processes have stakeholders or contributors across departments. Intentionally or not, limiting access to knowledge and content and transparency to enterprise business processes will reinforce departmental silos and impede collaboration at an enterprise level. What’s worse, departments often pick their own tools and platforms. If product development is using Yammer and your sales force is using Chatter, you can be assured that there’s not much electronic collaboration happening – not to mention the agony of watching your ongoing maintenance and support costs going through the roof.</p>
-            <p>A recent McKinsey study, <a href="http://www.mckinsey.com/insights/high_tech_telecoms_internet/the_rise_of_the_networked_enterprise_web_20_finds_its_payday" target="_blank">“The rise of the networked enterprise: Web 2.0 finds its payday”</a> concluded that “companies using the Web intensively gain greater market share and higher margins.” What executive wouldn’t get excited about that? Further, McKinsey states, “A new class of company is emerging – one that uses collaborative Web 2.0 technologies intensively to connect the internal efforts of employees and to extend the organization’s reach to customers, partners, and suppliers. We call this new kind of company the networked enterprise.”</p>
-            <p>The networked enterprise requires an enterprise view of content, processes and use of collaboration tools.</p>
-            <h5>Collaboration with the enterprise in mind.</h5>
-            <p><strong>Content.</strong> Two things that spring to the surface in a discussion of content are taxonomy and permissions. Once content is created and stored, the simple adage applies that information is only useful if it can be easily found. This is why search has become such a powerful tool. Free form text search has replaced almost every other historical method of retrieving electronic content. We have Google to thank for that. If you expect your internal customers to find information that will make them more productive at work in ways that are not clearly and accurately defined (taxonomy), it won’t be easy, and they’ll continue to use whatever less effective method they apply today. Of course, who can view and modify content is another important determination. Search can be powerful. Without the right restrictions, it could be too powerful.</p>
-            <p><strong>Process/Workflow.</strong> Since many business processes transcend organizational boundaries, proper transparency across departments is critical. Many transactional processes centered on structured data have already been automated by ERP systems and the like, and provide transparency to those that need it. In our experience, what are often not automated are collaborative processes that involve unstructured content (documents, designs, etc.). Think of activities like product or project management – any process currently managed by spreadsheets and email. We’ve found huge opportunities to increase speed of execution to results and reduction in errors in these scenarios. In fact, one client was able to reduce turnaround time for transportation costing by 90%, and cut approval times in half. It’s amazing what’s possible.</p>
-            <p><strong>Social.</strong> Although social business has its roots in consumer social technologies, this isn’t Facebook or Pinterest. Social business is about finding the right experts quickly, fostering communities of people with like interests and skills, improving project communication and execution, and about reducing the amount of email flowing through your organization. Some argue that social is the end of cc: in email. Time will tell, but without an enterprise solution and a common platform for collaboration, organizational silos prevail and the opportunity is squandered.</p>
-            <h5>How can I avoid the trap of organizational silos?</h5>
-            <p><strong>Content.</strong> In our experience, collaboration across the enterprise begins with a strongly supported enterprise collaboration strategy and roadmap. Buy-in and involvement across departments is essential. This strategy must set a foundation for content taxonomy built with users and their work activities in mind, along with appropriate permission safeguards. Surfacing opportunities to accelerate collaborative business processes is critical. <a href="http://blog.tahoepartners.com/index.php/enterprise-collaboration-obstacles-breaking-down-organizational-silos/">Here’s a great blog post</a> that discusses the Enterprise Collaboration Roadmap in more detail.</p>
-        </div>
+        </script>
+        <!--- HANDLEBARS TEMPLATE END -->
       </div>
     </div>
   </div>
@@ -759,6 +755,7 @@
 <script src="js/libs/jquery.nav.js"></script>
 <script src="js/libs/supersized.3.2.7.min.js"></script>
 <script src="js/libs/supersized.shutter.js"></script>
+<script src="js/libs/handlebars.js"></script>
 <script src="js/script.js"></script>
 <script src="js/contact.js"></script>
 <script type="text/javascript">
