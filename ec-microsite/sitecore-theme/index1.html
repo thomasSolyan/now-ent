@@ -410,11 +410,11 @@
           <h3 class="port-title">Our Clients, Our Heros</h3>
         </div>
       </div>
-      <div class="row port-container">
+      <div class="row port-container" data-modal="portfolio">
 
         <!-- PORTFOLIO ITEM START -->
         <div class="col-md-6 port-item">
-          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target="#portfolio_modal"> 
+          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target=".portfolio-modal" data-title="Reyes Holdings">
             <figure class="box-40 hovers bwWrapper">
               <img alt="Portfolio Image" src="images/work/1.jpg">
             </figure>
@@ -428,12 +428,12 @@
 
         <!-- PORTFOLIO ITEM START -->
         <div class="col-md-6 port-item">
-          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target="#portfolio_modal"> 
+          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target=".portfolio-modal" data-title="Huron Consulting">
             <figure class="box-40 hovers bwWrapper">
               <img alt="Portfolio Image" src="images/work/1.jpg">
             </figure>
             <div class="padding box-60">
-              <h3>HURON CONSULTING</h3>
+              <h3>Huron Consulting</h3>
               <p>What does an award-winning intranet look like? Like increasing usage by 86% and tripling the number of content contributors.</p>
               <i class="cat-icon fa fa-html5"></i>
             </div>
@@ -442,12 +442,12 @@
 
         <!-- PORTFOLIO ITEM START -->
         <div class="col-md-6 port-item">
-          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target="#portfolio_modal"> 
+          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target=".portfolio-modal" data-title="Hollister">
             <figure class="box-40 hovers bwWrapper">
               <img alt="Portfolio Image" src="images/work/1.jpg">
             </figure>
             <div class="padding box-60">
-              <h3>HOLLISTER</h3>
+              <h3>Hollister</h3>
               <p>Where does an Enterprise Collaboration roadmap take you? At Hollister, all over the world.</p>
               <i class="cat-icon fa fa-html5"></i>
             </div>
@@ -456,12 +456,12 @@
 
         <!-- PORTFOLIO ITEM START -->
         <div class="col-md-6 port-item">
-          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target="#portfolio_modal"> 
+          <div class="port-inner white-bg clearfix" data-toggle="modal" data-target=".portfolio-modal" data-title="Navistar">
             <figure class="box-40 hovers bwWrapper">
               <img alt="Portfolio Image" src="images/work/1.jpg">
             </figure>
             <div class="padding box-60">
-              <h3>NAVISTAR</h3>
+              <h3>Navistar</h3>
               <p>Finding thousands of untapped employee ideas - and uncovering 5.3MM in savings. That's pretty heroic.</p>
               <i class="cat-icon fa fa-html5"></i>
             </div>
@@ -648,63 +648,68 @@
   <!-- BLOG SUBSCRIPTION MODAL END -->
 
   <!-- PORTFOLIO MODAL START -->
-  <div class="modal fade" id="portfolio_modal" tabindex="-1">
+  <div class="modal fade portfolio-modal"tabindex="-1">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-8 col-xs-12">
-              <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
+      <div class="modal-content" data-append="modal-content">
+        
+        <!--- HANDLEBARS TEMPLATE START -->
+        <script data-template="portfolio-template" type="text/x-handlebars-template">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal title</h4>
           </div>
-          <div class="row">
-            <div class="align-center padding">
-              <img src="images/team/2.jpg" alt="modal">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-8 col-xs-12">
+                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="bg-box1 padding clearfix">
-              <div class="col-sm-4">
-                <div class="bg-box1">
-                  <a class="hovers bwWrapper">
-                    <img src="images/team/1.jpg" alt="team">
-                  </a>
-                  <div class="clearfix team-inner white-bg padding">
-                    <h3 class="team-name">Titi Haryati</h3>
-                    <p class="team-position">Web Designer</p>
+            <div class="row">
+              <div class="align-center padding">
+                <img src="images/team/2.jpg" alt="modal">
+              </div>
+            </div>
+            <div class="row">
+              <div class="bg-box1 padding clearfix">
+                <div class="col-sm-4">
+                  <div class="bg-box1">
+                    <a class="hovers bwWrapper">
+                      <img src="images/team/1.jpg" alt="team">
+                    </a>
+                    <div class="clearfix team-inner white-bg padding">
+                      <h3 class="team-name">Titi Haryati</h3>
+                      <p class="team-position">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4"> 
+                  <div class="bg-box1">
+                    <a class="hovers bwWrapper">
+                      <img src="images/team/2.jpg" alt="team">
+                    </a>
+                    <div class="clearfix team-inner white-bg padding">
+                      <h3 class="team-name">Cucu Maricu</h3>
+                      <p class="team-position">Web Developer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4"> 
+                  <div class="bg-box1">
+                    <a class="hovers bwWrapper">
+                      <img src="images/team/3.jpg" alt="team">
+                    </a>
+                    <div class="clearfix team-inner  white-bg padding">
+                      <h3 class="team-name">Marimas</h3>
+                      <p class="team-position">Photographer</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4"> 
-                <div class="bg-box1">
-                  <a class="hovers bwWrapper">
-                    <img src="images/team/2.jpg" alt="team">
-                  </a>
-                  <div class="clearfix team-inner white-bg padding">
-                    <h3 class="team-name">Cucu Maricu</h3>
-                    <p class="team-position">Web Developer</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4"> 
-                <div class="bg-box1">
-                  <a class="hovers bwWrapper">
-                    <img src="images/team/3.jpg" alt="team">
-                  </a>
-                  <div class="clearfix team-inner  white-bg padding">
-                    <h3 class="team-name">Marimas</h3>
-                    <p class="team-position">Photographer</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
+        </script>
+
       </div>
     </div>
   </div>
@@ -715,7 +720,7 @@
     <div class="modal-dialog">
       <div class="modal-content" data-append="modal-content">
 
-      <!--- HANDLEBARS TEMPLATE START -->
+        <!--- HANDLEBARS TEMPLATE START -->
         <script data-template="blog-template" type="text/x-handlebars-template">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>

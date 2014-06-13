@@ -276,8 +276,8 @@ blockquote small {
 
 .menu-btn.main-menu {
   position: absolute;
-  right: 50px;
-  top: 17px;
+  right: 60px;
+  top: 12px;
 }
 
 .branch-menu { 
@@ -1234,6 +1234,11 @@ input:focus, textarea:focus {
 
   .menu-btn {
     display: block;
+  }
+
+  .menu-btn.main-menu {
+    right: 60px;
+    top: 12px;
   }
 
   .nav-collapse {

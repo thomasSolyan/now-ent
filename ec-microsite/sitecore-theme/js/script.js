@@ -1,49 +1,59 @@
 
 window.onload = function () {
 
-  /* DYNAMIC BLOG MODAL START */
-  var destroyModal = function() {
-        if ($('.generic-blog .modal-header').length > 1) {
-          $('.generic-blog .modal-header')[0].remove();
+  /* DYNAMIC MODAL START */
+  var destroyModal = function(selector) {
+        if ($(selector + ' .modal-header').length > 1) {
+          $(selector + ' .modal-header')[0].remove();
         }
-        if ($('.generic-blog .modal-body').length > 1) {
-          $('.generic-blog .modal-body')[0].remove();
+        if ($(selector + ' .modal-body').length > 1) {
+          $(selector + ' .modal-body')[0].remove();
         }
       },
 
-      setTemplate = function(data, title, appandTo, content) {
+      setTemplate = function(data, title, appendTo, content, selector) {
         $.each(data, function(i, el) {
           var dataTitle = el.title.toLowerCase();
           if (dataTitle === title) {
             template = Handlebars.compile(content),
             html = template(el);
-            $(appendTo).append(html);
-            destroyModal();
+            appendTo.append(html);
+            destroyModal(selector);
+            console.log(el);
             return;
           }
         });
       },
 
-      getData = function(content, dataUrl, appendTo, title) {
+      getData = function(content, dataUrl, appendTo, title, selector) {
         $.ajax({
           url: dataUrl,
           method: 'GET',
           success: function (data) {
-            setTemplate(data, title, appendTo, content);
+            setTemplate(data, title, appendTo, content, selector);
           },
           error: function(jqxhr) {
             console.log(jqxhr.statusText);
           }
         });
-      },
-
-      content = $('[data-template=blog-template]').html(),
-      dataUrl = "data/blogs.json",
-      appendTo = '[data-append=modal-content]';
+      };
 
   $('[data-modal=blogs]').on('click', '[data-toggle=modal]', function(ev) {
-    var title = $(this).data('title').toLowerCase();;
-    getData(content, dataUrl, appendTo, title);
+    var title = $(this).data('title').toLowerCase(),
+        content = $('[data-template=blog-template]').html(),
+        dataUrl = 'data/blogs.json',
+        appendTo = $('[data-append=modal-content]'),
+        selector = '.generic-blog';
+    getData(content, dataUrl, appendTo, title, selector);
+  });
+
+  $('[data-modal=portfolio]').on('click', '[data-toggle=modal]', function() {
+    var title = $(this).data('title').toLowerCase(),
+        content = $('[data-template=portfolio-template]').html(),
+        dataUrl = 'data/heros.json',
+        appendTo = $('[data-append=modal-content]'),
+        selector = '.portfolio-modal';
+    getData(content, dataUrl, appendTo, title, selector);
   });
 
   /* HOME IMAGE CHANGER START */
@@ -55,7 +65,7 @@ window.onload = function () {
     transition_speed: 600,
     slide_links: 'false',
     slides: [
-      {image: 'images/test1.jpg'},
+      {image: 'images/slider1.jpg'},
       {image: 'images/slider2.jpg'},
       {image: 'images/slider3.jpg'},
       {image: 'images/slider4.jpg'}
