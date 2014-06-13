@@ -33,7 +33,7 @@
 
   <!-- HEADER SECTION START -->
   <header class="clearfix">
-    <section class="header clearfix">
+    <section class="header clearfix" data-header>
       <div class="container">
         <div class="row">
           <div class="col-xs-5 col-sm-4"> 
@@ -59,7 +59,7 @@
             <div class="menu-btn main-menu" data-target=".nav-collapse" data-toggle="collapse"><span class="fa fa-th"></span></div>
 
             <!-- NAVIGATION START -->
-            <ul class="navigation nav-collapse">
+            <ul class="navigation nav-collapse" data-navigation>
               <li><a href="#home">Home</a></li>
               <li><a href="#challenge">Challenge</a></li>
               <li><a href="#solution">Solution</a></li>
@@ -197,35 +197,30 @@
       <div class="spacing40 clearfix"></div>
 
       <!-- TEAM LIST START -->
-      <div class="team-container">
-        
-        <!-- http://blog.tahoepartners.com/index.php/career-development-millennials-nowenterprise-next-generation/ -->
-        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Career Development for Millennials: the NowEnterprise for the Next Generation"> 
-            <img src="images/team/ph1.jpg" alt="team" class="article-link">
-            <div class="clearfix team-inner white-bg padding article-link">
-              <h3 class="team-name">GET READY FOR THE MILLENNIALS</h3>
-              <p class="team-position">By Mike Davidson - Apr 2, 2014</p>
-            </div>
+      <div class="team-container" data-modal="blogs">
+
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="Career Development for Millennials: the NowEnterprise for the Next Generation">
+          <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">GET READY FOR THE MILLENNIALS</h3>
+            <p class="team-position">By Mike Davidson - Apr 2, 2014</p>
+          </div>
         </div>
 
-        <div class="col-md-4"> 
-          <a href="http://blog.tahoepartners.com/index.php/future-knowledge-worker-nowenterprise/" target="_blank">
-            <img src="images/team/ph1.jpg" alt="team" class="article-link">
-            <div class="clearfix team-inner white-bg padding article-link">
-              <h3 class="team-name">FUTURE OF THE KNOWLEDGE WORKER</h3>
-              <p class="team-position">By David Sidwell - Mar 17, 2014</p>
-            </div>
-          </a>
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="The Future of the Knowledge Worker is the NowEnterprise">
+          <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">FUTURE OF THE KNOWLEDGE WORKER</h3>
+            <p class="team-position">By David Sidwell - Mar 17, 2014</p>
+          </div>
         </div>
-        
-        <div class="col-md-4"> 
-          <a href="http://blog.tahoepartners.com/index.php/intranets-say-hello-nowenterprise/" target="_blank">
-            <img src="images/team/ph1.jpg" alt="team" class="article-link">
-            <div class="clearfix team-inner white-bg padding article-link">
-              <h3 class="team-name">GOODBYE INTRANET. HELLO TO THE NOWENTERPRISE</h3>
-              <p class="team-position">by Ralph Kelpert - Jan 13, 2014</p>
-            </div>
-          </a>
+
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="Goodbye Intranet. Say Hello to the NowEnterprise">
+          <img src="images/team/ph1.jpg" alt="team" class="article-link">
+          <div class="clearfix team-inner white-bg padding article-link">
+            <h3 class="team-name">GOODBYE INTRANET. HELLO TO THE NOWENTERPRISE</h3>
+            <p class="team-position">by Ralph Kelpert - Jan 13, 2014</p>
+          </div>
         </div>
       </div>
       <!-- TEAM LIST END -->
@@ -367,12 +362,12 @@
       <!-- SOLUTION TAB END -->
     </div>
     <div class="spacing40 clearfix"></div>
-    <div class="container" data-modal="blogs">
+    <div class="container">
       <div class="spacing40 clearfix"></div>
 
       <!-- TEAM LIST START -->
-      <div class="team-container">
-        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration Strategy and Roadmap">
+      <div class="team-container" data-modal="blogs">
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="Enterprise Collaboration Strategy and Roadmap">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION STRATEGY & ROADMAP</h3>
@@ -381,14 +376,14 @@
         </div>
 
         <!-- http://blog.tahoepartners.com/index.php/enterprise-collaboration-obstacles-breaking-down-organizational-silos/ -->
-        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration Obstacles: Breaking Down Organizational Silos"> 
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="Enterprise Collaboration Obstacles: Breaking Down Organizational Silos"> 
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION OBSTACLES</h3>
               <p class="team-position">By Ralph Keipert - June 26, 2013</p>
             </div>
         </div>
-        <div class="col-md-4 modal-target" data-toggle="modal" data-target="#generic_blog" data-title="Enterprise Collaboration: User Experience and Change Resilient Design">
+        <div class="col-md-4 modal-target" data-toggle="modal" data-target=".generic-blog" data-title="Enterprise Collaboration: User Experience and Change Resilient Design">
             <img src="images/team/ph1.jpg" alt="team" class="article-link">
             <div class="clearfix team-inner white-bg padding article-link">
               <h3 class="team-name">COLLABORATION: USER EXPERIENCE, RESILIENT DESIGN</h3>
@@ -716,7 +711,7 @@
   <!-- PORTFOLIO MODAL END -->
 
   <!-- GENERIC BLOG MODAL START -->
-  <div class="modal fade" id="generic_blog">
+  <div class="modal fade generic-blog" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content" data-append="modal-content">
 
@@ -743,6 +738,7 @@
           </div>
         </script>
         <!--- HANDLEBARS TEMPLATE END -->
+
       </div>
     </div>
   </div>
