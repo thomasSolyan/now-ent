@@ -35,21 +35,6 @@ $(document).ready(function () {
         scrollOffset: 90
     });
 
-    // script prettyphoto
-    $("a[data-rel^='prettyPhoto']").prettyPhoto({
-        social_tools: false,
-        deeplinking: false
-    });
-
-    $('.more,.cat-icon').bind('click', function (event) {
-        var $anchor = $('#workslist');
-
-        $('html, body').stop().animate({
-            scrollTop: $($anchor).offset().top - 89
-        }, 1000, 'linear');
-        event.preventDefault();
-    });
-
     //portfolio setting
     $('#about-carousel').carousel({
         interval: 6000
@@ -86,4 +71,23 @@ $(document).ready(function () {
             });
         }
     });
+
+
+    $.ajax({
+            method: 'GET',
+            url: "data/blogs.json",
+            dataType: 'json',
+            success: function (data) {
+                //var template = Handlebars.compile(content),
+                    //html = template(data);
+                //data = $.parseXML(data)
+                console.log(data);
+
+            },
+            error: function(jqxhr) {
+                console.log(jqxhr.statusText);
+            }
+        });
+
+
 });

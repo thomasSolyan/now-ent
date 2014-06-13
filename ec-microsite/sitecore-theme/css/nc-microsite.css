@@ -39,6 +39,11 @@
 .btn {
   margin: 20px 20px 20px 0;
 }
+strong {
+  color: #000;
+  font-weight: 700;
+}
+
 
 #self_assesment .modal-header,
 #blog_subscription .modal-header {
@@ -156,7 +161,7 @@
 
 [data-layout] .article-link {
   border: 1px solid #ddd;
-  width: 22%;
+  width: 100%;
 }
 
 .col-md-3.cape-container {
@@ -195,10 +200,6 @@
   @media (min-width : 768px) and (max-width:979px) {
     .col-md-3.cape-container:first-child { margin-left: 50px; }
   }
-
-[data-layout] .article-link {
-  width: 100%;
-}
 
 .port-container {
   padding-left: 30px;
@@ -312,4 +313,10 @@
 #get-started,
 #portfolio {
   padding-top: 0;
+}
+
+.modal .modal-content{
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
