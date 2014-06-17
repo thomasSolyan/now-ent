@@ -44,9 +44,13 @@ strong {
   font-weight: 700;
 }
 
+.portfolio-modal .case-study:hover {
+  cursor: pointer;
+}
 
 #self_assesment .modal-header,
-#blog_subscription .modal-header {
+#blog_subscription .modal-header,
+.portfolio-modal .modal-header {
   border-bottom: none;
 }
 
@@ -321,3 +325,10 @@ strong {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.modal-body h4,
+.inner-title {
+  color: #999;
+}
+
+.modal-body .list-content { margin-left: 15px;}

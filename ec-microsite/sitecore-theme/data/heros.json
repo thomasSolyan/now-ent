@@ -7,7 +7,12 @@
       "Platfrorm and feature consolidation"
     ],
     "content": "A three-year roadmap aligned the organization around collaboration priorities for over 15,000 global employees, many of them mobile. Intranet redesign and document management were two early high priority areas.",
-    "imageUrl": "/images/heros/reyes-hero.png"
+    "imageUrl": "images/heros/reyes-hero.png",
+    "caseStudy" : [
+      {"title": "Hollister", "image" : "images/team/1.jpg"},
+      {"title": "Huron Consulting", "image" : "images/team/1.jpg"},
+      {"title": "Navistar", "image" : "images/team/1.jpg"}
+    ]
   },
   {
     "title": "Hollister",
@@ -17,7 +22,12 @@
       "50+ interview participants"
     ],
     "content": "A multi-year roadmap for this global organization will lead to a common collaboration environment. Early priorities included a redesigned intranet, multi-lingual, personalization, social, content governance and robust search.",
-    "imageUrl": "/images/heros/hollister-hero.png"
+    "imageUrl": "images/heros/reyes-hero.png",
+    "caseStudy" : [
+      {"title": "Reyes Holdings", "image" : "images/team/1.jpg"},
+      {"title": "Huron Consulting", "image" : "images/team/1.jpg"},
+      {"title": "Navistar", "image" : "images/team/1.jpg"}
+    ]
   },
   {
     "title": "Huron Consulting",
@@ -26,7 +36,12 @@
       "300% increase in content contributors"
     ],
     "content": "This $700 M professional services firm sough to increase adoption of its intranet and, as a result, workforce productivity. Nielsen Normal recognized this intranet as one of the ten best of the year.",
-    "imageUrl": "/images/heros/huron-hero.png"
+    "imageUrl": "images/heros/reyes-hero.png",
+    "caseStudy" : [
+      {"title": "Reyes Holdings", "image" : "images/team/1.jpg"},
+      {"title": "Hollister", "image" : "images/team/1.jpg"},
+      {"title": "Navistar", "image" : "images/team/1.jpg"}
+    ]
   },
   {
     "title": "Navistar",
@@ -35,6 +50,11 @@
       "5.3 MM in savings in 1st 6 months"
     ],
     "content": "This $13 B global manufacturer sought to foster communication through social business across its 14,000 employees. Finding internal experts quickly and cultivating employee ideas that drive bottom line results were high priority objectives.",
-    "imageUrl": "/images/heros/navistar-hero.png"
+    "imageUrl": "images/heros/reyes-hero.png",
+    "caseStudy" : [
+      {"title": "Reyes Holdings", "image" : "images/team/1.jpg"},
+      {"title": "Hollister", "image" : "images/team/1.jpg"},
+      {"title": "Huron Consulting", "image" : "images/team/1.jpg"}
+    ]
   }
 ]

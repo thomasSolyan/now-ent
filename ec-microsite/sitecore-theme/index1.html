@@ -648,7 +648,7 @@
   <!-- BLOG SUBSCRIPTION MODAL END -->
 
   <!-- PORTFOLIO MODAL START -->
-  <div class="modal fade portfolio-modal"tabindex="-1">
+  <div class="modal fade portfolio-modal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content" data-append="modal-portfolio">
         
@@ -656,55 +656,43 @@
         <script data-template="portfolio-template" type="text/x-handlebars-template">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal title</h4>
+            <h4 class="modal-title">{{title}}</h4>
+            <h5 class="inner-title">Heroic Feats</h5>
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-sm-8 col-xs-12">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <div class="col-sm-6">
+                <ul class="list-content">
+                  {{#each feats}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <p>{{content}}</p>
               </div>
             </div>
+          
             <div class="row">
               <div class="align-center padding">
-                <img src="images/team/2.jpg" alt="modal">
+                <img src="/ec-microsite/sitecore-theme/{{imageUrl}}" alt="modal">
               </div>
             </div>
             <div class="row">
               <div class="bg-box1 padding clearfix">
-                <div class="col-sm-4">
-                  <div class="bg-box1">
-                    <a class="hovers bwWrapper">
-                      <img src="images/team/1.jpg" alt="team">
-                    </a>
-                    <div class="clearfix team-inner white-bg padding">
-                      <h3 class="team-name">Titi Haryati</h3>
-                      <p class="team-position">Web Designer</p>
+                {{#each caseStudy}}
+                  <div class="col-sm-4 case-study" data-trigger="{{title}}">
+                    <div class="bg-box1">
+                      <a class="hovers bwWrapper">
+                        <img src="/ec-microsite/sitecore-theme/{{image}}" alt="team">
+                      </a>
+                      <div class="clearfix team-inner white-bg padding">
+                        <h3 class="team-name">{{title}}</h3>
+                        <p class="team-position">Hero Case Study</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-sm-4"> 
-                  <div class="bg-box1">
-                    <a class="hovers bwWrapper">
-                      <img src="images/team/2.jpg" alt="team">
-                    </a>
-                    <div class="clearfix team-inner white-bg padding">
-                      <h3 class="team-name">Cucu Maricu</h3>
-                      <p class="team-position">Web Developer</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4"> 
-                  <div class="bg-box1">
-                    <a class="hovers bwWrapper">
-                      <img src="images/team/3.jpg" alt="team">
-                    </a>
-                    <div class="clearfix team-inner  white-bg padding">
-                      <h3 class="team-name">Marimas</h3>
-                      <p class="team-position">Photographer</p>
-                    </div>
-                  </div>
-                </div>
+               {{/each}}
               </div>
             </div>
           </div>

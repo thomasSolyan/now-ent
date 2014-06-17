@@ -22,6 +22,23 @@ window.onload = function () {
     ModalModule.getData(content, dataUrl, appendTo, title, selector, key);
   });
 
+  $('.portfolio-modal').on('click', '[data-trigger]', function() {
+    var newCase = $(this).data('trigger');
+    matchCase(newCase);
+  });
+
+  function matchCase(newCase) {
+    $('[data-target=".portfolio-modal"]').each(function(i, el) {
+      var portTitle = $(el).data('title');
+      if (newCase === portTitle) {
+         $('[data-dismiss=modal]').trigger('click');
+        setTimeout(function() {
+          $('[data-title="' + portTitle + '"]').trigger('click')
+        }, 500);
+      }
+    });
+  }
+
   /* HOME IMAGE CHANGER START */
   $.supersized({
     slide_interval: 7000,
@@ -58,16 +75,16 @@ window.onload = function () {
 
   $(function () {
     if (!$.support.placeholder) {
-      $("[placeholder]").focus(function () {
-        if ($(this).val() == $(this).attr("placeholder")) $(this).val("");
+      $('[placeholder]').focus(function () {
+        if ($(this).val() == $(this).attr('placeholder')) $(this).val('');
       }).blur(function () {
-        if ($(this).val() == "") $(this).val($(this).attr("placeholder"));
+        if ($(this).val() == '') $(this).val($(this).attr('placeholder'));
       }).blur();
 
-      $("[placeholder]").parents("form").submit(function () {
+      $('[placeholder]').parents('form').submit(function () {
         $(this).find('[placeholder]').each(function() {
-          if ($(this).val() == $(this).attr("placeholder")) {
-            $(this).val("");
+          if ($(this).val() == $(this).attr('placeholder')) {
+            $(this).val('');
           }
         });
       });
