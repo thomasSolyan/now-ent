@@ -2,58 +2,24 @@
 window.onload = function () {
 
   /* DYNAMIC MODAL START */
-  var destroyModal = function(selector) {
-        if ($(selector + ' .modal-header').length > 1) {
-          $(selector + ' .modal-header')[0].remove();
-        }
-        if ($(selector + ' .modal-body').length > 1) {
-          $(selector + ' .modal-body')[0].remove();
-        }
-      },
-
-      setTemplate = function(data, title, appendTo, content, selector) {
-        $.each(data, function(i, el) {
-          var dataTitle = el.title.toLowerCase();
-          if (dataTitle === title) {
-            template = Handlebars.compile(content),
-            html = template(el);
-            appendTo.append(html);
-            destroyModal(selector);
-            console.log(el);
-            return;
-          }
-        });
-      },
-
-      getData = function(content, dataUrl, appendTo, title, selector) {
-        $.ajax({
-          url: dataUrl,
-          method: 'GET',
-          success: function (data) {
-            setTemplate(data, title, appendTo, content, selector);
-          },
-          error: function(jqxhr) {
-            console.log(jqxhr.statusText);
-          }
-        });
-      };
-
   $('[data-modal=blogs]').on('click', '[data-toggle=modal]', function(ev) {
-    var title = $(this).data('title').toLowerCase(),
-        content = $('[data-template=blog-template]').html(),
+    var content = $('[data-template=blog-template]').html(),
         dataUrl = 'data/blogs.json',
-        appendTo = $('[data-append=modal-content]'),
-        selector = '.generic-blog';
-    getData(content, dataUrl, appendTo, title, selector);
+        appendTo = $('[data-append=modal-blog]'),
+        title = $(this).data('title').toLowerCase(),
+        selector = '.generic-blog',
+        key = 'genericBlog';
+    ModalModule.getData(content, dataUrl, appendTo, title, selector, key);
   });
 
   $('[data-modal=portfolio]').on('click', '[data-toggle=modal]', function() {
-    var title = $(this).data('title').toLowerCase(),
-        content = $('[data-template=portfolio-template]').html(),
+    var content = $('[data-template=portfolio-template]').html(),
         dataUrl = 'data/heros.json',
-        appendTo = $('[data-append=modal-content]'),
-        selector = '.portfolio-modal';
-    getData(content, dataUrl, appendTo, title, selector);
+        appendTo = $('[data-append=modal-portfolio]'),
+        title = $(this).data('title').toLowerCase(),
+        selector = '.portfolio-modal',
+        key = 'portfolio';
+    ModalModule.getData(content, dataUrl, appendTo, title, selector, key);
   });
 
   /* HOME IMAGE CHANGER START */
