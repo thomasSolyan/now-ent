@@ -3,11 +3,12 @@ require.config({
     jquery: "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min",
     text: "libs/text",
     handlebars: "libs/handlebars",
-    jqNav: "libs/jquery.nav",
-    jqScrollTo: "libs/jquery.scrollTo",
-    jqStickey: "libs/jquery.sticky",
-    supersized: "supersized.3.2.7.min",
-    superShutter: "supersized.shutter"
+    nav: "libs/jquery.nav",
+    scrollTo: "libs/jquery.scrollTo",
+    stickey: "libs/jquery.sticky",
+    supersized: "libs/supersized.3.2.7.min",
+    shutter: "libs/supersized.shutter",
+    modals: "modals"
   }
 });
 
@@ -28,5 +29,3 @@ require(['jquery'], function ($) {
     require([JSModule], function (JSModule) {});
   }
 });
-
-

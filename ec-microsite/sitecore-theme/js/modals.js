@@ -18,6 +18,12 @@ var ModalModule = new (function() {
     if ($(selector + ' .modal-body').length > 1) {
       $(selector + ' .modal-body')[0].remove();
     }
+    // $('.modal').click(function() {
+    //       $(this).on('shown.bs.modal', function(ev) {
+    //         $(ev.target).scrollTo( 0, 0);
+    //         console.log('scroll')
+    //       });
+    //   });
   };
 
   this.setTemplate = function(content, data, appendTo, title, selector) {
@@ -28,6 +34,7 @@ var ModalModule = new (function() {
         html = template(el);
         appendTo.append(html);
         _this.destroyModal(selector);
+
         return;
       }
     });
