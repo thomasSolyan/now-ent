@@ -1,19 +1,14 @@
 var ModalModule = new (function() {
-  var _self = this;
+  var _this = this;
 
   this.setSession = function(key, data) {
     data = JSON.stringify(data);
     window.sessionStorage.setItem(key, data);
-    _self.updateWhenLastStashed();
   };
 
   this.getSession = function(key) {
     var data = JSON.parse(window.sessionStorage.getItem(key));
     return data;
-  };
-
-  this.updateWhenLastStashed = function() {
-    window.sessionStorage.setItem('lastUpdate', new Date().getTime());
   };
 
   this.destroyModal = function(selector) {
@@ -32,18 +27,17 @@ var ModalModule = new (function() {
         template = Handlebars.compile(content),
         html = template(el);
         appendTo.append(html);
-        _self.destroyModal(selector);
-        //console.log(el);
+        _this.destroyModal(selector);
         return;
       }
     });
   };
 
   this.getData = function(content, dataUrl, appendTo, title, selector, key) {
-    var session = _self.getSession(key);
+    var session = _this.getSession(key);
     session = JSON.parse(session);
     if (session) {
-      _self.setTemplate(content, session, appendTo, title, selector);
+      _this.setTemplate(content, session, appendTo, title, selector);
       console.log('session');
     } else {
       $.ajax({
@@ -51,8 +45,8 @@ var ModalModule = new (function() {
         method: 'GET',
         dataType: 'json',
         success: function (data) {
-          _self.setTemplate(content, data, appendTo, title, selector);
-          _self.setSession(key, JSON.stringify(data));
+          _this.setTemplate(content, data, appendTo, title, selector);
+          _this.setSession(key, JSON.stringify(data));
           console.log('request');
         },
         error: function(jqxhr) {

@@ -50,7 +50,8 @@ strong {
 
 #self_assesment .modal-header,
 #blog_subscription .modal-header,
-.portfolio-modal .modal-header {
+.portfolio-modal .modal-header,
+.generic-blog .modal-header  {
   border-bottom: none;
 }
 
