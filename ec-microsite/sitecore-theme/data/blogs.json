@@ -1,6 +1,7 @@
 [
   {
     "title": "Career Development for Millennials: the NowEnterprise for the Next Generation",
+    "displayTitle":"get ready for the millennials",
     "link": "http://blog.tahoepartners.com/index.php/career-development-millennials-nowenterprise-next-generation/",
     "pubDate": "Wed, 02 Apr 2014 21:02:40 +0000",
     "creator": "Mike Davidson",
@@ -10,6 +11,7 @@
   },
   {
     "title": "The Future of the Knowledge Worker is the NowEnterprise",
+    "displayTitle":"future of the knowledge worker",
     "link": "http://blog.tahoepartners.com/index.php/future-knowledge-worker-nowenterprise/",
     "pubDate": "Mon, 17 Mar 2014 21:15:43 +0000",
     "creator": "David Sidwell",
@@ -19,6 +21,7 @@
   },
   {
     "title": "Goodbye Intranet. Say Hello to the NowEnterprise",
+    "displayTitle":"goodbye intranet, hello to the nowentreprise",
     "link": "http://blog.tahoepartners.com/index.php/intranets-say-hello-nowenterprise/",
     "pubDate": "Mon, 13 Jan 2014 21:17:36 +0000",
     "creator": "Ralph Keipert",
@@ -28,6 +31,7 @@
   },
   {
     "title": "Enterprise Collaboration Obstacles: Breaking Down Organizational Silos",
+    "displayTitle":"collaboration obstacles",
     "link": "http://blog.tahoepartners.com/index.php/enterprise-collaboration-obstacles-breaking-down-organizational-silos/",
     "pubDate": "Wed, 26 Jun 2013 20:08:19 +0000",
     "creator": "Ralph Keipert",
@@ -37,6 +41,7 @@
   },
   {
     "title": "Enterprise Collaboration Strategy and Roadmap",
+    "displayTitle":"Enterprise Collaboration Strategy & Roadmap",
     "link": "http://blog.tahoepartners.com/index.php/enterprise-collaboration-strategy-and-roadmap/",
     "pubDate": "Mon, 17 Jun 2013 19:50:00 +0000",
     "creator": "David Sidwell",
@@ -46,6 +51,7 @@
   },
   {
     "title": "Enterprise Collaboration: User Experience and Change Resilient Design",
+    "displayTitle":"Collaboration: User Experience and Change Resilient Design",
     "link": "http://blog.tahoepartners.com/index.php/enterprise-collaboration-user-experience-and-change-resilient-design/",
     "pubDate": "Wed, 09 Oct 2013 15:01:24 +0000",
     "creator": "Mike Davidson",

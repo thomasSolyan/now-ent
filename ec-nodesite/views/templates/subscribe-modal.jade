@@ -1,0 +1,36 @@
+// START BLPOG-SUBSCRIPTION MODAL SECTION -
+section#blog_subscription.modal.fade(tabindex='-1')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') ×
+      .modal-body
+        .row
+          .col-sm-8
+            h4 POWER UP - Become TahoeSmart!
+            p Sign up to recieve weekly industry updates, insights, and more...
+        form#blog_signup
+          p Interest:
+          .check-container
+            input(type='checkbox', checked='')
+            label.assesment-label
+              span SharePoint
+            | ​​​​​​​​​​​​​​​​​​​​​​​​​​
+            .secondary-label
+              input(type='checkbox')
+              label.assesment-label Workforce Productivity
+              | ​​​​​​​​​​​​​​​​​​​​​​​​​​
+            .secondary-label
+              input(type='checkbox')
+              label.assesment-label Customer Engagement
+              | ​​​​​​​​​​​​​​​​​​​​​​​​​​
+            .secondary-label
+              input(type='checkbox')
+              label.assesment-label Healthcare
+              | ​​​​​​​​​​​​​​​​​​​​​​​​​​
+          input(type='text', placeholder='Email*', required='')
+          input(type='text', placeholder='First Name')
+          input(type='text', placeholder='Last Name')
+          input(type='text', placeholder='Your Phone')
+          input(type='text', placeholder='Your Company')
+          button Power Up Now!

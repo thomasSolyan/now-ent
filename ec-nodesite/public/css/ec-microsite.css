@@ -1,0 +1,335 @@
+.invisible { 
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+  display: block !important;
+}
+
+.branch-menu {
+  margin-left: 10px;
+}
+
+.navigation li a {
+  padding: 15px 10px;
+}
+
+.team-inner {
+  min-height: 120px;
+}
+
+.team-name {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.team-position {
+  font-size: 12px;
+}
+
+.about-title {
+  font-size: 48px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.btn {
+  margin: 20px 20px 20px 0;
+}
+strong {
+  color: #000;
+  font-weight: 700;
+}
+
+.portfolio-modal .case-study:hover {
+  cursor: pointer;
+}
+
+#self_assesment .modal-header,
+#blog_subscription .modal-header,
+.portfolio-modal .modal-header,
+.generic-blog .modal-header  {
+  border-bottom: none;
+}
+
+#self_assesment .modal-body {
+  background: #ddd;
+  padding: 0;
+  margin: 20px;
+}
+
+#assesment_survey {
+  margin-left: 8%;
+}
+
+#assesment_survey .assesment-label,
+#blog_signup .assesment-label {
+  display: block;
+  width: 200px;
+  margin-top: -22px;
+  margin-left: 20px;
+}
+
+#assesment_survey .secondary-label,
+#blog_signup .secondary-label {
+  margin-top: -25px;
+}
+
+#blog_signup {
+  background: #ddd;
+  margin: 0 auto;
+  width: 66.666%;
+  color: #fff;
+  padding: 40px;
+}
+
+#blog_signup .check-container {
+  margin-left: 50px;
+}
+
+#blog_signup input[type=text],
+#blog_signup button {
+  margin-bottom: 10px;
+}
+
+#self_assesment .modal-body .col-sm-8 {
+  text-align: center !important;
+  margin-left: 5%;
+}
+
+#self_assesment .modal-body h3 {
+  color: #fff;
+}
+
+.heavy {
+  font-weight: 700;
+  color: #000;
+}
+
+.content {
+  background-color: #fff;
+}
+
+#home article {
+  text-align: left;
+  margin-top: 50px;
+}
+
+#home h3,
+#home h1:first-child {
+  color: #fff;
+}
+
+#home h3 {
+  margin-left: 75px;
+}
+
+#home h1:first-child {
+  text-transform: uppercase;
+}
+
+#home figure {
+  height: 400px;
+}
+
+[data-layout] .container {
+  border: 1px solid #ddd;
+}
+
+[data-layout].content {
+  padding-top: 0;
+}
+
+[data-layout] .chart-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  background-color: #ddd;
+}
+
+
+[data-layout] .about-title {
+  color: #ddd;
+  margin-top: -10px;
+}
+
+.challenge-copy {
+  text-align: center;
+}
+
+.lower-container {
+  margin: 0 auto;
+}
+
+[data-layout] .article-link {
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.col-md-3.cape-container {
+  border: 1px solid #ddd;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+  @media (max-width:480px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+  @media (max-width:570px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+  }
+
+  @media (max-width: 767px) {
+    .col-md-3.cape-container,
+    .col-md-3.cape-container:first-child {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width : 768px) and (max-width:979px) {
+    .col-md-3.cape-container:first-child { margin-left: 50px; }
+  }
+
+.port-container {
+  padding-left: 30px;
+}
+
+.port-title {
+  background-color: #fff !important;
+  z-index: 99999;
+  padding: 10px;
+}
+
+.col-md-6.port-item {
+  padding-left: 0;
+}
+
+.port-inner {
+  border: 1px solid #ddd;
+}
+
+.port-item h5 {
+  color: #999;
+}
+
+.port-item img:hover,
+.port-inner:hover,
+.modal-target:hover {
+  cursor: pointer;
+}
+
+.pricing-table {
+  padding: 15px;
+  min-height: 360px;
+}
+
+.pricing-table h3 {
+  font-size: 16px;
+  border-bottom: none;
+}
+
+.cape-title {
+  min-height: 50px;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.cape-link {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#get-started input[type=text],
+#get-started input[type=email],
+#get-started textarea {
+  background-color: #ddd;
+  color: #fff;
+}
+#get-started ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#get-started :-moz-placeholder {
+  color: #fff;
+}
+
+#get-started ::-moz-placeholder {
+  color: #fff;
+}
+
+#get-started :-ms-input-placeholder {
+  color: #fff;
+}
+
+.radio {
+  margin-left: -20px;
+}
+
+.radio span,
+.radio label {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.radio input[type=radio] {
+  top: 15px;
+  display: block;
+  position: relative;
+  margin-left: -30px !important;
+  background: transparent;
+  border: none;
+}
+
+.footer {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+#self-assesment-wrapper {
+  min-height: 500px;
+}
+
+#self_assesment .modal-body {
+  min-height: 400px;
+}
+
+.image-replacment {
+  min-height: 100px;
+  padding: 100px 50px;
+  color: #fff;
+  font-size: 18px;
+}
+
+#get-started,
+#portfolio {
+  padding-top: 0;
+}
+
+.modal .modal-content{
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal-body h4,
+.inner-title {
+  color: #999;
+}
+
+.modal-body .list-content { margin-left: 15px;}
