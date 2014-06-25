@@ -92,12 +92,17 @@
       });
 
       /* FORMAT DATE */
-      (function() {
-        var $elem = $('.date');
-        $elem.each(function(i, el) {
-            var val = $(el).html();
-            $(el).html((new Date(val)).toString().split(' ').splice(1,3).join(' '));
-        });
-      })();
-    }
+      var $elem = $('.date');
+      $elem.each(function(i, el) {
+        var val = $(el).html();
+        $(el).html((new Date(val)).toString().split(' ').splice(1,3).join(' '));
+      });
 
+      /* add divider to ddLinks */
+      $('.branch-menu li:eq(3)').append('<div class="divider"></div>');
+
+      $('[data-js-link]').each(function(i, el) {
+        var copy = $(el).text().toLowerCase();
+        $(el).attr('href', '#' + copy);
+      })
+}

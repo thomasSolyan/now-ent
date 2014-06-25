@@ -17,35 +17,31 @@ block content
                 a(href="#", class="dropdown-toggle", data-toggle="dropdown")
                   i(class=['fa', 'fa-bars'])
                 ul.dropdown-menu
-                  li
-                    a(href="#") Site Link One
-                  li
-                    a(href="#") Another Site
-                  li
-                    a(href="#") Something Else
-                  li.divider
-                  li
-                    a(href="#") Seperated Link
+                  // DYNAMIC DROPDOWN LINKS HERE -
+                  each ec, i in ecData
+                    if (i === 10)
+                      each link in ec.ddLinks
+                        li
+                          a(href="#") #{link}
             .menu-btn.menu-main(data-target=".nav-collapse", data-toggle="collapse")
               span(class=['fa', 'fa-th'])
             ul(class=['navigation', 'nav-collapse'], data-navigation)
-              li
-                a(href="#home") Home
-              li
-                a(href="#challenge") Challenge
-              li
-                a(href="#solution") Solution
-              li
-                a(href="#portfolio") Portfolio
-              li
-                a(href="#get-started") Get Started
+              // DYNAMIC MAIN LINKS HERE -
+              each ec, i in ecData
+                if (i === 10)
+                  each main in ec.mainLinks
+                    li
+                      a(href="#", data-js-link) #{main}
     .clearfix
     // START HOME SECTION -
     section#home
       .container.align-center
         article.row
-          h1.col-md-12 Sharepoint, A hero&rsquo;s tale
-          h3 Are you ready to go from scapegoat to hero?
+          // DYNAMIC COPY HERE -
+          each ec, i in ecData
+            if (i === 11)
+              h1.col-md-12 #{ec.mainCopy}
+              h3 #{ec.secondaryCopy}
         figure
     // START CHALLENGE SECTION -
     section(id="challenge", data-layout, class=['clearfix', 'content'])
@@ -128,6 +124,7 @@ block content
       .container
         .spacing40.clearfix
         .team-container(data-modal='blogs')
+          // DYNAMIC BLOG TILES HERE -
           each ec, i in ecData
             if (i < 3)
               .col-md-4.modal-target(data-toggle='modal', data-target='.generic-blog', data-title='#{ec.title}')
@@ -226,6 +223,7 @@ block content
       .container
         .spacing40.clearfix
         .team-container(data-modal='blogs')
+          // DYNAMIC BLOG TILES HERE -
           each ec, i in ecData
             if (i >= 3 && i < 6)
               .col-md-4.modal-target(data-toggle='modal', data-target='.generic-blog', data-title='#{ec.title}')
@@ -247,8 +245,9 @@ block content
           .title-inner
             h3.port-title Our Clients, Our Heros
         .row.port-container(data-modal='portfolio')
+          // DYNAMIC PORTFOLIO TILES HERE -
           each ec, i in ecData
-            if (i >= 6)
+            if (i >= 6 && i < 9)
               .col-md-6.port-item
                 .port-inner.white-bg.clearfix(data-toggle='modal', data-target='.portfolio-modal', data-title='#{ec.name}')
                   figure.box-40.hovers.bwWrapper

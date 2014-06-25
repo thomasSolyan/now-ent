@@ -28,7 +28,6 @@ var ModalModule = new (function() {
         html = template(el);
         appendTo.append(html);
         _this.destroyModal(selector);
-
         return;
       }
     });
