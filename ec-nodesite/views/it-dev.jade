@@ -31,7 +31,7 @@ block content
                 if (i === 10)
                   each main in ec.mainLinks
                     li
-                      a(href="#", data-js-link) #{main}
+                      a(href="#{ec.el}#{main}") #{main}
     .clearfix
     // START HOME SECTION -
     section#home
@@ -48,77 +48,51 @@ block content
       .container
         .white-bg.clearfix.flat-tabs
           ul.nav.margin.align-right.nav-tabs
-            li.active
-              a(href="#statistics", data-target="#problem_1, #problem_2" data-toggle="tab") Problem
-            li
-              a(href="#scapegoat", data-target="#implication_1, #implication_2" data-toggle="tab") Implication
-            li
-              a(href="#challenges", data-target="#trends_1, #trends_2" data-toggle="tab") Trends
+            // DYNAMIC LINKS HERE -
+            each ec, i in ecData
+              if (i === 12)
+                each name in ec.linkName
+                  li.inner-link-list
+                    a(data-target="#{ec.el}#{name}_1, #{ec.el}#{name}_2" data-toggle="tab") #{name}
         .tab-content
-          #problem_1.tab-pane.fade.in.active
-            figure.chart-container
-              img(src="images/chart.png", alt="Problem")
-          #implication_1.tab-pane.fade
-            img(src="images/about/2.jpg", alt="Implication Image")
-          .tab-pane.fade(id="trends_1")
-            img(src="images/about/3.jpg", alt="Trends Image")
+          // DYNAMIC IMAGES HERE -
+          each ec, i in ecData
+            if (i === 13)
+              each elem in ec.images
+                .tab-pane.fade(id="#{elem.id_}", data-name="inner-image")
+                  figure.chart-container
+                    img(src="#{elem.imageUrl}", alt="Inner Image")
         .tab-content.white-bg
-          #problem_2.tab-pane.active.fade.in.active
-            .white-bg.clearfix
-              .row.clearfix.lower-container
-                .col-md-4
-                  .padding
-                    p CHALLENGE
-                    h2.about-title Problem
-                .col-md-8.challenge-copy
-                  h4
-                    | There’s no doubt about it - you’re not alone;
-                    br
-                    | implementing SharePoint can be challenging.
-                  p
-                    | A 2013 Industry Watch Report from AIIM found that 61% of SharePoint ECM projects had stalled or did not meet expectations.
-                  p.heavy And, as an IT leader, you’ve heard the complaints...
-                  .spacing40.clearfix
-          #implication_2.tab-pane.fade
-            .white-bg.clearfix
-              .row.clearfix.lower-container
-                .col-md-4
-                  .padding
-                    p CHALLENGE
-                    h2.about-title Implication
-                .col-md-8.challenge-copy
-                  h4 Even after you get SharePoint live, users still aren’t happy.
-                  p
-                    | “SharePoint isn’t easy to use.”
-                    br
-                    | “I can’t find what I’m looking for.”
-                    br
-                    | “It dosen’t make me more productive. It actually makes my job harder.”
-                    br
-                    | “I’d rather walk on hot coals... (well maybe not yet)”
-                  p And then your team weighs in, “This is a mess. I can’t support it.”
-                  p.heavy And there is the future to consider...
-                  .spacing40.clearfix
-          #trends_2.tab-pane.fade
-            .white-bg.clearfix
-              .row.clearfix.lower-container
-                .col-md-4
-                  .padding
-                    p CHALLENGE
-                    h2.about-title trends
-                .col-md-8.challenge-copy
-                  h4 Future trends compound the challenges.
-                  p
-                    | Millennials will soon make up 75% of the workforce.
-                    br
-                    | Tablets are outselling PC’s and smart phones are ubiquitous.
-                    br
-                    | Social technology has changed the way people interact.
-                  p.heavy
-                    | Becoming the hero seems as though it will only get harder.
-                    br
-                    | So, where can you go from here?
-                  .spacing40.clearfix
+          // DYNAMIC TABS HERE -
+          each ec, i in ecData
+            if (i === 14)
+              each elem in ec.data
+                .tab-pane.fade(id="#{elem.id_}", data-tab="tabs-1")
+                  .white-bg.clearfix
+                    .row.clearfix.lower-container
+                      .col-md-4
+                        .padding
+                          p CHALLENGE
+                          h2.about-title #{elem.h2}
+                      .col-md-8.challenge-copy
+                        h4 
+                          | #{elem.h4}
+                          br
+                          | #{elem.h4br}
+                        p 
+                          | #{elem.para1}
+                          br
+                          | #{elem.para1br}
+                          br
+                          | #{elem.para1br1}
+                          br
+                          | #{elem.para1br2}
+                        p #{para2}
+                        p.heavy 
+                          | #{elem.heavy}
+                          br
+                          | #{elem.heavy2}
+                        .spacing40.clearfix
         .spacing40.clearfix
       .spacing40.clearfix
       .container
@@ -247,7 +221,7 @@ block content
         .row.port-container(data-modal='portfolio')
           // DYNAMIC PORTFOLIO TILES HERE -
           each ec, i in ecData
-            if (i >= 6 && i < 9)
+            if (i >= 6 && i <= 9)
               .col-md-6.port-item
                 .port-inner.white-bg.clearfix(data-toggle='modal', data-target='.portfolio-modal', data-title='#{ec.name}')
                   figure.box-40.hovers.bwWrapper
@@ -341,6 +315,27 @@ block content
                             .clearfix
                             a.contact-btn(href='#') Send Message
                   .spacing40.clearfix
+    // START FOOTERß SECTION -
+    section.footer.clearfix
+      .container
+        .row
+          .col-sm-6
+            p &copy; 2014
+              a(href="#") Tahoe Partners
+          .col-sm-6
+            ul.soc-footer
+              li
+                a(href="#")
+                  i.a.fa-facebook
+              li
+                a(href="#")
+                  i.fa.fa-twitter
+              li
+                a(href="#")
+                  i.fa.fa-google-plus
+              li
+                a(href="#")
+                  i.fa.fa-pinterest
     include templates/subscribe-modal
     include templates/portfolio-modal
     include templates/blog-modal

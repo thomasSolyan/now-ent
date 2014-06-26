@@ -100,9 +100,12 @@
 
       /* add divider to ddLinks */
       $('.branch-menu li:eq(3)').append('<div class="divider"></div>');
+      $('li.inner-link-list:eq(0)').addClass('active');
+      $('[data-name=inner-image]:eq(0), [data-tab=tabs-1]:eq(0)').addClass('in active');
 
-      $('[data-js-link]').each(function(i, el) {
-        var copy = $(el).text().toLowerCase();
-        $(el).attr('href', '#' + copy);
-      })
+      // $('[data-js-link]').each(function(i, el) {
+      //   var copy = $(el).text().toLowerCase();
+      //   $(el).attr('href', '#' + copy);
+      // })
 }
+

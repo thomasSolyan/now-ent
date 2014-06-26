@@ -258,6 +258,8 @@ blockquote small {
   height: 30px;
   line-height: 30px;
   text-align: center;
+  margin-top: 12px;
+  margin-right: -10px;
 }
 
 .logo {
@@ -1252,6 +1254,7 @@ input:focus, textarea:focus {
     top: 90px;
     width: 100%;
     z-index: 999;
+    background-color: #333;
   }
 
   .navigation li {
@@ -1312,6 +1315,7 @@ input:focus, textarea:focus {
     top: 90px;
     width: 100%;
     z-index: 999;
+    background-color: #333;
   }
 
   .navigation li {
