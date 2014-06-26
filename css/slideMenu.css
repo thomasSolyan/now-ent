@@ -1,4 +1,5 @@
-#nav-con { z-index: 99999; }
+#global { z-index: 99999; }
+#tertiary { z-index: 88; }
 .invisible { display: none; }
 
 .nav-container {
