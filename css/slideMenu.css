@@ -50,9 +50,11 @@ a:hover.icon-comp:before { background-position: -320px -20px; }
   width: 40px;
   height: 40px;
   display: inline-block;
-  background: url('../img/now-ent-ui-sprite.png') 0 0 no-repeat;
+  background: url('../img/hamburger.png') 3px 7px no-repeat;
 }
-
+#tertiary .menu-trigger { background: url('../img/hamburger.png') 3px 3px no-repeat; }
+.menu-trigger:hover { background: url('../img/hamburger-roll.png') 3px 7px no-repeat; }
+#tertiary .menu-trigger:hover { background: url('../img/hamburger-roll.png') 3px 3px no-repeat; }
 nav {
   position: absolute;
   top: 0;
@@ -94,7 +96,9 @@ nav ul li > a {
   display: block;
   color: #666;
   margin-left: 1.25em;
-  padding: 0.1em 0;
+  height: 40px;
+  margin-top: -5px;
+  padding-top: 5px;
 }
 
 nav ul li > a:before {
@@ -163,11 +167,9 @@ a.main-trigger {
 
 .trigger-container a.main-trigger {
   top: 0;
-  height: 32px;
+  height: 35px;
   border-bottom: 1px solid #E6E6E6;
 }
-
-div.trigger-container .menu-trigger { background: url('../img/now-ent-ui-sprite.png') 0 0 no-repeat; height: 34px; }
 
 nav .h4 {
   color: #777;
@@ -198,8 +200,14 @@ nav .h4:before {
   background:  transparent url(../img/arrowRight.png) no-repeat 0 0;
   float: left;
   margin-right: 5px;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
+  margin-top: -3px;
+}
+
+nav .h4:hover:before {
+  content: " ";
+  background:  transparent url(../img/arrowRight-roll.png) no-repeat 0 0;
 }
 
 li.menu-item.selected {
