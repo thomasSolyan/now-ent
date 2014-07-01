@@ -3,18 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-<title>NOW-ENT-EMPLOY</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>Slide Menu</title>
 
 <link rel="stylesheet" type="text/css" href="css/slideMenu.css" />
 <script src="js/vendor/modernizr.custom.js"></script>
 </head>
 <body style="height: 1000px">
 
-<!-- necessary content target div for slideOut menu -->
+<!-- necessary content for slideOut menu -->
 <a href="#" class="menu-trigger" data-trigger data-id="main" data-no></a>
-<div data-target="template"></div>
+<div data-target="template" id="template"></div>
+
+<div id="mask" style="display: none;"></div>
 
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/handlebars.js"></script>
